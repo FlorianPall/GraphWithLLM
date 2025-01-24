@@ -67,4 +67,13 @@ CREATE (spec:Unit {
 ### What can the program do?
 1. Check the Graph structure of the txt file based on the yml structure. For the Moment only Edges can be checked.
 2. If edges have been deleted, the program will show the edges, delete them and checks the syntax of the cipher.
+3. The Result will be saved in a new file named `LLM_Graph_Output.txt`. This file will be written in the same directory as the input file. This will also be written if the input file is correct.
+
+### How to use the program?
+Simply run the `main.py` file and follow the instructions.
+
+### ToDo for the future
+1. Add the possibility to check the Nodes.
+2. Add the possibility to check the Properties of the Nodes.
+3. Not only check one graph file but multiple files at once.
 
