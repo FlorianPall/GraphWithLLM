@@ -1,8 +1,9 @@
 import pandas as pd
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 import numpy as np
+import os
 
-CSV_FILE = "./src/ESCO/skills_en.csv"
+CSV_FILES_FOLDER = "./src/ESCO/"
 
 # PostgreSQL Verbindungsdaten
 DB_USER = 'admin'
@@ -18,16 +19,33 @@ engine = create_engine(db_url)
 
 def csv_to_db():
     """Funktion zum Importieren der CSV Daten in die Datenbank"""
+    files = os.listdir(CSV_FILES_FOLDER)
+    if files:
+        truncate_table()
+    for file in files:
+        try:
+            import_csv(CSV_FILES_FOLDER + file)
+        except Exception as e:
+            print(f"Programm mit Fehler beendet: {str(e)}")
+
+def truncate_table():
+    """Leert die Tabelle und setzt den ID-Counter zurück"""
     try:
-        import_csv(CSV_FILE)
+        with engine.connect() as connection:
+            connection.execute(text("TRUNCATE TABLE skills RESTART IDENTITY"))
+            connection.commit()
+        print("Tabelle erfolgreich geleert")
     except Exception as e:
-        print(f"Programm mit Fehler beendet: {str(e)}")
+        print(f"Fehler beim Leeren der Tabelle: {str(e)}")
+        raise
 
 
 def clean_data(df):
     """Bereinigt die Daten vor dem Import"""
     # Ersetze NaN durch None für SQL NULL
     df = df.replace({np.nan: None})
+
+    df.columns = df.columns.str.lower().str.strip().str.replace(' ', '')
 
     return df
 
@@ -49,12 +67,12 @@ def import_csv(file_path):
         # In Datenbank schreiben
         df.to_sql('skills',
                   engine,
-                  if_exists='replace',
+                  if_exists='append',
                   index=False,
                   chunksize=1000)
 
         print(f"Erfolgreich {len(df)} Datensätze importiert")
 
     except Exception as e:
-        print(f"Fehler beim Import: {str(e)}")
+        print(f"Fehler beim Import in File {file_path}: {str(e)}")
         raise
