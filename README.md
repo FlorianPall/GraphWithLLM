@@ -9,6 +9,8 @@ The `src` folder needs the following files:
 1. `LLM_Angaben.yml` - Contains the graph structure.
 2. `LLM_Graph.txt` - Contains the graph data (Cipher for Neo4j).
 
+The 'src' folder also needs the followings folders:
+1. 'ESCO' - Contains the ESCO Skills in different csv Files
 
 ## LLM_Angaben.yml
 ```yaml
@@ -68,9 +70,10 @@ CREATE (spec:Unit {
 1. Check the Graph structure of the txt file based on the yml structure. For the Moment only Edges can be checked.
 2. If edges have been deleted, the program will show the edges, delete them and checks the syntax of the cipher.
 3. The Result will be saved in a new file named `LLM_Graph_Output.txt`. This file will be written in the same directory as the input file. This will also be written if the input file is correct.
+4. The Programm will setup da Database in the docker container with the Structure of 'DB/init.sql'. Then it will automaticaly insert all the ESCO Skills in the DB. It will use all csv files in the ESCO folder no matter what names the files have.
 
 ### How to use the program?
-Simply run the `main.py` file and follow the instructions.
+For the ESCO Skills the container of the DB folder is needed. Then simply run the `main.py` file and follow the instructions.
 
 ### ToDo for the future
 1. Add the possibility to check the Nodes.
