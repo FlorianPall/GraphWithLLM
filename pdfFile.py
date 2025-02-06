@@ -1,5 +1,8 @@
 from pdfminer.high_level import extract_pages
-import os
+import yaml
+import json
+
+STRUCTURE_PATH = "./src/Modules/structure.yml"
 
 
 def group_text_boxes(text_boxes):
@@ -31,25 +34,85 @@ def group_text_boxes(text_boxes):
 
     return groups
 
+def word_to_lower_and_without_spaces(word):
+    return word.lower().strip().replace(' ', '')
 
-def extract_pdf():
+def pdf_groups(pages):
     try:
-        pages = list(extract_pages("./src/Modules/SE_I_German.pdf"))
-        for page_num, page in enumerate(pages, 1):
-            print(f"\nSeite {page_num}:")
+        all_groups = []
 
+        for page in pages:
             # Sammle alle TextBoxes von der Seite
             text_boxes = [element for element in page if hasattr(element, 'get_text')]
 
             # Gruppiere die Textboxen
             grouped_boxes = group_text_boxes(text_boxes)
 
-            # Gib die Gruppen aus
-            for i, group in enumerate(grouped_boxes, 1):
-                print(f"\nGruppe {i}:")
-                for box in group:
-                    print(f"{box.get_text().strip()}")
-                print("-" * 50)
+            # Extrahiere nur die Texte aus jeder Gruppe
+            for group in grouped_boxes:
+                group_texts = [box.get_text().strip() for box in group]
+                all_groups.append(group_texts)
+
+        return all_groups
+
+    except Exception as e:
+        return f"Fehler beim Verarbeiten der PDF: {str(e)}"
+
+def load_pdf_structure():
+    try:
+        keywords = []
+        with open(STRUCTURE_PATH, 'r') as f:
+            file = yaml.safe_load(f)
+            for category, titles in file.items():
+                for title in titles:
+                    keywords.append((word_to_lower_and_without_spaces(category), word_to_lower_and_without_spaces(title)))
+
+        return keywords
+    except yaml.YAMLError as e:
+        print(f"YAML Fehler: {e}")
+    except FileNotFoundError:
+        print("Datei nicht gefunden")
+
+def groups_by_structure(pdf_data, pdf_structure):
+    result = {}
+    current_key = None
+    current_category = None
+    current_content = []
+
+    # Erstelle Dict für schnelleren Lookup: {searchterm: category}
+    structure_dict = {searchterm: category
+                      for category, searchterm in pdf_structure}
+
+    for group in pdf_data[1:]:  # Überspringe die erste Gruppe (Header)
+        text = group[0] if group else ""
+        text_normalized = word_to_lower_and_without_spaces(text)
+
+        # Prüfe ob aktuelle Gruppe einem Searchterm entspricht
+        if text_normalized in structure_dict:
+            # Speichere vorherigen Inhalt wenn vorhanden
+            if current_category:
+                result[current_category] = current_content
+            # Starte neue Sektion mit der Kategorie als Key
+            current_category = structure_dict[text_normalized]
+            current_content = []
+        else:
+            # Füge Inhalt zur aktuellen Sektion hinzu
+            if current_category:  # Nur hinzufügen wenn wir eine aktuelle Kategorie haben
+                current_content.append(group)
+
+    # Füge letzten Inhalt hinzu
+    if current_category:
+        result[current_category] = current_content
+
+    return result
+
+def extract_pdf():
+    try:
+        pages = list(extract_pages("./src/Modules/SE_I_German.pdf"))
+        pdf_data = pdf_groups(pages)
+        pdf_structure = load_pdf_structure()
+        structured_data = groups_by_structure(pdf_data, pdf_structure)
+        print(json.dumps(structured_data, indent=2, ensure_ascii=False))
 
     except Exception as e:
         print(f"Fehler beim Verarbeiten der PDF: {str(e)}")
