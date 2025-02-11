@@ -78,6 +78,7 @@ def groups_by_structure(pdf_data, pdf_structure):
     current_key = None
     current_category = None
     current_content = []
+    counter = 1
 
     # Erstelle Dict für schnelleren Lookup: {searchterm: category}
     structure_dict = {searchterm: category
@@ -92,8 +93,9 @@ def groups_by_structure(pdf_data, pdf_structure):
             # Speichere vorherigen Inhalt wenn vorhanden
             if current_category:
                 result[current_category] = current_content
+                counter += 1
             # Starte neue Sektion mit der Kategorie als Key
-            current_category = structure_dict[text_normalized]
+            current_category = structure_dict[text_normalized] + str(counter)
             current_content = []
         else:
             # Füge Inhalt zur aktuellen Sektion hinzu
@@ -104,11 +106,15 @@ def groups_by_structure(pdf_data, pdf_structure):
     if current_category:
         result[current_category] = current_content
 
-    return result
+    return {
+        key: value
+        for key, value in result.items()
+        if "literature" not in key
+    }
 
 def extract_pdf():
     try:
-        pages = list(extract_pages("./src/Modules/SE_I_German.pdf"))
+        pages = list(extract_pages("./src/Modules/2_Module.pdf"))
         pdf_data = pdf_groups(pages)
         pdf_structure = load_pdf_structure()
         structured_data = groups_by_structure(pdf_data, pdf_structure)
