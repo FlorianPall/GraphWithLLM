@@ -1,3 +1,5 @@
+from itertools import count
+
 from pdfminer.high_level import extract_pages
 import yaml
 import json
@@ -75,7 +77,6 @@ def load_pdf_structure():
 
 def groups_by_structure(pdf_data, pdf_structure):
     result = {}
-    current_key = None
     current_category = None
     current_content = []
     counter = 1
@@ -84,7 +85,7 @@ def groups_by_structure(pdf_data, pdf_structure):
     structure_dict = {searchterm: category
                       for category, searchterm in pdf_structure}
 
-    for group in pdf_data[1:]:  # Überspringe die erste Gruppe (Header)
+    for group in pdf_data:  # Überspringe die erste Gruppe (Header)
         text = group[0] if group else ""
         text_normalized = word_to_lower_and_without_spaces(text)
 
@@ -101,21 +102,41 @@ def groups_by_structure(pdf_data, pdf_structure):
             # Füge Inhalt zur aktuellen Sektion hinzu
             if current_category:  # Nur hinzufügen wenn wir eine aktuelle Kategorie haben
                 current_content.append(group)
+            else:
+                result["header" + str(counter)] = group
+                counter += 1
 
     # Füge letzten Inhalt hinzu
     if current_category:
         result[current_category] = current_content
 
-    return {
-        key: value
-        for key, value in result.items()
-        if "literature" not in key
-    }
+    return process_pdf_data(result)
+
+def process_pdf_data(data):
+    output = {}
+
+    for key, value in data.items():
+        # Prüfen ob es sich um einen literature-Key handelt
+        if "literature" in key:
+            # Prüfen ob mehr als 2 Arrays vorhanden sind
+            if isinstance(value, list) and len(value) > 2:
+                # Neuen Header-Key erstellen (gleiche Nummer wie literature)
+                header_key = f"header{key.replace('literature', '')}"
+                # Nur das letzte Array übernehmen
+                output[header_key] = [value[-1]]
+                continue
+
+        # Wenn der Suchstring nicht im Key ist, Key-Value-Paar übernehmen
+        else:
+            output[key] = value
+
+    return output
 
 def extract_pdf():
     try:
         pages = list(extract_pages("./src/Modules/2_Module.pdf"))
         pdf_data = pdf_groups(pages)
+        print(pdf_data)
         pdf_structure = load_pdf_structure()
         structured_data = groups_by_structure(pdf_data, pdf_structure)
         print(json.dumps(structured_data, indent=2, ensure_ascii=False))
