@@ -39,16 +39,14 @@ def truncate_table():
         print(f"Fehler beim Leeren der Tabelle: {str(e)}")
         raise
 
-
 def clean_data(df):
     """Bereinigt die Daten vor dem Import"""
     # Ersetze NaN durch None für SQL NULL
     df = df.replace({np.nan: None})
 
-    df.columns = df.columns.str.lower().str.strip().str.replace(' ', '')
+    df.columns = df.columns.str.lower().str.strip().str.replace(' ', '').str.replace('"', '')
 
     return df
-
 
 def import_csv(file_path):
     """Importiert CSV Daten in die PostgreSQL Datenbank"""
@@ -75,4 +73,16 @@ def import_csv(file_path):
 
     except Exception as e:
         print(f"Fehler beim Import in File {file_path}: {str(e)}")
+        raise
+
+def export_preferred_label():
+    """Exportiert die preferred_label Spalte der Datenbank in eine CSV Datei"""
+    try:
+        with engine.connect() as connection:
+            result = connection.execute(text("SELECT DISTINCT preferredlabel FROM skills"))
+            df = pd.DataFrame(result.fetchall(), columns=['preferredlabel'])
+            df.to_csv('./src/output/preferred_label.csv', index=False, header=False, sep=';')
+            print("Export erfolgreich")
+    except Exception as e:
+        print(f"Fehler beim Export: {str(e)}")
         raise
