@@ -123,7 +123,10 @@ def process_pdf_data(data):
                 # Neuen Header-Key erstellen (gleiche Nummer wie literature)
                 header_key = f"header{key.replace('literature', '')}"
                 # Nur das letzte Array übernehmen
-                output[header_key] = [value[-1]]
+                values = value[-1]
+                output[header_key] = []
+                for val in values:
+                    output[header_key].append(val)
                 continue
 
         # Wenn der Suchstring nicht im Key ist, Key-Value-Paar übernehmen
@@ -132,14 +135,75 @@ def process_pdf_data(data):
 
     return output
 
+
+def structure_to_correct_form(structure):
+    if not structure:
+        return {}
+
+    result = {}
+    current_header = None
+
+    def process_values(values, is_paired=False):
+        """Verarbeitet die Werte je nach Format (gepaart oder einzeln)"""
+        if not is_paired:
+            if len(values) == 1:
+                return values
+            if len(values[0]) == len(values[1]):
+                pair = process_values([values[0], values[1]], True)
+                return_value = pair
+                for i in range(2, len(values)):
+                    return_value.append(values[i])
+                return return_value
+
+        paired_results = []
+        for i in range(0, len(values), 2):
+            if i + 1 >= len(values):
+                break
+            keys, vals = values[i], values[i + 1]
+            paired_results.extend(
+                {key: val} for key, val in zip(keys, vals)
+            )
+        return paired_results
+
+    def remove_numbers(text):
+        """Entfernt Zahlen aus einem String"""
+        return ''.join(char for char in text if not char.isdigit())
+
+    for key, value in structure.items():
+        if not value:  # Überprüfe auf leere Werte
+            continue
+
+        if 'header' in key.lower():
+            try:
+                current_header = value[-1]
+                result[current_header] = []
+            except IndexError:
+                continue
+
+        else:
+            if not current_header:
+                continue
+
+            local_key = remove_numbers(key)
+            current_entry = {local_key: []}
+            result[current_header].append(current_entry)
+
+            # Bestimme, ob die Werte gepaart sind (gerade Anzahl)
+            is_paired = len(value) % 2 == 0
+            processed_values = process_values(value, is_paired)
+
+            current_entry[local_key].extend(processed_values)
+
+    return result
+
 def extract_pdf():
     try:
         pages = list(extract_pages("./src/Modules/2_Module.pdf"))
         pdf_data = pdf_groups(pages)
-        print(pdf_data)
         pdf_structure = load_pdf_structure()
         structured_data = groups_by_structure(pdf_data, pdf_structure)
-        print(json.dumps(structured_data, indent=2, ensure_ascii=False))
+        correct_form = structure_to_correct_form(structured_data)
+        print(json.dumps(correct_form, indent=2, ensure_ascii=False))
 
     except Exception as e:
         print(f"Fehler beim Verarbeiten der PDF: {str(e)}")
