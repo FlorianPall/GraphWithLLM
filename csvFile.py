@@ -79,9 +79,14 @@ def export_preferred_label():
     """Exportiert die preferred_label Spalte der Datenbank in eine CSV Datei"""
     try:
         with engine.connect() as connection:
-            result = connection.execute(text("SELECT DISTINCT preferredlabel FROM skills"))
+            result = connection.execute(text("SELECT DISTINCT preferredlabel FROM skills where preferredlabel is not null"))
             df = pd.DataFrame(result.fetchall(), columns=['preferredlabel'])
-            df.to_csv('./src/output/preferred_label.csv', index=False, header=False, sep=';')
+            df.to_csv('./src/output/preferred_label.csv', index=False, header=True, sep=';')
+
+            result = connection.execute(
+                text("SELECT DISTINCT preferredlabel, description FROM skills where preferredlabel is not null"))
+            df = pd.DataFrame(result.fetchall(), columns=['preferredlabel', 'description'])
+            df.to_csv('./src/output/preferred_label_and_description.csv', index=False, header=True, sep=';')
             print("Export erfolgreich")
     except Exception as e:
         print(f"Fehler beim Export: {str(e)}")
