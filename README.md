@@ -11,9 +11,12 @@ The `src` folder needs the following files:
   1. `LLM_Angaben.yml` - Contains the graph structure.
   2. `LLM_Graph.txt` - Contains the graph data (Cipher for Neo4j).
 - For the ESCO Skills:
-  1. `ESCO` - Contains the ESCO Skills in different csv Files
+  1. Folder `ESCO` - Contains the ESCO Skills in different csv Files
+  2. Folder `Output` - Contains the output csv files.
 - For the Modules:
-  1. `Modules` - Contains the Modules in pdf format.
+  1. Folder `Modules` - Contains the Modules in pdf format.
+- For the AI:
+  1. Folder `Prompts` - Contains the Prompts for the AI.
 
 ## LLM_Angaben.yml
 ```yaml

@@ -1,0 +1,39 @@
+Analysiere das Modul und erstelle eine umfassende Skill-Matrix. Folge dabei diesen Schritten:
+1. Skill-Identifikation und Kategorisierung:
+   - Extrahiere alle explizit genannten Skills aus der Modulbeschreibung
+   - Kategorisiere jeden Skill in die Bereiche:
+     * Professional Competence
+     * Methodical Competence
+     * Personal/Social Competence
+     * Interdisciplinary Competence
+   - Füge für jeden Skill die exakte Textquelle aus der Modulbeschreibung an
+2. Erstelle diese Basis-Matrizen:
+   a) Skill-Übersichtsmatrix:
+      | Skill Name | Category | Description | Source in Module Description | Proficiency Level |
+   b) Skill-Progression-Matrix:
+      | Skill Name | Prerequisites | Leads To | Evidence for Connection |
+   c) Unit-Coverage-Matrix:
+      | Unit Name | Primary Skills Taught | Supporting Skills | Hours | Learning Context |
+   d) Assessment-Matrix:
+      | Skill Name | Assessment Method | Assessment Criteria | Validation Evidence |
+3. Validierungsrichtlinien:
+   - Jeder Skill muss durch eine Textstelle belegt sein
+   - Skill-Verbindungen müssen durch den Modulaufbau oder explizite Erwähnung begründet sein
+   - Jeder Skill muss mindestens einer Unit zugeordnet sein
+   - Skill-Progression muss der zeitlichen Unit-Abfolge entsprechen
+4. Cross-Reference-Matrix:
+   Erstelle eine Matrix, die zeigt, wo und wie Skills zusammenhängen:
+   - Direkte Abhängigkeiten
+   - Gemeinsames Auftreten in Units
+   - Verwendung in gleichen Assessments
+   - Geteilte Voraussetzungen
+5. Spezielle Markierungen für:
+   - Skills, die in mehreren Units entwickelt werden
+   - Übergreifende Kompetenzen
+   - Kritische Pfade in der Skill-Entwicklung
+   - Assessment-relevante Skills
+Die Matrix soll:
+- Vollständig sein (alle Skills aus der Modulbeschreibung erfassen)
+- Nachvollziehbar sein (klare Quellenangaben)
+- Konsistent sein (keine Widersprüche in Abhängigkeiten)
+- Praktisch anwendbar sein (als Basis für Curriculum-Design)

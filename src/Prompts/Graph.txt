@@ -1,0 +1,61 @@
+Erstelle mir basierend auf der Modulbeschreibung aber vorallem aufgrund der generierten Matrizen einen Graphen mit der Struktur der JSON/YML. Beachte dabei:
+
+1. Grundlegende Anforderungen:
+   - Achte auf Genauigkeit und sei konkret mit Topics und Skills
+   - Gruppiere die Skills in ihre Kategorien (Methodical, Professional, Personal, Interdisciplinary)
+   - Erstelle den Graphen in einer Neo4J-kompatiblen Struktur
+   - Achte auf Vollständigkeit gemäß JSON-Anforderungen
+   - Stelle eine korrekte Syntax der Cipher Query sicher
+
+2. Skill-Beziehungen:
+   - Analysiere die Modulbeschreibung auf implizite und explizite Skill-Verbindungen
+   - Wenn Skills im gleichen Kontext oder der gleichen Learning Unit erwähnt werden, prüfe mögliche builds_on Beziehungen
+   - Beachte besonders Skills aus verschiedenen Kompetenzkategorien, die zusammen erwähnt werden
+   - Erweitere die Skills mit implizit gemeinten Skills, aber erstelle keine nicht definierten Verbindungen
+   - Prüfe bei jeder Skill-Kombination die inhaltlichen Abhängigkeiten
+   - Jeder Skill muss in einen der Definierten Skill Bereiche passen
+
+3. Unit-Skill-Beziehungen:
+   - Wenn eine Unit mehrere Skills teaches, prüfe ob diese Skills miteinander in Beziehung stehen
+   - Analysiere die Beschreibung der Unit auf Hinweise zu Skill-Abhängigkeiten
+   - Stelle sicher, dass alle teaches-Beziehungen durch die Modulbeschreibung begründbar sind
+   - Berücksichtige die zeitliche Abfolge der Units bei der Analyse von Skill-Abhängigkeiten
+
+4. Kompetenzübergreifende Beziehungen:
+   - Interdisciplinary Skills bauen häufig auf anderen Kompetenzen auf
+   - Professional und Methodical Skills sind oft Grundlage für Personal/Social Skills
+   - Prüfe besonders die Verbindungen zwischen:
+     * Professional Skills und Methodical Skills
+     * Methodical Skills und Personal/Social Skills
+     * Professional/Methodical Skills und Interdisciplinary Skills
+
+5. Validierung und Qualitätssicherung:
+   - Stelle für jede builds_on Beziehung sicher, dass sie durch die Modulbeschreibung begründbar ist
+   - Dokumentiere kurz die Begründung für nicht-offensichtliche Beziehungen
+   - Prüfe den erstellten Graphen mit dem Modultext, vor allem die Verbindungen
+   - Validiere die Verbindungen von Units zu Skills besonders sorgfältig
+
+6. Datenstruktur und Formatierung:
+   - Folge strikt der JSON-Struktur für Node-Typen und Eigenschaften
+   - Verwende die definierten Relationship-Typen
+   - Stelle sicher, dass alle erforderlichen Properties ausgefüllt sind
+   - Achte auf konsistente Benennung und Formatierung
+
+7. Erweiterungen und Einschränkungen:
+   - Erweitere Skills nur basierend auf expliziten oder stark impliziten Hinweisen im Text
+   - Füge keine Verbindungen hinzu, die nicht durch die Modulbeschreibung oder JSON-Struktur unterstützt werden
+   - Dokumentiere alle Erweiterungen mit Begründung aus dem Modultext
+
+8. Spezielle Überprüfungen:
+   - Stelle sicher, dass Skills, die in aufeinander aufbauenden Units vorkommen, auf ihre builds_on Beziehungen geprüft werden
+   - Überprüfe, ob Skills, die für komplexere Kompetenzen notwendig sind, als builds_on markiert sind
+   - Validiere, dass interdisziplinäre Kompetenzen mit ihren Grundlagen-Skills verbunden sind
+
+Gib mir den Graphen in einer Struktur, welche ich in Neo4J einfügen kann. Die Cipher Query soll:
+1. Alle Nodes und Beziehungen gemäß der JSON-Struktur erstellen
+2. Korrekte Properties und Labels verwenden
+3. Alle Beziehungen entsprechend der analysierten Verbindungen setzen
+4. Eine klare und nachvollziehbare Struktur haben
+5. In Neo4J ausführbar sein
+6. Bei mehreren CREATE und MATCH Statements in Neo4j müssen diese mit WITH verbunden werden
+7. Lasse Kompetenz-Nodes ohne Verbindung weg
