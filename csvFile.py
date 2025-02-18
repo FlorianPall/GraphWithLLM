@@ -2,15 +2,18 @@ import pandas as pd
 from sqlalchemy import create_engine, text
 import numpy as np
 import os
+from dotenv import load_dotenv
+
+load_dotenv("./DB/.env")
 
 CSV_FILES_FOLDER = "./src/ESCO/"
 
-# PostgreSQL Verbindungsdaten
-DB_USER = 'admin'
-DB_PASS = 'adminGeheim123'
-DB_HOST = 'localhost'
-DB_PORT = '5432'
-DB_NAME = 'esco'
+# PostgreSQL Verbindungsdaten aus .env
+DB_USER = os.getenv('POSTGRES_USER')
+DB_PASS = os.getenv('POSTGRES_PASSWORD')
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('POSTGRES_PORT')
+DB_NAME = os.getenv('POSTGRES_DB')
 
 # PostgreSQL Verbindung erstellen
 db_url = f'postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}'

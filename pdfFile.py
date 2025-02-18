@@ -196,9 +196,9 @@ def structure_to_correct_form(structure):
 
     return result
 
-def extract_pdf():
+def extract_pdf(filename):
     try:
-        pages = list(extract_pages("./src/Modules/2_Module.pdf"))
+        pages = list(extract_pages("./src/Modules/" + filename))
         pdf_data = pdf_groups(pages)
         pdf_structure = load_pdf_structure()
         structured_data = groups_by_structure(pdf_data, pdf_structure)
