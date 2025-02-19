@@ -2,6 +2,9 @@ import CheckStructure
 import csvFile
 import pdfFile
 import argparse
+import ReadConfig
+
+
 
 parser = argparse.ArgumentParser(description='pdf to graph')
 parser.add_argument('--escodb', action='store_true', help='read esco csv and write to db')
@@ -13,11 +16,14 @@ parser.add_argument('--config', type=str, help='name of the config file')
 
 args = parser.parse_args()
 
+if args.config:
+    ReadConfig.CONFIG = args.config
+
 if args.escodb or args.all:
     csvFile.csv_to_db()
 if args.extractpdf or args.all:
-    pdfFile.extract_pdf(args.extractpdf, args.config if args.config else "general.yml")
+    pdfFile.extract_pdf(args.extractpdf)
 if args.escolabel or args.all:
     csvFile.export_preferred_label()
 if args.structure or args.all:
-    CheckStructure.check_structure("./src", "LLM_Angaben.yml", "LLM_Graph.txt")
+    CheckStructure.check_structure("./src", "LLM_Graph.txt")

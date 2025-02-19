@@ -26,3 +26,127 @@ Modulestructure:
   Literature:
     - Literature
     - LITERATUR
+LLM_Angaben:
+  Nodes:
+    - Name: Program
+      Properties:
+        - name
+        - level
+        - totalETCS
+      Edges:
+        - Target: Module
+          Properties:
+            - contains
+
+    - Name: Module
+      Properties:
+        - code
+        - name
+        - year
+        - mandatory
+        - ETCS
+        - language
+      Edges:
+        - Target: Module
+          Properties:
+            - requires
+        - Target: Unit
+          Properties:
+            - consists_of
+        - Target: Assessment
+          Properties:
+            - assessed_by
+        - Target: Skill
+          Properties:
+            - needs_skill
+            - develops_skill
+
+    - Name: Unit
+      Properties:
+        - name
+        - code
+        - hours
+        - delivery_mode
+      Edges:
+        - Target: Topic
+          Properties:
+            - covers
+        - Target: Skill
+          Properties:
+            - teaches
+
+    - Name: Topic
+      Properties:
+        - name
+        - description
+        - iscedCategory
+        - URL
+      Edges: [ ]
+
+    - Name: Assessment
+      Properties:
+        - type
+        - weighting
+      Edges:
+        - Target: Skill
+          Properties:
+            - validates
+
+    - Name: Skill
+      Properties:
+        - name
+        - description
+        - proficiencyLevel
+        - URL
+      Edges:
+        - Target: Skill
+          Properties:
+            - builds_on
+        - Target: ESCO
+          Properties:
+            - partOf
+            - contains
+            - equivalent
+
+    - Name: ESCO
+      Properties:
+        - url
+        - preferredLabel
+        - alsLabels
+        - description
+      Edges:
+        - Target: ESCO
+          Properties:
+            - builds_on
+
+    - Name: Methodical Competence
+      Properties:
+        - name
+      Edges:
+        - Target: Skill
+          Properties:
+            - contains
+
+    - Name: Professional Competence
+      Properties:
+        - name
+      Edges:
+        - Target: Skill
+          Properties:
+            - contains
+
+    - Name: Personal/Social Competence
+      Properties:
+        - name
+      Edges:
+        - Target: Skill
+          Properties:
+            - contains
+
+    - Name: Interdisciplinary Competence
+      Properties:
+        - name
+      Edges:
+        - Target: Skill
+          Properties:
+            - contains

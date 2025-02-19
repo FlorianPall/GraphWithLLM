@@ -1,11 +1,11 @@
-import yaml
 import re
+import ReadConfig
 
-def check_structure (path, config_name, graph_name):
+def check_structure (path, graph_name):
     print("Start Checking the structure of the input file")
-    graph = load_graph(path, graph_name)
+    graph = load_graph('./src/', graph_name)
     relationships = extract_graph_connections(graph)
-    config = load_graph_config(path, config_name)
+    config = ReadConfig.config('LLM_Angaben')
     lines = check_graph_structure(relationships, config)
     print("Lines with errors (Anzahl: " + str(len(lines)) + "):" + str(lines))
     if len(lines) > 0:
@@ -15,18 +15,6 @@ def check_structure (path, config_name, graph_name):
     else:
         graph_splits = split_graph(graph)
     write_graph(path, graph_splits, graph_name)
-
-def load_graph_config (path, config_name):
-    print("Start loading the graph configuration")
-    path = path + "/" + config_name
-    # Mit Fehlerbehandlung
-    try:
-        with open(path, 'r') as f:
-            return yaml.safe_load(f)
-    except yaml.YAMLError as e:
-        print(f"YAML Fehler: {e}")
-    except FileNotFoundError:
-        print("Datei nicht gefunden")
 
 def load_graph (path, graph_name):
     print("Start loading the graph")
