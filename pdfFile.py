@@ -4,7 +4,6 @@ from pdfminer.high_level import extract_pages
 import yaml
 import json
 
-STRUCTURE_PATH = "./src/Modules/structure.yml"
 
 
 def group_text_boxes(text_boxes):
@@ -60,12 +59,12 @@ def pdf_groups(pages):
     except Exception as e:
         return f"Fehler beim Verarbeiten der PDF: {str(e)}"
 
-def load_pdf_structure():
+def load_pdf_structure(config_path):
     try:
         keywords = []
-        with open(STRUCTURE_PATH, 'r') as f:
+        with open("./src/config/" + config_path, 'r') as f:
             file = yaml.safe_load(f)
-            for category, titles in file.items():
+            for category, titles in file['Modulestructure'].items():
                 for title in titles:
                     keywords.append((word_to_lower_and_without_spaces(category), word_to_lower_and_without_spaces(title)))
 
@@ -73,7 +72,7 @@ def load_pdf_structure():
     except yaml.YAMLError as e:
         print(f"YAML Fehler: {e}")
     except FileNotFoundError:
-        print("Datei nicht gefunden")
+        print("Datei nicht gefunden. Path: " + "./src/config/" + config_path)
 
 def groups_by_structure(pdf_data, pdf_structure):
     result = {}
@@ -196,11 +195,11 @@ def structure_to_correct_form(structure):
 
     return result
 
-def extract_pdf(filename):
+def extract_pdf(filename, config_path):
     try:
         pages = list(extract_pages("./src/Modules/" + filename))
         pdf_data = pdf_groups(pages)
-        pdf_structure = load_pdf_structure()
+        pdf_structure = load_pdf_structure(config_path)
         structured_data = groups_by_structure(pdf_data, pdf_structure)
         correct_form = structure_to_correct_form(structured_data)
         print(json.dumps(correct_form, indent=2, ensure_ascii=False))

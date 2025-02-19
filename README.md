@@ -17,6 +17,8 @@ The `src` folder needs the following files:
   1. Folder `Modules` - Contains the Modules in pdf format.
 - For the AI:
   1. Folder `Prompts` - Contains the Prompts for the AI.
+- For the config:
+    1. `general.yml` - Contains the configuration for the program. You can add your own configuration in this folder.
 
 ## LLM_Angaben.yml
 ```yaml
@@ -91,3 +93,4 @@ You have to run the `main.py` file. You can use the following flags:
 - `--structure` to check the graph structure of the txt file.
 - `--escolabel` read ESCO-DB and extract preferred label and description.
 - `--all` to run all the functions at once.
+- `--config` to use a different config file. Value is the filename. Default is `general.yml`.

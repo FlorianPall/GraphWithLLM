@@ -1,0 +1,28 @@
+Modulestructure:
+  FormalDetails:
+    - Formal Details of the Module
+    - FORMALE ANGABEN ZUM MODUL
+  TeachingMethods:
+    - EINGESETZTE LEHRFORMEN
+    - Teaching Methods
+  Examination:
+    - Forms of Examination
+    - EINGESETZTE PRÜFUNGSFORMEN
+  WorkloadAndECTS:
+    - Workload and ECTS Credit Points
+    - WORKLOAD UND ECTS-LEISTUNGSPUNKTE
+  Competences:
+    - Qualification Goals and Competences
+    - QUALIFIKATIONSZIELE UND KOMPETENZEN
+  UnitsAndContents:
+    - Learning Units and Contents
+    - LERNEINHEITEN UND INHALTE
+  Specifics:
+    - Specifics
+    - BESONDERHEITEN
+  Prerequisites:
+    - Prerequisites
+    - VORAUSSETZUNGEN
+  Literature:
+    - Literature
+    - LITERATUR
