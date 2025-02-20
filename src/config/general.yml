@@ -150,3 +150,7 @@ LLM_Angaben:
         - Target: Skill
           Properties:
             - contains
+Ignored_Properties_Merging:
+  - code
+Ignored_Nodes_Merging:
+  - Assessment

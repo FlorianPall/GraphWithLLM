@@ -1,4 +1,4 @@
-from ReadConfig import config
+from ReadFiles import config
 
 from pdfminer.high_level import extract_pages
 import json

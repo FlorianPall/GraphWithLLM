@@ -1,5 +1,5 @@
 import re
-import ReadConfig
+import ReadFiles
 
 def check_structure (path, graph_name):
     print("Start Checking the structure of the input file")
