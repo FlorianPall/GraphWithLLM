@@ -1,5 +1,5 @@
 from ReadFiles import config
-
+from AI import simplify_competences, translate_modules
 from pdfminer.high_level import extract_pages
 import json
 
@@ -214,76 +214,10 @@ def extract_pdf(filename):
         pdf_structure = load_pdf_structure()
         structured_data = groups_by_structure(pdf_data, pdf_structure)
         correct_form = structure_to_correct_form(structured_data)
-        extract_competences(correct_form)
-        replace_competences(correct_form, json.loads(testing_simplify()))
+        correct_form = translate_modules(correct_form)
+        competences = extract_competences(correct_form)
+        replace_competences(correct_form, simplify_competences(competences))
         print(json.dumps(correct_form, indent=2, ensure_ascii=False))
 
     except Exception as e:
         print(f"Fehler beim Verarbeiten der PDF: {str(e)}")
-
-def testing_simplify():
-    return """{
-  "Mathematik I (T4INF1001)": {
-    "competences": [
-      {
-        "FACHKOMPETENZ": [
-          "The students can develop mathematical thinking and argumentation skills.",
-          "The students are able to demonstrate a basic understanding of discrete mathematics and linear algebra.",
-          "The students can apply this knowledge to problems in engineering sciences and computer science.",
-          "The students are able to describe scientific and technical processes using discrete mathematics and linear algebra.",
-          "The students can develop an understanding of the complexity of matrix calculations."
-        ]
-      },
-      {
-        "METHODENKOMPETENZ": [
-          "The students can apply logical thinking skills.",
-          "The students are able to structure problems clearly.",
-          "The students can develop creative and exploratory behaviors.",
-          "The students are able to demonstrate perseverance when solving mathematical problems."
-        ]
-      },
-      {
-        "PERSONALE UND SOZIALE KOMPETENZ": [
-          "The students can work independently on mathematical problems.",
-          "The students are able to communicate mathematical concepts to others."
-        ]
-      },
-      {
-        "ÜBERGREIFENDE HANDLUNGSKOMPETENZ": [
-          "The students can transfer mathematical principles to other disciplines.",
-          "The students are able to use mathematical tools to solve interdisciplinary problems."
-        ]
-      }
-    ]
-  },
-  "Theoretische Informatik I (T4INF1002)": {
-    "competences": [
-      {
-        "FACHKOMPETENZ": [
-          "The students can understand the theoretical foundations of propositional and predicate logic.",
-          "The students are able to understand formal specification of algorithms and classify them.",
-          "The students can master the model of logical programming and apply it."
-        ]
-      },
-      {
-        "METHODENKOMPETENZ": [
-          "The students can break down complex business applications through abstract thinking.",
-          "The students are able to apply logical reasoning and inference depending on the situation.",
-          "The students can develop solution strategies for complex problems."
-        ]
-      },
-      {
-        "PERSONALE UND SOZIALE KOMPETENZ": [
-          "The students can present logical concepts to others.",
-          "The students are able to work in teams to solve complex logical problems."
-        ]
-      },
-      {
-        "ÜBERGREIFENDE HANDLUNGSKOMPETENZ": [
-          "The students can communicate with experts and laypeople about topics in logic, logical inference, verification, and abstract thinking at a scientific level.",
-          "The students are able to apply logical reasoning skills to various interdisciplinary contexts."
-        ]
-      }
-    ]
-  }
-}"""
