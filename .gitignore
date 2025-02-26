@@ -171,6 +171,7 @@ cython_debug/
 .pypirc
 
 src/*
+*.txt
 
 .DS_Store
 .idea/

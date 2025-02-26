@@ -41,6 +41,6 @@ if args.extractpdf or args.all:
 if args.escolabel or args.all:
     csvFile.export_preferred_label()
 if args.structure or args.all:
-    CheckStructure.check_structure("./src", "LLM_Graph.txt")
+    CheckStructure.check_structure()
 if args.merge or args.all:
     MergeGraphs.merge()

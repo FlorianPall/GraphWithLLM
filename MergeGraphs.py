@@ -73,7 +73,9 @@ def change_relationship_end_node(start, old_end, new_end, data):
 
 def write_json_cache(data):
     try:
-        with open('./src/Cache/Merged_Graph_JSON.json', 'w', encoding='utf-8') as file:
+        filename = config('Caching')['Merged_Graph_JSON']
+        print("Writing to file: " + filename)
+        with open('./src/Cache/' + filename, 'w', encoding='utf-8') as file:
             json.dump(data, file, indent=2, ensure_ascii=False)
     except Exception as e:
         print(f"Error writing to file: {e}")

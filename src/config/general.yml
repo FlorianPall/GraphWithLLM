@@ -26,7 +26,7 @@ Modulestructure:
   Literature:
     - Literature
     - LITERATUR
-LLM_Angaben:
+LLM_Structure:
   Nodes:
     - Name: Program
       Properties:
@@ -154,3 +154,7 @@ Ignored_Properties_Merging:
   - code
 Ignored_Nodes_Merging:
   - Assessment
+Caching:
+  Graph_JSON: Graph_JSON.json
+  Merged_Graph_JSON: Merged_Graph_JSON.json
+  LLM_Graph: LLM_Graph.txt
