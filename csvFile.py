@@ -1,23 +1,14 @@
 import pandas as pd
-from sqlalchemy import create_engine, text
+from sqlalchemy import text
 import numpy as np
 import os
-from dotenv import load_dotenv
-
-load_dotenv("./DB/.env")
+from Files import csv, config
+from DBEngine import get_engine
 
 CSV_FILES_FOLDER = "./src/ESCO/"
 
-# PostgreSQL Verbindungsdaten aus .env
-DB_USER = os.getenv('POSTGRES_USER')
-DB_PASS = os.getenv('POSTGRES_PASSWORD')
-DB_HOST = os.getenv('DB_HOST')
-DB_PORT = os.getenv('POSTGRES_PORT')
-DB_NAME = os.getenv('POSTGRES_DB')
-
 # PostgreSQL Verbindung erstellen
-db_url = f'postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
-engine = create_engine(db_url)
+engine = get_engine()
 
 
 def csv_to_db():
@@ -49,18 +40,16 @@ def clean_data(df):
 
     df.columns = df.columns.str.lower().str.strip().str.replace(' ', '').str.replace('"', '')
 
+    for col in df.select_dtypes(include=['object']).columns:
+        df[col] = df[col].str.strip() if df[col].notna().any() else df[col]
+
     return df
 
 def import_csv(file_path):
     """Importiert CSV Daten in die PostgreSQL Datenbank"""
     try:
         # CSV einlesen
-        df = pd.read_csv(file_path,
-                         encoding='utf-8',
-                         # Verhindert, dass Pandas Kommas in Textfeldern als Trenner interpretiert
-                         quotechar='"',
-                         # Erlaubt Anführungszeichen in Textfeldern
-                         escapechar='\\')
+        df = csv(file_path)
 
         # Daten bereinigen
         df = clean_data(df)
@@ -84,12 +73,14 @@ def export_preferred_label():
         with engine.connect() as connection:
             result = connection.execute(text("SELECT DISTINCT preferredlabel FROM skills where preferredlabel is not null"))
             df = pd.DataFrame(result.fetchall(), columns=['preferredlabel'])
-            df.to_csv('./src/Output/preferred_label.csv', index=False, header=True, sep=';')
+            file_name = config('Caching')['ESCO_preferred_label']
+            df.to_csv('./src/Output/' + file_name, index=False, header=True, sep=';')
 
             result = connection.execute(
                 text("SELECT DISTINCT preferredlabel, description FROM skills where preferredlabel is not null"))
             df = pd.DataFrame(result.fetchall(), columns=['preferredlabel', 'description'])
-            df.to_csv('./src/Output/preferred_label_and_description.csv', index=False, header=True, sep=';')
+            file_name = config('Caching')['ESCO_preferred_label_and_description']
+            df.to_csv('./src/Output/' + file_name, index=False, header=True, sep=';')
             print("Export erfolgreich")
     except Exception as e:
         print(f"Fehler beim Export: {str(e)}")

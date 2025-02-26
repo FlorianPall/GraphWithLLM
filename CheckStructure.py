@@ -1,5 +1,5 @@
 import re
-import ReadFiles
+import Files
 
 def check_structure ():
     graph_name = ReadFiles.config('Caching')['LLM_Graph']

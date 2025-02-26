@@ -158,3 +158,6 @@ Caching:
   Graph_JSON: Graph_JSON.json
   Merged_Graph_JSON: Merged_Graph_JSON.json
   LLM_Graph: LLM_Graph.txt
+  ESCO_preferred_label: preferred_label.csv
+  ESCO_preferred_label_and_description: preferred_label_and_description.csv
+  Merged_Graph_ESCO_JSON: Merged_Graph_ESCO_JSON.json

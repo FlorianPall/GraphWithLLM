@@ -1,10 +1,10 @@
 
-
+import ESCO
 import CheckStructure
 import csvFile
 import pdfFile
 import argparse
-import ReadFiles
+import Files
 import MergeGraphs
 import Startup
 
@@ -26,6 +26,7 @@ parser.add_argument('--all', action='store_true', help='all flags')
 parser.add_argument('--config', type=str, help='name of the config file')
 parser.add_argument('--merge', action='store_true', help='merge graphs')
 parser.add_argument('--folderstructure', action='store_true', help='creates the folder structure of the project')
+parser.add_argument('--connectesco', action='store_true', help='connect esco with skills in graph')
 
 args = parser.parse_args()
 
@@ -44,3 +45,5 @@ if args.structure or args.all:
     CheckStructure.check_structure()
 if args.merge or args.all:
     MergeGraphs.merge()
+if args.connectesco or args.all:
+    ESCO.connect_esco()

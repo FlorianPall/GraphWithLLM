@@ -1,4 +1,4 @@
-from ReadFiles import config
+from Files import config
 from AI import simplify_competences, translate_modules
 from pdfminer.high_level import extract_pages
 import json

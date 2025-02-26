@@ -1,0 +1,7 @@
+Connect each of these skills with a suitable ESCO skill. Dont rewrite any title. The output structure should look like this:
+[["Skill1Id", "ESCO1preferredlabel", "Type1"], ["Skill2Id", "ESCO2preferredlabel", "Type2"], ...]
+Types:
+- partOf
+- contains
+- equivalent
+Skills:

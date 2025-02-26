@@ -1,5 +1,6 @@
 import yaml
 import json
+import pandas as pd
 
 CONFIG = "general.yml"
 
@@ -25,3 +26,18 @@ def cache(file):
     except KeyError as e:
         print(f"Key not found: {e}")
 
+def csv(file_path):
+    return pd.read_csv(file_path,
+                         encoding='utf-8',
+                         # Verhindert, dass Pandas Kommas in Textfeldern als Trenner interpretiert
+                         quotechar='"',
+                         # Erlaubt Anführungszeichen in Textfeldern
+                         escapechar='\\')
+
+def write_json_cache(data, filename):
+    try:
+        print("Writing to file: " + filename)
+        with open('./src/Cache/' + filename, 'w', encoding='utf-8') as file:
+            json.dump(data, file, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"Error writing to file: {e}")

@@ -1,7 +1,4 @@
-from ReadFiles import cache
-from ReadFiles import config
-import json
-
+from Files import cache, config, write_json_cache
 def merge():
     data = cache('Graph_JSON.json')
     ignored_properties = config('Ignored_Properties_Merging')
@@ -9,7 +6,7 @@ def merge():
     node_map = extract(data, ignored_properties, ignored_nodes)
     duplicates = detect_duplicates(node_map)
     connections_of_duplicates(duplicates, data)
-    write_json_cache(data)
+    write_json_cache(data, config('Caching')['Merged_Graph_JSON'])
 
 def properties_equal(prop1, prop2, ignored_properties):
     prop1_filtered = {k: v for k, v in prop1.items() if k not in ignored_properties}
@@ -71,11 +68,3 @@ def change_relationship_end_node(start, old_end, new_end, data):
             relation["endNode"] = new_end
             break
 
-def write_json_cache(data):
-    try:
-        filename = config('Caching')['Merged_Graph_JSON']
-        print("Writing to file: " + filename)
-        with open('./src/Cache/' + filename, 'w', encoding='utf-8') as file:
-            json.dump(data, file, indent=2, ensure_ascii=False)
-    except Exception as e:
-        print(f"Error writing to file: {e}")
