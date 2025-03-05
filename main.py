@@ -31,7 +31,7 @@ parser.add_argument('--connectesco', action='store_true', help='connect esco wit
 args = parser.parse_args()
 
 if args.config:
-    ReadFiles.CONFIG = args.config
+    Files.CONFIG = args.config
 
 if args.folderstructure or args.all:
     Startup.folder_structure(necessary_folders)
@@ -41,9 +41,9 @@ if args.extractpdf or args.all:
     pdfFile.extract_pdf(args.extractpdf)
 if args.escolabel or args.all:
     csvFile.export_preferred_label()
-if args.structure or args.all:
-    CheckStructure.check_structure()
-if args.merge or args.all:
-    MergeGraphs.merge()
 if args.connectesco or args.all:
     ESCO.connect_esco()
+if args.merge or args.all:
+    MergeGraphs.merge()
+if args.structure or args.all:
+    CheckStructure.check_structure()

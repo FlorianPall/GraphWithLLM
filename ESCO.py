@@ -65,6 +65,7 @@ def add_esco_to_graph(skills, data, connected_skills):
             "startNode": connection[0],
             "endNode": connection[1],
             "type": connection[2],
+            "properties": {}
         })
 
 
