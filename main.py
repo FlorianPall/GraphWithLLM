@@ -7,6 +7,7 @@ import argparse
 import Files
 import MergeGraphs
 import Startup
+import AI
 
 necessary_folders = [
     './src/Cache',
@@ -41,9 +42,16 @@ if args.extractpdf or args.all:
     pdfFile.extract_pdf(args.extractpdf)
 if args.escolabel or args.all:
     csvFile.export_preferred_label()
-if args.connectesco or args.all:
-    ESCO.connect_esco()
 if args.merge or args.all:
     MergeGraphs.merge()
+if args.connectesco or args.all:
+    ESCO.connect_esco()
 if args.structure or args.all:
     CheckStructure.check_structure()
+
+data = AI.generate("Hallo, wie geht es dir?")
+print(data['response'])
+data = AI.generate("Was ist ein Computer?", data)
+print(data['response'])
+data = AI.generate("Schreibe die letzte Anfrage in Stichpunkten", data)
+print(data['response'])
