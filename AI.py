@@ -3,21 +3,36 @@ import os
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
-from Files import config
+from Files import config, get_prompt
 
 load_dotenv("./DB/.env")
 
-def simplify_competences(competences):
-    return json.loads(simplify_competences_testing())
+def simplify_competences(competences, data = None):
+    simplify_prompt = get_prompt("Simplify")
+    return generate(simplify_prompt + json.dumps(competences), data)
 
-def translate_modules(modules):
-    return modules
+def translate_modules(modules, data = None):
+    translate_prompt = get_prompt("Translate")
+    return generate(translate_prompt + json.dumps(modules), data)
 
-def connected_esco(skills):
-    return json.loads(connect_esco_testing())
+def connected_esco(skills, data = None):
+    esco_prompt = get_prompt("ConnectESCO")
+    return generate(esco_prompt + json.dumps(skills), data)
 
+def create_cipher(graph, data = None):
+    cipher_prompt = get_prompt("Graph")
+    return generate(cipher_prompt + json.dumps(graph), data)
 
-def generate(prompt, data = None):
+def matrix(graph, data = None):
+    matrix_prompt = get_prompt("Matrix")
+    return generate(matrix_prompt + json.dumps(graph), data)
+
+def graph_json(graph, data = None):
+    graph_prompt = get_prompt("Graph")
+    return generate(graph_prompt + graph, data)
+
+def generate(prompt, data):
+    print("AI generating...")
     settings = config('LLM')
     client = genai.Client(
         api_key=os.getenv('API_KEY'),
@@ -72,84 +87,9 @@ def generate(prompt, data = None):
             parts=[types.Part.from_text(text=response)],
         )
     )
-
+    print("AI generated.")
     return {
         "response": response,
         "used_tokens": used_tokens,
         "history": history
     }
-
-# TESTING
-def simplify_competences_testing():
-    return """{
-          "Mathematik I (T4INF1001)": {
-            "competences": [
-              {
-                "FACHKOMPETENZ": [
-                  "The students can develop mathematical thinking and argumentation skills.",
-                  "The students are able to demonstrate a basic understanding of discrete mathematics and linear algebra.",
-                  "The students can apply this knowledge to problems in engineering sciences and computer science.",
-                  "The students are able to describe scientific and technical processes using discrete mathematics and linear algebra.",
-                  "The students can develop an understanding of the complexity of matrix calculations."
-                ]
-              },
-              {
-                "METHODENKOMPETENZ": [
-                  "The students can apply logical thinking skills.",
-                  "The students are able to structure problems clearly.",
-                  "The students can develop creative and exploratory behaviors.",
-                  "The students are able to demonstrate perseverance when solving mathematical problems."
-                ]
-              },
-              {
-                "PERSONALE UND SOZIALE KOMPETENZ": [
-                  "The students can work independently on mathematical problems.",
-                  "The students are able to communicate mathematical concepts to others."
-                ]
-              },
-              {
-                "ÜBERGREIFENDE HANDLUNGSKOMPETENZ": [
-                  "The students can transfer mathematical principles to other disciplines.",
-                  "The students are able to use mathematical tools to solve interdisciplinary problems."
-                ]
-              }
-            ]
-          },
-          "Theoretische Informatik I (T4INF1002)": {
-            "competences": [
-              {
-                "FACHKOMPETENZ": [
-                  "The students can understand the theoretical foundations of propositional and predicate logic.",
-                  "The students are able to understand formal specification of algorithms and classify them.",
-                  "The students can master the model of logical programming and apply it."
-                ]
-              },
-              {
-                "METHODENKOMPETENZ": [
-                  "The students can break down complex business applications through abstract thinking.",
-                  "The students are able to apply logical reasoning and inference depending on the situation.",
-                  "The students can develop solution strategies for complex problems."
-                ]
-              },
-              {
-                "PERSONALE UND SOZIALE KOMPETENZ": [
-                  "The students can present logical concepts to others.",
-                  "The students are able to work in teams to solve complex logical problems."
-                ]
-              },
-              {
-                "ÜBERGREIFENDE HANDLUNGSKOMPETENZ": [
-                  "The students can communicate with experts and laypeople about topics in logic, logical inference, verification, and abstract thinking at a scientific level.",
-                  "The students are able to apply logical reasoning skills to various interdisciplinary contexts."
-                ]
-              }
-            ]
-          }
-        }"""
-
-def connect_esco_testing():
-    return """[["S1", "interpret mathematical information", "equivalent"], 
-    ["S2", "algebra", "partOf"], 
-    ["TESTSKILL", "use logic programming", "equivalent"], 
-    ["S4", "think abstractly", "equivalent"], 
-    ["S5", "communicate with a non-scientific audience", "contains"]]"""

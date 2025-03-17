@@ -153,6 +153,9 @@ You have to run the `main.py` file. You can use the following flags:
 - `--config` to use a different config file. Value is the filename. Default is `general.yml`. Your own config needs the same structure as the `general.yml`.
 - `--merge` to merge graphs into one.
 - `--folderstructure` to create the folder structure for the project.
+- `--connectesco` connect esco with skills in graph
+- `--createcipher` to create the cipher for the graph.
+- `--createjsongraph` create json graph from pdf json
 
 #### Results
 The different results of each step will be saved in the `Cache` folder. The final result will be saved in the `Output` folder.

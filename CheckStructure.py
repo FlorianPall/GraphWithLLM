@@ -2,12 +2,12 @@ import re
 import Files
 
 def check_structure ():
-    graph_name = ReadFiles.config('Caching')['LLM_Graph']
+    graph_name = Files.config('Caching')['LLM_Graph']
     path = './src/Cache/'
     print("Start Checking the structure of the input file")
     graph = load_graph(path, graph_name)
     relationships = extract_graph_connections(graph)
-    config = ReadFiles.config('LLM_Structure')
+    config = Files.config('LLM_Structure')
     lines = check_graph_structure(relationships, config)
     print("Lines with errors (Anzahl: " + str(len(lines)) + "):" + str(lines))
     if len(lines) > 0:

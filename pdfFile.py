@@ -1,4 +1,4 @@
-from Files import config
+from Files import config, write_json_cache
 from AI import simplify_competences, translate_modules
 from pdfminer.high_level import extract_pages
 import json
@@ -214,10 +214,12 @@ def extract_pdf(filename):
         pdf_structure = load_pdf_structure()
         structured_data = groups_by_structure(pdf_data, pdf_structure)
         correct_form = structure_to_correct_form(structured_data)
-        correct_form = translate_modules(correct_form)
+        data = translate_modules(correct_form)
+        correct_form = json.loads(data['response'])
         competences = extract_competences(correct_form)
-        replace_competences(correct_form, simplify_competences(competences))
-        print(json.dumps(correct_form, indent=2, ensure_ascii=False))
+        data = simplify_competences(competences, data)
+        replace_competences(correct_form, json.loads(data['response']))
+        write_json_cache(correct_form, config('Caching')['PDF_JSON'])
 
     except Exception as e:
         print(f"Fehler beim Verarbeiten der PDF: {str(e)}")

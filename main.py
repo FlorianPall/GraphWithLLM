@@ -7,7 +7,7 @@ import argparse
 import Files
 import MergeGraphs
 import Startup
-import AI
+import Graph
 
 necessary_folders = [
     './src/Cache',
@@ -28,6 +28,8 @@ parser.add_argument('--config', type=str, help='name of the config file')
 parser.add_argument('--merge', action='store_true', help='merge graphs')
 parser.add_argument('--folderstructure', action='store_true', help='creates the folder structure of the project')
 parser.add_argument('--connectesco', action='store_true', help='connect esco with skills in graph')
+parser.add_argument('--createcipher', action='store_true', help='create cipher query')
+parser.add_argument('--createjsongraph', action='store_true', help='create json graph from pdf json')
 
 args = parser.parse_args()
 
@@ -40,18 +42,15 @@ if args.escodb or args.all:
     csvFile.csv_to_db()
 if args.extractpdf or args.all:
     pdfFile.extract_pdf(args.extractpdf)
+if args.createjsongraph or args.all:
+    Graph.create_json_graph()
 if args.escolabel or args.all:
     csvFile.export_preferred_label()
 if args.merge or args.all:
     MergeGraphs.merge()
 if args.connectesco or args.all:
     ESCO.connect_esco()
+if args.createcipher or args.all:
+    Graph.create_cipher()
 if args.structure or args.all:
     CheckStructure.check_structure()
-
-data = AI.generate("Hallo, wie geht es dir?")
-print(data['response'])
-data = AI.generate("Was ist ein Computer?", data)
-print(data['response'])
-data = AI.generate("Schreibe die letzte Anfrage in Stichpunkten", data)
-print(data['response'])

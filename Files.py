@@ -41,3 +41,23 @@ def write_json_cache(data, filename):
             json.dump(data, file, indent=2, ensure_ascii=False)
     except Exception as e:
         print(f"Error writing to file: {e}")
+
+def write_txt_cache(data, filename):
+    try:
+        print("Writing to file: " + filename)
+        with open('./src/Cache/' + filename, 'w', encoding='utf-8') as file:
+            file.write(str(data))
+    except Exception as e:
+        print(f"Error writing to file: {e}")
+
+def get_prompt(prompt_name):
+    try:
+        with open('./src/Prompts/' + prompt_name + '.txt', 'r') as file:
+            return file.read()
+    except FileNotFoundError:
+        print("File not found!")
+    except json.JSONDecodeError:
+        print("Invalid JSON format!")
+    except KeyError as e:
+        print(f"Key not found: {e}")
+    return None
