@@ -12,7 +12,7 @@ def create_cipher():
     return data
 
 def create_json_graph():
-    filename = config('Caching')['PDF_JSON']
+    filename = config('Caching')['Pdf_JSON']
     graph = cache(filename)
     data = matrix(graph)
     matrix_response = data['response']

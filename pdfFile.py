@@ -219,7 +219,7 @@ def extract_pdf(filename):
         competences = extract_competences(correct_form)
         data = simplify_competences(competences, data)
         replace_competences(correct_form, json.loads(data['response']))
-        write_json_cache(correct_form, config('Caching')['PDF_JSON'])
+        write_json_cache(correct_form, config('Caching')['Pdf_JSON'])
 
     except Exception as e:
         print(f"Fehler beim Verarbeiten der PDF: {str(e)}")

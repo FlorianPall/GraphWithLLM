@@ -28,7 +28,7 @@ def matrix(graph, data = None):
     return generate(matrix_prompt + json.dumps(graph), data)
 
 def graph_json(graph, data = None):
-    graph_prompt = get_prompt("Graph")
+    graph_prompt = get_prompt("Graph_JSON")
     return generate(graph_prompt + graph, data)
 
 def generate(prompt, data):
