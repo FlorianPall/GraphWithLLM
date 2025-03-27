@@ -122,6 +122,7 @@ LLM:
 5. Check the prompts in the `Prompts` folder.
 6. Get the ESCO Skills and store them in the `ESCO` folder. They can be stored in multiple csv files.
 7. The projects needs a .env file with the following content. The file has to be in the `DB` folder:
+8. Start the docker container with the docker-compose file in the `DB` folder.
   ```env
 POSTGRES_USER=
 POSTGRES_PASSWORD=
@@ -146,3 +147,12 @@ You have to run the `main.py` file. You can use the following flags:
 
 #### Results
 The different results of each step will be saved in the `Cache` folder. The final result will be saved in the `Cache` folder. The name of the file is defined in the config file with the key `LLM_Graph`.
+
+
+# ToDos in the 6th Semester
+- (optional) Implement UI for Skill Suggestions
+- Implement highlighting of the skill suggestions in the pdf
+- Test the program with Gemini Pro
+- Test the program with whole Modules
+- Write Paper
+- Skill Clustering with LLM
