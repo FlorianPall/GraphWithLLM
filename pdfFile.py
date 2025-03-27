@@ -207,19 +207,20 @@ def replace_competences(data, competences):
                 if "competences" in section:
                     data[module_key][i] = {"competences": competences[matching_key]["competences"]}
 
-def extract_pdf(filename):
+def extract_pdf(filename, data):
     try:
         pages = list(extract_pages("./src/Modules/" + filename))
         pdf_data = pdf_groups(pages)
         pdf_structure = load_pdf_structure()
         structured_data = groups_by_structure(pdf_data, pdf_structure)
         correct_form = structure_to_correct_form(structured_data)
-        data = translate_modules(correct_form)
+        data = translate_modules(correct_form, data)
         correct_form = json.loads(data['response'])
         competences = extract_competences(correct_form)
         data = simplify_competences(competences, data)
         replace_competences(correct_form, json.loads(data['response']))
         write_json_cache(correct_form, config('Caching')['Pdf_JSON'])
-
+        return data
     except Exception as e:
         print(f"Fehler beim Verarbeiten der PDF: {str(e)}")
+        return None

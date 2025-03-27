@@ -1,1 +1,8 @@
-erstelle mir daraus eine Cipher Query:
+erstelle mir daraus eine Cipher Query, nutze für die Nodes und für die Relations APOC-Erweiterungsprozeduren:
+Beispiel output:
+[
+  {
+    "query": "CALL apoc.create.node(['Module'], {code: 'T4INF1001', name: 'Mathematics I', year: '1st', mandatory: 'true', ETCS: '5', language: 'German'}) YIELD node AS n1\nCALL apoc.create.node(['Unit'], {name: 'Fundamentals of discrete mathematics', code: 'DM101', hours: 'Variable', delivery_mode: 'Lecture, seminar, exercise'}) YIELD node AS n2\nCALL apoc.create.relationship(n2, 'teaches', {}, n3) YIELD rel AS r17\nCALL apoc.create.relationship(n6, 'teaches', {}, n3) YIELD rel AS r18\nCALL apoc.create.relationship(n7, 'teaches', {}, n3) YIELD rel AS r19\n
+    "params": {}
+  }
+]

@@ -18,8 +18,8 @@ def extract_skills(data):
             skills[node['id']] = {"Skill": node['properties']['name'], "Description": node['properties']['description']}
     return skills
 
-def connected_esco_skills(skills):
-    return connected_esco(skills)
+def connected_esco_skills(skills, data):
+    return connected_esco(skills, data)
 
 def esco_skills(extracted_skills):
     preferred_labels = [pair[1] for pair in extracted_skills]
@@ -29,7 +29,7 @@ def esco_skills(extracted_skills):
             query = text("""
                          SELECT concepturi, preferredLabel, altlabels, description
                          FROM skills
-                         WHERE preferredlabel = :label LIMIT 1;
+                         WHERE preferredlabel ILIKE :label LIMIT 1;
                          """)
 
             result = connection.execute(query, {"label": label})
@@ -46,19 +46,27 @@ def add_esco_to_graph(skills, data, connected_skills):
     # Add Nodes
     counter = 1
     for skill in skills:
+        current_skill = skills[skill]
+        if current_skill is None:
+            print("ERROR: No ESCO Skill found for: " + str(skill))
+            connected_skills = [connection for connection in connected_skills if connection[1] != skill]
+            continue
+
         data['nodes'].append({
             "id": 'E' + str(counter),
             "label": "ESCO",
             "properties": {
-                "name": skills[skill]['preferredlabel'],
+                "name": skills[skill].get('preferredlabel', "ERROR"),
                 "description": skills[skill]['description'],
                 "altlabels": skills[skill]['altlabels'],
                 "concepturi": skills[skill]['concepturi']
             }
         })
-        connected_skills[counter - 1][1] = 'E' + str(counter)
-        counter += 1
 
+        for i, connection in enumerate(connected_skills):
+            if connection[1] == skill:
+                connected_skills[i][1] = 'E' + str(counter)
+        counter += 1
 # Add relationships
     for connection in connected_skills:
         data['relationships'].append({
@@ -69,10 +77,12 @@ def add_esco_to_graph(skills, data, connected_skills):
         })
 
 
-def connect_esco():
-    data = read_data()
-    extracted_skills = extract_skills(data)
-    connected_skills = connected_esco_skills(extracted_skills)
+def connect_esco(data):
+    json_graph = read_data()
+    extracted_skills = extract_skills(json_graph)
+    data = connected_esco_skills(extracted_skills, data)
+    connected_skills = json.loads(data['response'])
     skills = esco_skills(connected_skills)
-    add_esco_to_graph(skills, data, connected_skills)
-    write_json_cache(data, config('Caching')['Merged_Graph_ESCO_JSON'])
+    add_esco_to_graph(skills, json_graph, connected_skills)
+    write_json_cache(json_graph, config('Caching')['Merged_Graph_ESCO_JSON'])
+    return data

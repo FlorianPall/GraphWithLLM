@@ -29,9 +29,13 @@ def cache(file):
 def csv(file_path):
     return pd.read_csv(file_path,
                          encoding='utf-8',
-                         # Verhindert, dass Pandas Kommas in Textfeldern als Trenner interpretiert
                          quotechar='"',
-                         # Erlaubt Anführungszeichen in Textfeldern
+                         escapechar='\\')
+def csv_semicolon(file_path):
+    return pd.read_csv(file_path,
+                         encoding='utf-8',
+                         sep=';',
+                         quotechar='"',
                          escapechar='\\')
 
 def write_json_cache(data, filename):

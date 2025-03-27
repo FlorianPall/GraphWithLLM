@@ -1,9 +1,10 @@
+import base64
 import json
 import os
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
-from Files import config, get_prompt
+from Files import config, get_prompt, csv_semicolon
 
 load_dotenv("./DB/.env")
 
@@ -17,7 +18,10 @@ def translate_modules(modules, data = None):
 
 def connected_esco(skills, data = None):
     esco_prompt = get_prompt("ConnectESCO")
-    return generate(esco_prompt + json.dumps(skills), data)
+    esco_skills_filename = config('Caching')['ESCO_preferred_label']
+    esco_skills = csv_semicolon("./src/Output/" + esco_skills_filename)
+    esco_skills_str = esco_skills.to_csv(sep=';', index=False)
+    return generate(esco_prompt + json.dumps(skills) + "\n Do not use other esco skills like these under any circumstances. This are the labels: \n" + esco_skills_str, data)
 
 def create_cipher(graph, data = None):
     cipher_prompt = get_prompt("Graph")
@@ -29,7 +33,8 @@ def matrix(graph, data = None):
 
 def graph_json(graph, data = None):
     graph_prompt = get_prompt("Graph_JSON")
-    return generate(graph_prompt + graph, data)
+    node_structure = config('LLM_Structure')
+    return generate(graph_prompt + graph + '\n YAML Structure: \n' + str(node_structure), data)
 
 def generate(prompt, data):
     print("AI generating...")

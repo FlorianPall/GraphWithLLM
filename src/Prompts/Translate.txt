@@ -1,0 +1,1 @@
+Translate everything into English, but leave the structure of the JSON the same

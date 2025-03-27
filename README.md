@@ -147,7 +147,6 @@ Caching:
 You have to run the `main.py` file. You can use the following flags:
 - `--escodb` to setup the ESCO DB and insert the data.
 - `--extractpdf` to extract the Modules from the pdf files. Value is the filename.
-- `--structure` to check the graph structure of the txt file.
 - `--escolabel` read ESCO-DB and extract preferred label and description.
 - `--all` to run all the functions at once.
 - `--config` to use a different config file. Value is the filename. Default is `general.yml`. Your own config needs the same structure as the `general.yml`.

@@ -47,35 +47,74 @@ Die Struktur soll:
 3. Alle Beziehungen entsprechend der analysierten Verbindungen setzen
 4. Eine klare und nachvollziehbare Struktur haben
 5. Lasse Kompetenz-Nodes ohne Verbindung weg
-Format: {
+6. Module soll auch eine Node sein mit den Relations, die in der YAML angegeben sind
+Format:
+{
   "nodes": [
     {
-      "id": ,
-      "label": ,
+      "id": 1,
+      "label": "Module",
       "properties": {
+        "code": "T4INF1001",
+        "name": "Mathematics I",
+        "year": "1st",
+        "mandatory": "true",
+        "ETCS": "5",
+        "language": "German"
       }
     },
     {
-      "id": ,
-      "label": ,
+      "id": 2,
+      "label": "Unit",
       "properties": {
+        "name": "Linear Algebra",
+        "code": "LA101",
+        "hours": "60",
+        "delivery_mode": "Lecture, seminar, exercise"
       }
     },
+    {
+      "id": 4,
+      "label": "Skill",
+      "properties": {
+        "name": "Basic understanding of linear algebra",
+        "description": "Ability to show a basic understanding of linear algebra.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 24,
+      "label": "Professional Competence",
+      "properties": {
+        "name": "Professional Competence"
+      }
+    },
+    {
+      "id": 28,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF1002",
+        "name": "Theoretische Informatik I",
+        "year": "1st",
+        "mandatory": "true",
+        "ETCS": "5",
+        "language": "German"
+      }
+    }
   ],
   "relationships": [
     {
       "startNode": "1",
       "endNode": "2",
-      "type": ,
-      "properties": {
-      }
+      "type": "consists_of",
+      "properties": {}
     },
     {
       "startNode": "1",
       "endNode": "3",
-      "type": ,
-      "properties": {
-      }
-    },
+      "type": "consists_of",
+      "properties": {}
+    }
   ]
 }
