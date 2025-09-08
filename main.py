@@ -1,12 +1,8 @@
-
-import ESCO
-import csvFile
-import pdfFile
+from Helper import csvFile, Files
+from Pdf import pdfFile
 import argparse
-import Files
-import MergeGraphs
 import Startup
-import Graph
+from Graph import Graph, ESCO, MergeGraphs
 
 necessary_folders = [
     './src/Cache',
@@ -20,7 +16,7 @@ necessary_folders = [
 parser = argparse.ArgumentParser(description='pdf to graph')
 parser.add_argument('--escodb', action='store_true', help='read esco csv and write to db')
 parser.add_argument('--extractpdf', type=str, help='wandelt pdf in json um. example: --extractpdf=LLM_Angaben.pdf')
-parser.add_argument('--escolabel', action='store_true', help='read ESCO-DB and extract preferred label and description')
+parser.add_argument('--escolabel', action='store_true', help='read ESCO-DB_Setup and extract preferred label and description')
 parser.add_argument('--all', action='store_true', help='all flags')
 parser.add_argument('--config', type=str, help='name of the config file')
 parser.add_argument('--merge', action='store_true', help='merge graphs')
@@ -48,7 +44,7 @@ if args.createjsongraph or args.all:
     print("##########Creating json graph##########")
     data = Graph.create_json_graph(data)
 if args.escolabel or args.all:
-    print("##########Reading ESCO-DB and extracting preferred label and description##########")
+    print("##########Reading ESCO-DB_Setup and extracting preferred label and description##########")
     csvFile.export_preferred_label()
 if args.merge or args.all:
     print("##########Merging graphs##########")
@@ -59,4 +55,5 @@ if args.connectesco or args.all:
 if args.createcipher or args.all:
     print("##########Creating cipher query##########")
     data = Graph.create_cipher_graph(data)
-data = Graph.create_cipher_graph(data)
+
+data = ESCO.connect_esco(data)

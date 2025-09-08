@@ -1,5 +1,5 @@
-from Files import config, write_json_cache
-from AI import simplify_competences, translate_modules
+from Helper.Files import config, write_json_cache
+from AI.AI import simplify_competences, translate_modules
 from pdfminer.high_level import extract_pages
 import json
 
@@ -57,9 +57,9 @@ def pdf_groups(pages):
     except Exception as e:
         return f"Fehler beim Verarbeiten der PDF: {str(e)}"
 
-def load_pdf_structure():
+def load_pdf_structure(log_callback):
     keywords = []
-    for category, titles in config('Modulestructure').items():
+    for category, titles in config('Modulestructure', log_callback).items():
         for title in titles:
             keywords.append((word_to_lower_and_without_spaces(category), word_to_lower_and_without_spaces(title)))
 
@@ -207,11 +207,12 @@ def replace_competences(data, competences):
                 if "competences" in section:
                     data[module_key][i] = {"competences": competences[matching_key]["competences"]}
 
-def extract_pdf(filename, data):
+def extract_pdf(filename, cache_folder, data, log_callback, set_process_complete, set_process_error):
     try:
-        pages = list(extract_pages("./src/Modules/" + filename))
+        log_callback('Starte PDF Extraktion')
+        pages = list(extract_pages("../src/Cache/" + cache_folder + "/" + filename))
         pdf_data = pdf_groups(pages)
-        pdf_structure = load_pdf_structure()
+        pdf_structure = load_pdf_structure(log_callback)
         structured_data = groups_by_structure(pdf_data, pdf_structure)
         correct_form = structure_to_correct_form(structured_data)
         data = translate_modules(correct_form, data)
@@ -219,8 +220,9 @@ def extract_pdf(filename, data):
         competences = extract_competences(correct_form)
         data = simplify_competences(competences, data)
         replace_competences(correct_form, json.loads(data['response']))
-        write_json_cache(correct_form, config('Caching')['Pdf_JSON'])
-        return data
+        write_json_cache(correct_form, cache_folder, config('Caching', log_callback)['Pdf_JSON'], log_callback)
+        set_process_complete(data)
     except Exception as e:
-        print(f"Fehler beim Verarbeiten der PDF: {str(e)}")
+        log_callback(f"Fehler beim Verarbeiten der PDF: {str(e)}")
+        set_process_error()
         return None

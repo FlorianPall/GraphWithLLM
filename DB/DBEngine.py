@@ -2,9 +2,7 @@ from dotenv import load_dotenv
 import os
 from sqlalchemy import create_engine
 
-load_dotenv("./DB/.env")
-
-CSV_FILES_FOLDER = "./src/ESCO/"
+load_dotenv("../DB_Setup/.env")
 
 # PostgreSQL Verbindungsdaten aus .env
 DB_USER = os.getenv('POSTGRES_USER')

@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Drawer Interface mit Live-Logs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .drawer-header {
+            background-color: white;
+            color: white;
+        }
+        .drawer-content {
+            background-color: #f8f9fa;
+        }
+        .log-area {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            font-family: 'Courier New', monospace;
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .text-area {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .start-btn {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .start-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+        }
+        .start-btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        .stop-btn {
+            background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+            border: none;
+        }
+        .stop-btn:hover {
+            background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+        }
+        .btn-group {
+            gap: 10px;
+        }
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+        .collapse-body {
+            padding: 20px;
+        }
+        .log-entry {
+            margin-bottom: 3px;
+            padding: 2px 0;
+            font-size: 0.9em;
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .alert-custom {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+            min-width: 300px;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .log-controls {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        .log-controls button {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: #e2e8f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+        .log-controls button:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .create-folder-section {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        .create-folder-section.show {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .file-upload-section {
+            background-color: #fff3cd;
+            border: 2px dashed #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .file-upload-section:hover {
+            background-color: #fff;
+            border-color: #ff8c00;
+        }
+        .file-upload-section.dragover {
+            background-color: #e6f3ff;
+            border-color: #007bff;
+        }
+        .file-list {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: white;
+            border-radius: 3px;
+            border: 1px solid #dee2e6;
+        }
+        .file-info {
+            flex-grow: 1;
+        }
+        .file-name {
+            font-weight: 600;
+            color: #495057;
+        }
+        .file-details {
+            font-size: 0.8em;
+            color: #6c757d;
+        }
+        .file-actions {
+            display: flex;
+            gap: 5px;
+        }
+        .btn-file-delete {
+            background: #dc3545;
+            border: none;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+        .btn-file-delete:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">
+                <i class="fas fa-cogs me-2"></i>
+                Flask Drawer Interface - Live Updates
+            </span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-4">Graph mit LLM</h2>
+                <div class="mb-3">
+                    <label for="selectCache" class="form-label">
+                        <i class="fas fa-cog me-2"></i>Cache Ordner auswählen
+                    </label>
+                    <select class="form-select" id="selectCache" onchange="onCacheChange()">
+                        <option value="" selected disabled>Lade Cache Ordner...</option>
+                    </select>
+                    <!-- Sektion für neuen Ordner erstellen -->
+                    <div id="createFolderSection" class="create-folder-section">
+                        <div class="row g-2">
+                            <div class="col-md-8">
+                                <label for="newFolderName" class="form-label">
+                                    <i class="fas fa-folder-plus me-2"></i>Neuer Ordnername
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="newFolderName" 
+                                       placeholder="Ordnername eingeben..."
+                                       maxlength="255">
+                            </div>
+                            <div class="col-md-4 d-flex align-items-end">
+                                <button class="btn btn-success me-2" id="saveFolderBtn" onclick="createFolder()">
+                                    <i class="fas fa-save me-2"></i>Speichern
+                                </button>
+                                <button class="btn btn-secondary" onclick="cancelCreateFolder()">
+                                    <i class="fas fa-times me-2"></i>Abbrechen
+                                </button>
+                            </div>
+                        </div>
+                        <small class="text-muted">
+                            <i class="fas fa-info-circle me-1"></i>
+                            Keine Sonderzeichen: / \\ : * ? " < > |
+                        </small>
+                    </div>
+                </div>
+                <!-- Drawer Accordion -->
+                <div class="accordion" id="drawerAccordion">
+                    {% for i in range(1, drawer_count + 1) %}
+                    <div class="card">
+                        <div class="card-header drawer-header" id="heading{{ i }}">
+                            <h5 class="mb-0">
+                                <button class="btn text-decoration-none w-100 text-start" 
+                                        type="button" 
+                                        data-bs-toggle="collapse" 
+                                        data-bs-target="#collapse{{ i }}" 
+                                        aria-expanded="false" 
+                                        aria-controls="collapse{{ i }}"
+                                        onclick="loadDrawerData({{ i }})">
+                                    <i class="fas fa-folder me-2"></i>
+                                    {{ i }} - {{ drawers[i] }}
+                                    <span class="float-end">
+                                        <i class="fas fa-chevron-down mt-1"></i>
+                                    </span>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse{{ i }}" class="collapse" aria-labelledby="heading{{ i }}" data-bs-parent="#drawerAccordion">
+                            <div class="card-body drawer-content collapse-body">
+                                <!-- File Upload Section (nur für Drawer 2) -->
+                                {% if i == 2 %}
+                                <div class="file-upload-section mb-4" id="fileUploadSection{{ i }}">
+                                    <h6><i class="fas fa-upload me-2"></i>Dateien hochladen</h6>
+                                    <div class="mb-3">
+                                        <input type="file" class="form-control" id="fileInput{{ i }}" 
+                                               accept=".pdf"
+                                               multiple onchange="handleFileSelect({{ i }})">
+                                        <div class="form-text">
+                                            Erlaubte Dateiformate: pdf (Max. 50MB)
+                                        </div>
+                                    </div>
+                                    <div id="fileList{{ i }}" class="file-list" style="display: none;">
+                                        <h6><i class="fas fa-list me-2"></i>Hochgeladene Dateien</h6>
+                                        <div id="fileItems{{ i }}"></div>
+                                    </div>
+                                    <h4>Ausgewählte Datei:</h4>
+                                    <h6 id="selectedFile{{ i }}" class="mt-3"></h4>
+                                </div>
+                                {% endif %}
+
+                                <!-- Control Buttons -->
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <div class="btn-group me-3">
+                                            <button class="btn btn-success start-btn" id="start-btn-{{ i }}" onclick="startDrawer({{ i }})">
+                                                <i class="fas fa-play me-2"></i>
+                                                Jetzt starten
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Logs Bereich mit Live-Updates -->
+                                    <div class="mb-3">
+                                        <h6><i class="fas fa-terminal me-2"></i>Live Logs</h6>
+                                        <div class="log-area" id="logs-{{ i }}">
+                                            <div class="log-controls">
+                                                <button onclick="clearLogs({{ i }})" title="Logs löschen">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                            <div class="log-entry">System bereit...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Text Editor Bereich -->
+                                    <div>
+                                        <h6><i class="fas fa-edit me-2"></i>Text Editor</h6>
+                                        <textarea class="form-control text-area mb-3" 
+                                                  id="textArea-{{ i }}" 
+                                                  rows="25"></textarea>
+                                        <!-- Buttons -->
+                                        <div class="btn-group d-flex">
+                                            <button class="btn btn-primary flex-fill" onclick="saveText({{ i }})">
+                                                <i class="fas fa-save me-2"></i>
+                                                Speichern
+                                            </button>
+                                            <button class="btn btn-warning flex-fill" onclick="resetText({{ i }})">
+                                                <i class="fas fa-undo me-2"></i>
+                                                Zurücksetzen
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Alert Container -->
+    <div id="alertContainer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // EventSource connections für Live-Updates
+        const eventSources = {};
+        loadCacheFolders();
+
+        function showAlert(message, type = 'success') {
+            const alertContainer = document.getElementById('alertContainer');
+            const alertId = 'alert-' + Date.now();
+            const alertHtml = `
+                <div id="${alertId}" class="alert alert-${type} alert-dismissible fade show alert-custom" role="alert">
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+            alertContainer.innerHTML = alertHtml;
+
+            // Auto-hide after 3 seconds
+            setTimeout(() => {
+                const alert = document.getElementById(alertId);
+                if (alert) {
+                    alert.remove();
+                }
+            }, 3000);
+        }
+
+        function onCacheChange() {
+            const selectElement = document.getElementById('selectCache');
+            const createSection = document.getElementById('createFolderSection');
+            const show_drawer = document.getElementsByClassName('collapse show')
+            for (let i = 0; i < show_drawer.length; i++) {
+                show_drawer[i].classList.remove('show');
+            }
+
+            if (selectElement.value === 'Neuen Ordner erstellen') {
+                createSection.classList.add('show');
+                document.getElementById('newFolderName').focus();
+            } else {
+                createSection.classList.remove('show');
+                fetch('folder/load',
+                {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            folder_name: selectElement.value
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            showAlert(data.message, 'success');
+                            // Lade Dateien für die Dateiauswahl
+                            loadFolderFiles(selectElement.value);
+                        } else {
+                            showAlert('Fehler: ' + data.message, 'danger');
+                            hideFolderFileSelection();
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        showAlert('Fehler beim Laden des Ordners', 'danger');
+                        hideFolderFileSelection();
+                    });
+            }
+        }
+
+        function createFolder() {
+            const folderName = document.getElementById('newFolderName').value.trim();
+            const saveBtn = document.getElementById('saveFolderBtn');
+
+            if (!folderName) {
+                showAlert('Bitte geben Sie einen Ordnernamen ein', 'warning');
+                return;
+            }
+
+            saveBtn.disabled = true;
+            saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Erstelle...';
+
+            fetch('/folder/create', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    folder_name: folderName
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert(data.message, 'success');
+                    loadCacheFolders().then(() => {
+                        document.getElementById('selectCache').value = data.folder_name;
+                    });
+                    cancelCreateFolder();
+                } else {
+                    showAlert('Fehler: ' + data.message, 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('Fehler beim Erstellen des Ordners', 'danger');
+            })
+            .finally(() => {
+                saveBtn.disabled = false;
+                saveBtn.innerHTML = '<i class="fas fa-save me-2"></i>Speichern';
+            });
+        }
+
+        function cancelCreateFolder() {
+            const createSection = document.getElementById('createFolderSection');
+            const selectElement = document.getElementById('selectCache');
+            const folderNameInput = document.getElementById('newFolderName');
+
+            createSection.classList.remove('show');
+            folderNameInput.value = '';
+
+            const options = selectElement.options;
+            if (options.length > 1) {
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i].value !== 'Neuen Ordner erstellen') {
+                        selectElement.value = options[i].value;
+                        break;
+                    }
+                }
+            }
+        }
+
+        document.getElementById('newFolderName').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                createFolder();
+            }
+        });
+
+        // File Upload Funktionen
+        function handleFileSelect(drawerId) {
+            const fileInput = document.getElementById(`fileInput${drawerId}`);
+            const files = fileInput.files;
+
+            if (files.length === 0) return;
+
+            for (let i = 0; i < files.length; i++) {
+                uploadFile(drawerId, files[i]);
+            }
+
+            // Input zurücksetzen
+            fileInput.value = '';
+        }
+
+        function uploadFile(drawerId, file) {
+            const cacheSelect = document.getElementById('selectCache');
+            let cacheFolder = '';
+            if (cacheSelect.value && cacheSelect.value !== 'Neuen Ordner erstellen') {
+                cacheFolder = cacheSelect.value;
+            }
+            const formData = new FormData();
+            formData.append('file', file);
+
+            fetch(`/upload_file/${drawerId}/${cacheFolder}`, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert(data.message, 'success');
+                    loadUploadedFiles(drawerId);
+                } else {
+                    showAlert('Fehler: ' + data.message, 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('Fehler beim Hochladen der Datei', 'danger');
+            });
+        }
+
+        function loadUploadedFiles(drawerId) {
+            fetch(`/get_uploaded_files/${drawerId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        displayUploadedFiles(drawerId, data.files);
+                    }
+                })
+                .catch(error => console.error('Error loading files:', error));
+        }
+
+        function displayUploadedFiles(drawerId, files) {
+            const fileList = document.getElementById(`fileList${drawerId}`);
+            const fileItems = document.getElementById(`fileItems${drawerId}`);
+            if (!fileList){
+                return;
+            }
+
+
+            if (files.length === 0) {
+                fileList.style.display = 'none';
+                return;
+            }
+
+            fileList.style.display = 'block';
+            fileItems.innerHTML = '';
+
+            files.forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+
+                const fileSizeKB = Math.round(file.size / 1024);
+
+                fileItem.innerHTML = `
+                    <div class="file-info" onclick="selectFile('${file.original_name}')">
+                        <div class="file-name">${file.original_name}</div>
+                        <div class="file-details">${fileSizeKB} KB • ${file.upload_time}</div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="btn-file-delete" onclick="deleteUploadedFile(${drawerId}, ${index})"
+                                title="Datei löschen">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+
+                fileItems.appendChild(fileItem);
+            });
+        }
+
+        function deleteUploadedFile(drawerId, fileIndex) {
+            if (!confirm('Möchten Sie diese Datei wirklich löschen?')) return;
+
+            fetch(`/delete_uploaded_file/${drawerId}/${fileIndex}`, {
+                method: 'DELETE'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert(data.message, 'info');
+                    loadUploadedFiles(drawerId);
+                } else {
+                    showAlert('Fehler: ' + data.message, 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('Fehler beim Löschen der Datei', 'danger');
+            });
+        }
+
+        // Drag & Drop Support für File Upload
+        function setupDragAndDrop(drawerId) {
+            const fileUploadSection = document.getElementById(`fileUploadSection${drawerId}`);
+            if (!fileUploadSection) return;
+
+            fileUploadSection.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                fileUploadSection.classList.add('dragover');
+            });
+
+            fileUploadSection.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                fileUploadSection.classList.remove('dragover');
+            });
+
+            fileUploadSection.addEventListener('drop', function(e) {
+                e.preventDefault();
+                fileUploadSection.classList.remove('dragover');
+
+                const files = e.dataTransfer.files;
+                for (let i = 0; i < files.length; i++) {
+                    uploadFile(drawerId, files[i]);
+                }
+            });
+        }
+
+        function setupLiveLogUpdates(drawerId) {
+            if (eventSources[drawerId]) {
+                eventSources[drawerId].close();
+            }
+
+            const eventSource = new EventSource(`/logs_stream/${drawerId}`);
+            eventSources[drawerId] = eventSource;
+
+            eventSource.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+                if (data.log) {
+                    addLogEntry(drawerId, data.log);
+                }
+            };
+
+            eventSource.onerror = function(event) {
+                console.log(`EventSource error for drawer ${drawerId}:`, event);
+            };
+        }
+
+        function addLogEntry(drawerId, logText) {
+            const logContainer = document.getElementById(`logs-${drawerId}`);
+            const logEntry = document.createElement('div');
+            logEntry.className = 'log-entry';
+            logEntry.textContent = logText;
+
+            const controls = logContainer.querySelector('.log-controls');
+            logContainer.appendChild(logEntry);
+            if (controls) {
+                logContainer.appendChild(controls);
+            }
+
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+
+        function updateDrawerStatus(drawerId, status) {
+            const startBtn = document.getElementById(`start-btn-${drawerId}`);
+
+            switch(status) {
+                case 'running':
+                    startBtn.disabled = true;
+                    break;
+                case 'completed':
+                    startBtn.disabled = false;
+                    break;
+                case 'error':
+                    startBtn.disabled = false;
+                    break;
+                case 'stopped':
+                    startBtn.disabled = false;
+                    break;
+                default:
+                    startBtn.disabled = false;
+            }
+        }
+
+        function pollDrawerStatus(drawerId) {
+            const interval = setInterval(() => {
+                fetch(`/drawer_status/${drawerId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            updateDrawerStatus(drawerId, data.status);
+                            if (data.status !== 'running') {
+                                clearInterval(interval);
+                            }
+                        }
+                    })
+                    .catch(error => console.error('Status-Polling Error:', error));
+            }, 2000);
+        }
+
+        function loadDrawerData(drawerId) {
+            fetch(`/get_drawer_data/${drawerId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById(`textArea-${drawerId}`).value = data.text;
+                        updateLogs(drawerId, data.logs);
+                        updateDrawerStatus(drawerId, data.status);
+
+                        // Lade hochgeladene Dateien
+                        if (data.uploaded_files) {
+                            displayUploadedFiles(drawerId, data.uploaded_files);
+                        }
+
+                        setupLiveLogUpdates(drawerId);
+
+                        if (data.status === 'running') {
+                            pollDrawerStatus(drawerId);
+                        }
+
+                        // Setup Drag & Drop für Drawer 2
+                        if (drawerId === 2) {
+                            setupDragAndDrop(drawerId);
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showAlert('Fehler beim Laden der Daten', 'danger');
+                });
+        }
+
+        function startDrawer(drawerId) {
+            let args = ''
+            let cache_folder = 'empty';
+            const cacheSelect = document.getElementById('selectCache');
+            if (cacheSelect.value && cacheSelect.value !== 'Neuen Ordner erstellen') {
+                cache_folder = cacheSelect.value;
+            }
+            if (drawerId === 2){
+                args = document.getElementById(`selectedFile${drawerId}`).textContent
+            }
+            fetch(`/start_drawer/${drawerId}/${cache_folder}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({args: args})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert(data.message, 'success');
+                    updateDrawerStatus(drawerId, data.status);
+                    pollDrawerStatus(drawerId);
+                } else {
+                    showAlert('Fehler: ' + data.message, 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('Fehler beim Starten', 'danger');
+            });
+        }
+
+        function saveText(drawerId) {
+            const text = document.getElementById(`textArea-${drawerId}`).value;
+
+            fetch(`/save_text/${drawerId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({text: text})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert(data.message, 'success');
+                } else {
+                    showAlert('Fehler: ' + data.message, 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('Fehler beim Speichern', 'danger');
+            });
+        }
+
+        function resetText(drawerId) {
+            if (confirm('Sind Sie sicher, dass Sie den Text zurücksetzen möchten?')) {
+                fetch(`/reset_text/${drawerId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById(`textArea-${drawerId}`).value = data.text;
+                        showAlert(data.message, 'warning');
+                    } else {
+                        showAlert('Fehler: ' + data.message, 'danger');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showAlert('Fehler beim Zurücksetzen', 'danger');
+                });
+            }
+        }
+
+        function updateLogs(drawerId, logs) {
+            const logContainer = document.getElementById(`logs-${drawerId}`);
+            if(logs.length !== 0){
+                logContainer.innerHTML = '';
+            }
+            logs.forEach(log => {
+                const logEntry = document.createElement('div');
+                logEntry.className = 'log-entry';
+                logEntry.textContent = log;
+                logContainer.appendChild(logEntry);
+            });
+
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+
+        function clearLogs(drawerId) {
+            fetch(`/clear_logs/${drawerId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const logContainer = document.getElementById(`logs-${drawerId}`);
+                    logContainer.innerHTML = `
+                        <div class="log-controls">
+                            <button onclick="clearLogs(${drawerId})" title="Logs löschen">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="log-entry">Logs gelöscht - System bereit...</div>
+                    `;
+                    showAlert(data.message, 'info');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('Fehler beim Löschen der Logs', 'danger');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            for (let i = 1; i <= 7; i++) {
+                const logContainer = document.getElementById(`logs-${i}`);
+                logContainer.innerHTML = `
+                    <div class="log-controls">
+                        <button onclick="clearLogs(${i})" title="Logs löschen">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="log-entry">System bereit...</div>
+                `;
+            }
+        });
+
+        window.addEventListener('beforeunload', function() {
+            for (let drawerId in eventSources) {
+                if (eventSources[drawerId]) {
+                    eventSources[drawerId].close();
+                }
+            }
+        });
+
+        function loadCacheFolders() {
+            const selectElement = document.getElementById(`selectCache`);
+            return fetch('/folder/all')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        selectElement.innerHTML = '<option value="" selected disabled>Ordner wählen...</option>';
+                        data.folders.forEach(type => {
+                            const option = document.createElement('option');
+                            option.value = type;
+                            option.textContent = type;
+                            selectElement.appendChild(option);
+                        });
+                    } else {
+                        showAlert('Fehler beim Laden der Ordner', 'danger');
+                        selectElement.innerHTML = '<option value="" disabled>Fehler beim Laden</option>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading process types:', error);
+                    showAlert('Fehler beim Laden der Ordner', 'danger');
+                    selectElement.innerHTML = '<option value="" disabled>Fehler beim Laden</option>';
+                });
+        }
+
+        // Neue Funktionen für Dateiauswahl aus Cache-Ordner
+        function loadFolderFiles(folderName) {
+            console.log('loadFolderFiles aufgerufen mit:', folderName);
+
+            if (folderName === 'Neuen Ordner erstellen' || !folderName) {
+                console.log('Verstecke Dateiauswahl - ungültiger Ordnername');
+                hideFolderFileSelection();
+                return;
+            }
+
+            // Nur für Drawer 2 - da nur dort die File-Upload-Sektion existiert
+            const drawerId = 2;
+            const folderFileSelection = document.getElementById(`folderFileSelection${drawerId}`);
+            const selectFolderFile = document.getElementById(`selectFolderFile${drawerId}`);
+            const selectFileBtn = document.getElementById(`selectFileBtn${drawerId}`);
+
+            console.log('Suche DOM-Elemente:');
+            console.log('folderFileSelection:', folderFileSelection);
+            console.log('selectFolderFile:', selectFolderFile);
+            console.log('selectFileBtn:', selectFileBtn);
+
+            // Prüfe ob Elemente existieren (falls Drawer 2 nicht geöffnet wurde)
+            if (!folderFileSelection || !selectFolderFile || !selectFileBtn) {
+                console.log('Drawer 2 Elemente noch nicht geladen - Drawer muss zuerst geöffnet werden');
+                return;
+            }
+
+            // Zeige die Sektion
+            console.log('Zeige Dateiauswahl');
+            folderFileSelection.style.display = 'block';
+
+            // Lade Dateien
+            console.log('Lade Dateien von:', `/folder/files/${encodeURIComponent(folderName)}`);
+            fetch(`/folder/files/${encodeURIComponent(folderName)}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Antwort vom Server:', data);
+
+                    if (data.success) {
+                        selectFolderFile.innerHTML = '<option value="" selected disabled>Datei wählen...</option>';
+
+                        if (data.files.length === 0) {
+                            console.log('Keine Dateien gefunden');
+                            selectFolderFile.innerHTML = '<option value="" disabled>Keine Dateien gefunden</option>';
+                            selectFileBtn.disabled = true;
+                        } else {
+                            console.log(`${data.files.length} Dateien gefunden:`, data.files);
+                            data.files.forEach(file => {
+                                const option = document.createElement('option');
+                                option.value = file.name;
+                                const sizeKB = Math.round(file.size / 1024);
+                                option.textContent = `${file.name} (${sizeKB} KB)`;
+                                selectFolderFile.appendChild(option);
+                            });
+                            selectFileBtn.disabled = false;
+                        }
+                    } else {
+                        console.error('Server-Fehler:', data.message);
+                        selectFolderFile.innerHTML = '<option value="" disabled>Fehler beim Laden</option>';
+                        selectFileBtn.disabled = true;
+                        showAlert('Fehler: ' + data.message, 'danger');
+                    }
+                })
+                .catch(error => {
+                    console.error('Netzwerk-Fehler:', error);
+                    selectFolderFile.innerHTML = '<option value="" disabled>Fehler beim Laden</option>';
+                    selectFileBtn.disabled = true;
+                    showAlert('Fehler beim Laden der Dateien', 'danger');
+                });
+
+            // Event Listener für Select-Änderung
+            selectFolderFile.onchange = function() {
+                console.log('Datei ausgewählt:', this.value);
+                selectFileBtn.disabled = !this.value;
+            };
+        }
+
+        function hideFolderFileSelection() {
+            // Nur für Drawer 2
+            const drawerId = 2;
+            const folderFileSelection = document.getElementById(`folderFileSelection${drawerId}`);
+            if (folderFileSelection) {
+                folderFileSelection.style.display = 'none';
+            }
+        }
+
+        function selectFileFromFolder(drawerId) {
+            const selectCache = document.getElementById('selectCache');
+            const selectFolderFile = document.getElementById(`selectFolderFile${drawerId}`);
+            const selectFileBtn = document.getElementById(`selectFileBtn${drawerId}`);
+
+            const folderName = selectCache.value;
+            const filename = selectFolderFile.value;
+
+            if (!folderName || !filename) {
+                showAlert('Bitte wählen Sie eine Datei aus', 'warning');
+                return;
+            }
+
+            // Button deaktivieren während der Anfrage
+            selectFileBtn.disabled = true;
+            selectFileBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Laden...';
+
+            fetch(`/select_folder_file/${drawerId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    folder_name: folderName,
+                    filename: filename
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert(data.message, 'success');
+                    loadUploadedFiles(drawerId);
+                    // Select zurücksetzen
+                    selectFolderFile.value = '';
+                } else {
+                    showAlert('Fehler: ' + data.message, 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('Fehler beim Auswählen der Datei', 'danger');
+            })
+            .finally(() => {
+                // Button wieder aktivieren
+                selectFileBtn.disabled = true; // Bleibt deaktiviert bis neue Auswahl
+                selectFileBtn.innerHTML = '<i class="fas fa-plus me-2"></i>Hinzufügen';
+            });
+        }
+        
+        function selectFile(filename) {
+            const selectedFileDisplay = document.getElementById('selectedFile2');
+            selectedFileDisplay.textContent = `${filename}`;
+        }
+    </script>
+</body>
+</html>

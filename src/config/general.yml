@@ -155,17 +155,19 @@ Ignored_Properties_Merging:
 Ignored_Nodes_Merging:
   - Assessment
 Caching:
+  Cache_Directory: /src/Cache
   Graph_JSON: Graph_JSON.json
   Merged_Graph_JSON: Merged_Graph_JSON.json
+  AI_Clustered_Graph_JSON: AI_Clustered_Graph_JSON.json
   LLM_Graph: LLM_Graph.txt
   ESCO_preferred_label: preferred_label.csv
-  ESCO_preferred_label_and_description: preferred_label_and_description.csv
   Merged_Graph_ESCO_JSON: Merged_Graph_ESCO_JSON.json
   Pdf_JSON: Pdf_JSON.json
 LLM:
-  Model: gemini-2.0-flash
-  Temperature: 1
-  Top_p: 0.95
-  Top_k: 40
-  Max_Output_Tokens: 8192
+  Model: claude-sonnet-4-20250514
+  Temperature: 0.85
+  Top_p: 0.75
+  Max_Output_Tokens: 50000
   Response_Mime_Type: application/json
+  Max_Tokens_Per_Minute: 50000
+  Rate_Limit_Buffer: 0.6
