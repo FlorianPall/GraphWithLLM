@@ -3,7 +3,6 @@ import time
 from datetime import datetime, timedelta
 import anthropic
 import re
-import json
 import uuid
 from dotenv import load_dotenv
 from Helper.Files import config
@@ -17,11 +16,11 @@ token_usage_tracker = {
 }
 
 
-def generate(prompt, data):
-    print("AI Batch generating...")
-    settings = config('LLM')
+def generate(prompt, data, log_callback):
+    log_callback("AI Batch generating...")
+    settings = config('LLM', log_callback)
 
-    check_rate_limit()
+    check_rate_limit(log_callback)
 
     # Claude Client initialisieren
     client = anthropic.Anthropic(
@@ -73,21 +72,21 @@ def generate(prompt, data):
     }
 
     # Batch mit einem Request erstellen
-    print("📦 Batch wird erstellt...")
+    log_callback("📦 Batch wird erstellt...")
     try:
         message_batch = client.messages.batches.create(
             requests=[batch_request]
         )
     except Exception as e:
-        print(f"❌ Fehler beim Erstellen des Batches: {e}")
+        log_callback(f"❌ Fehler beim Erstellen des Batches: {e}")
         raise
 
-    print(f"✅ Batch erstellt: {message_batch.id}")
-    print(f"Status: {message_batch.processing_status}")
+    log_callback(f"✅ Batch erstellt: {message_batch.id}")
+    log_callback(f"Status: {message_batch.processing_status}")
 
     # Auf Batch-Completion warten
-    print("⏳ Warte auf Batch-Verarbeitung...")
-    batch_result = wait_for_batch_completion(message_batch.id, client)
+    log_callback("⏳ Warte auf Batch-Verarbeitung...")
+    batch_result = wait_for_batch_completion(message_batch.id, client, log_callback)
 
     if not batch_result:
         raise Exception("Batch-Verarbeitung fehlgeschlagen")
@@ -121,11 +120,11 @@ def generate(prompt, data):
     token_usage_tracker['requests'].append((current_time, usage_metadata.output_tokens))
 
     if usage_metadata:
-        print(f"\n--- Token-Nutzung ---")
-        print(f"Prompt Tokens dieser Anfrage: {usage_metadata.input_tokens}")
-        print(f"Antwort Tokens dieser Anfrage: {usage_metadata.output_tokens}")
-        print(f"Gesamt Tokens dieser Anfrage: {total_tokens_this_request}")
-        print(f"Gesamt Tokens über alle Anfragen: {used_tokens}")
+        log_callback(f"\n--- Token-Nutzung ---")
+        log_callback(f"Prompt Tokens dieser Anfrage: {usage_metadata.input_tokens}")
+        log_callback(f"Antwort Tokens dieser Anfrage: {usage_metadata.output_tokens}")
+        log_callback(f"Gesamt Tokens dieser Anfrage: {total_tokens_this_request}")
+        log_callback(f"Gesamt Tokens über alle Anfragen: {used_tokens}")
 
     # Text der Antwort extrahieren
     response_text = message_result.content[0].text
@@ -139,39 +138,39 @@ def generate(prompt, data):
     response_text = re.sub(r'```json\s*', '', response_text)
     response_text = re.sub(r'```\s*$', '', response_text)
 
-    print("AI Batch generated.")
+    log_callback("AI Batch generated.")
     return {
         "response": response_text,
         "used_tokens": used_tokens
     }
 
 
-def wait_for_batch_completion(batch_id, client, check_interval=30):
+def wait_for_batch_completion(batch_id, client, log_callback, check_interval=30):
     """Wartet bis Batch fertig ist und gibt Ergebnisse zurück"""
 
     while True:
         batch = client.messages.batches.retrieve(batch_id)
 
         if batch.processing_status == "ended":
-            print("✅ Batch-Verarbeitung abgeschlossen!")
-            return get_batch_results(batch_id, client)
+            log_callback("✅ Batch-Verarbeitung abgeschlossen!")
+            return get_batch_results(batch_id, client, log_callback)
         elif batch.processing_status == "failed":
-            print("❌ Batch fehlgeschlagen!")
+            log_callback("❌ Batch fehlgeschlagen!")
             return None
         elif batch.processing_status == "canceled":
-            print("⚠️ Batch wurde abgebrochen!")
+            log_callback("⚠️ Batch wurde abgebrochen!")
             return None
         else:
-            print(f"⏳ Batch Status: {batch.processing_status} (nächste Prüfung in {check_interval}s)")
+            log_callback(f"⏳ Batch Status: {batch.processing_status} (nächste Prüfung in {check_interval}s)")
             time.sleep(check_interval)
 
 
-def get_batch_results(batch_id, client):
+def get_batch_results(batch_id, client, log_callback):
     """Holt die Ergebnisse eines fertigen Batches"""
     batch = client.messages.batches.retrieve(batch_id)
 
     if batch.processing_status != "ended":
-        print(f"Batch noch nicht fertig. Status: {batch.processing_status}")
+        log_callback(f"Batch noch nicht fertig. Status: {batch.processing_status}")
         return None
 
     # Results über Client-Methode laden (nicht direkt über URL!)
@@ -181,7 +180,7 @@ def get_batch_results(batch_id, client):
             # Error-Handling je nach Result-Type
             match result.result.type:
                 case "succeeded":
-                    print(f"✅ Success: {result.custom_id}")
+                    log_callback(f"✅ Success: {result.custom_id}")
                     # Als Dictionary speichern für konsistente Verarbeitung
                     results.append({
                         "custom_id": result.custom_id,
@@ -191,9 +190,9 @@ def get_batch_results(batch_id, client):
                     })
                 case "errored":
                     if result.result.error.type == "invalid_request":
-                        print(f"❌ Validation error {result.custom_id}: {result.result.error}")
+                        log_callback(f"❌ Validation error {result.custom_id}: {result.result.error}")
                     else:
-                        print(f"❌ Server error {result.custom_id}: {result.result.error}")
+                        log_callback(f"❌ Server error {result.custom_id}: {result.result.error}")
                     # Für Error-Cases
                     results.append({
                         "custom_id": result.custom_id,
@@ -201,26 +200,26 @@ def get_batch_results(batch_id, client):
                         "error": result.result.error
                     })
                 case "expired":
-                    print(f"⏰ Request expired: {result.custom_id}")
+                    log_callback(f"⏰ Request expired: {result.custom_id}")
                     results.append({
                         "custom_id": result.custom_id,
                         "result_type": result.result.type
                     })
 
-        print(f"📄 {len(results)} Batch-Ergebnisse verarbeitet")
+        log_callback(f"📄 {len(results)} Batch-Ergebnisse verarbeitet")
         return results
 
     except Exception as e:
-        print(f"❌ Fehler beim Laden der Batch-Ergebnisse: {e}")
+        log_callback(f"❌ Fehler beim Laden der Batch-Ergebnisse: {e}")
         return None
 
 
-def check_rate_limit():
+def check_rate_limit(log_callback):
     """
     Prüft das Rate-Limit und wartet wenn nötig
     Für Batch API weniger relevant, aber beibehalten für Konsistenz
     """
-    settings = config('LLM')
+    settings = config('LLM', log_callback)
 
     # Konfigurierbare Limits (falls nicht in config, verwende Standard-Werte)
     max_tokens_per_minute = settings.get('Max_Tokens_Per_Minute', 8000)  # https://docs.anthropic.com/en/api/rate-limits
@@ -241,7 +240,7 @@ def check_rate_limit():
     tokens_last_minute = sum(tokens for _, tokens in token_usage_tracker['requests'])
     token_usage_tracker['total_tokens_last_minute'] = tokens_last_minute
 
-    print(
+    log_callback(
         f"Rate-Limit Check: {tokens_last_minute}/{effective_limit} ({safety_buffer * 100}% des Limits) Tokens in letzter Minute")
 
     # Wenn wir nahe am Limit sind, warte
@@ -253,6 +252,6 @@ def check_rate_limit():
             wait_seconds = (wait_until - current_time).total_seconds()
 
             if wait_seconds > 0:
-                print(f"⏳ Rate-Limit erreicht! Warte {wait_seconds:.1f} Sekunden...")
+                log_callback(f"⏳ Rate-Limit erreicht! Warte {wait_seconds:.1f} Sekunden...")
                 time.sleep(wait_seconds + 1)  # +1 Sekunde Puffer
-                print("✅ Rate-Limit-Wartezeit beendet, setze fort...")
+                log_callback("✅ Rate-Limit-Wartezeit beendet, setze fort...")

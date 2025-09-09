@@ -210,15 +210,15 @@ def replace_competences(data, competences):
 def extract_pdf(filename, cache_folder, data, log_callback, set_process_complete, set_process_error):
     try:
         log_callback('Starte PDF Extraktion')
-        pages = list(extract_pages("../src/Cache/" + cache_folder + "/" + filename))
+        pages = list(extract_pages("../src/Cache/" + cache_folder + "/uploads/" + filename))
         pdf_data = pdf_groups(pages)
         pdf_structure = load_pdf_structure(log_callback)
         structured_data = groups_by_structure(pdf_data, pdf_structure)
         correct_form = structure_to_correct_form(structured_data)
-        data = translate_modules(correct_form, data)
+        data = translate_modules(correct_form, log_callback, data)
         correct_form = json.loads(data['response'])
         competences = extract_competences(correct_form)
-        data = simplify_competences(competences, data)
+        data = simplify_competences(competences, log_callback, data)
         replace_competences(correct_form, json.loads(data['response']))
         write_json_cache(correct_form, cache_folder, config('Caching', log_callback)['Pdf_JSON'], log_callback)
         set_process_complete(data)

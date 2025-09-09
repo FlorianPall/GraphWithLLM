@@ -18,8 +18,8 @@ def extract_skills(data):
             skills[node['id']] = {"Skill": node['properties']['name'], "Description": node['properties']['description']}
     return skills
 
-def connected_esco_skills(skills, data):
-    return connected_esco(skills, data)
+def connected_esco_skills(skills, data, log_callback):
+    return connected_esco(skills, log_callback, data)
 
 def esco_skills(extracted_skills):
     preferred_labels = [pair[1] for pair in extracted_skills['skills']]
@@ -80,7 +80,7 @@ def add_esco_to_graph(skills, data, connected_skills, log_callback):
 def connect_esco(data, cache_folder, log_callback, set_process_complete, set_process_error):
     json_graph = read_data(cache_folder, log_callback)
     extracted_skills = extract_skills(json_graph)
-    data = connected_esco_skills(extracted_skills, data)
+    data = connected_esco_skills(extracted_skills, data, log_callback)
     connected_skills = json.loads(data['response'])
     skills = esco_skills(connected_skills)
     add_esco_to_graph(skills, json_graph, connected_skills, log_callback)

@@ -68,21 +68,13 @@ def change_relationship_end_node(start, old_end, new_end, data):
 def ai_merge_nodes(data, cache_folder, log_callback):
     nodes = data['nodes']
     skills = list(filter(lambda node: node['label'] == 'Skill', nodes))
-    result = cluster_nodes(skills)
+    result = cluster_nodes(skills, log_callback)
     response = json.loads(result['response'])
     response = list(filter(lambda group: len(group['ids']) > 1, response))
     write_json_cache(response, cache_folder, config('Caching', log_callback)['AI_Clustered_Graph_JSON'], log_callback)
 
-    # print Statement und Bestätigung
-    log_callback(
-        "\n\n\nACHTUNG: Prüfe die Cluster Datei und Bestätige mit Enter. Es ist möglich Modifikationen vorzunehmen. ACHTUNG: Die Daten in originalNodes dienen nur der Dokumentation und werden nicht mehr beachtet werden.")
-    #input()  # Warten auf Enter
-
-    # Datei neu einlesen
-    clustered_data = cache(config('Caching', log_callback)['AI_Clustered_Graph_JSON'], cache_folder, log_callback)
-
     # Clustering auf data anwenden
-    apply_clustering_to_data(data, clustered_data)
+    apply_clustering_to_data(data, response)
     write_json_cache(data, cache_folder, config('Caching', log_callback)['AI_Clustered_Graph_JSON'], log_callback)
     return data
 

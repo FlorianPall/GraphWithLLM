@@ -6,7 +6,7 @@ import json
 def create_cipher_graph(data, cache_folder, log_callback, set_process_complete, set_process_error):
     filename = config('Caching', log_callback)['Merged_Graph_ESCO_JSON']
     graph = cache(filename, cache_folder, log_callback)
-    data = create_cipher(graph, data)
+    data = create_cipher(graph, log_callback, data)
     cipher_graph = json.loads(data['response'])
     if isinstance(cipher_graph, list):
         if len(cipher_graph) == 1 and isinstance(cipher_graph[0], dict) and 'query' in cipher_graph[0]:
@@ -32,10 +32,10 @@ def create_cipher_graph(data, cache_folder, log_callback, set_process_complete, 
 def create_json_graph(data, cache_folder, log_callback, set_process_complete, set_process_error):
     filename = config('Caching', log_callback)['Pdf_JSON']
     graph = cache(filename, cache_folder, log_callback)
-    data = matrix(graph, data)
+    data = matrix(graph, log_callback, data)
     matrix_response = data['response']
 
-    data = graph_json(matrix_response, data)
+    data = graph_json(matrix_response, log_callback, data)
     generated_graph_json = json.loads(data['response'])
     filename = config('Caching', log_callback)['Graph_JSON']
     write_json_cache(generated_graph_json, cache_folder, filename, log_callback)

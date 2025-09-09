@@ -286,6 +286,19 @@ def start_drawer(drawer_id, cache_folder):
         running_processes[drawer_id]['status'] = 'completed'
         log_callback(f"Prozess abgeschlossen")
         ai_data = return_data
+        cache_dir = config('Caching', print, '..')['Cache_Directory']
+        full_path = '..' + os.path.join('..', cache_dir, cache_folder)
+        file_path = os.path.join(full_path, config('Caching', print, '..')[drawer_file_mapping[drawer_id]])
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    file_data = f.read()
+                    drawer_data[drawer_id]['text'] = file_data
+            except Exception as e:
+                return jsonify({'success': False, 'message': f'Fehler beim Laden der Datei: {str(e)}'})
+        else:
+            drawer_data[drawer_id]['text'] = f'Keine gespeicherte Datei für Drawer {drawer_id} gefunden.'
+            return jsonify({'success': False, 'message': f'Keine gespeicherte Datei für Drawer {drawer_id} gefunden.'})
     def set_process_error():
         running_processes[drawer_id]['status'] = 'error'
         log_callback(f"Prozess mit Fehler beendet")
@@ -312,7 +325,7 @@ def start_drawer(drawer_id, cache_folder):
         # Starte Background-Thread
         thread = threading.Thread(
             target=pdfFile.extract_pdf,
-            args=(args.filename, cache_folder, ai_data, log_callback, set_process_complete, set_process_error)
+            args=(args, cache_folder, ai_data, log_callback, set_process_complete, set_process_error)
         )
         thread.daemon = True
         thread.start()
