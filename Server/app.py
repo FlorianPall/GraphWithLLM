@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify, Response
 import os
+import sys
 import json
 import time
 import threading
@@ -73,8 +74,8 @@ def index():
 @app.route('/folder/all', methods=['GET'])
 def all_folders():
     try:
-        cache_dir = config('Caching', print, '..')['Cache_Directory']
-        folders = os.listdir('../' + cache_dir)
+        cache_dir = config('Caching', print, '.')['Cache_Directory']
+        folders = os.listdir('./' + cache_dir)
         folders.sort()
         folders += ["Neuen Ordner erstellen"]
         return jsonify({'success': True, 'folders': folders})
@@ -97,8 +98,8 @@ def create_folder():
         if any(char in folder_name for char in invalid_chars):
             return jsonify({'success': False, 'message': 'Ordnername enthält ungültige Zeichen'})
 
-        cache_dir = config('Caching', print, '..')['Cache_Directory']
-        full_path = '..' + os.path.join('..', cache_dir, folder_name)
+        cache_dir = config('Caching', print, '.')['Cache_Directory']
+        full_path = '.' + os.path.join('.', cache_dir, folder_name)
 
         # Überprüfe ob Ordner bereits existiert
         if os.path.exists(full_path):
@@ -122,13 +123,13 @@ def load_folder():
     folder_name = data.get('folder_name', '').strip()
     if not folder_name:
         return jsonify({'success': False, 'message': 'Ordnername ist erforderlich'})
-    cache_dir = config('Caching', print, '..')['Cache_Directory']
-    full_path = '..' + os.path.join('..', cache_dir, folder_name)
+    cache_dir = config('Caching', print, '.')['Cache_Directory']
+    full_path = '.' + os.path.join('.', cache_dir, folder_name)
     if not os.path.exists(full_path):
         return jsonify({'success': False, 'message': 'Ordner existiert nicht'})
     for mapping in drawer_file_mapping.values():
         if mapping:
-            file_path = os.path.join(full_path, config('Caching', print, '..')[mapping])
+            file_path = os.path.join(full_path, config('Caching', print, '.')[mapping])
             if os.path.exists(file_path):
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
@@ -177,7 +178,7 @@ def upload_file(drawer_id, folder):
             filename = secure_filename(file.filename)
 
             # Erstelle Upload-Verzeichnis falls nicht vorhanden
-            upload_dir = f'..{config('Caching', print,'..')['Cache_Directory']}/{folder}/uploads'
+            upload_dir = f'.{config('Caching', print,'.')['Cache_Directory']}/{folder}/uploads'
             os.makedirs(upload_dir, exist_ok=True)
 
             # Speichere die Datei
@@ -286,9 +287,9 @@ def start_drawer(drawer_id, cache_folder):
         running_processes[drawer_id]['status'] = 'completed'
         log_callback(f"Prozess abgeschlossen")
         ai_data = return_data
-        cache_dir = config('Caching', print, '..')['Cache_Directory']
-        full_path = '..' + os.path.join('..', cache_dir, cache_folder)
-        file_path = os.path.join(full_path, config('Caching', print, '..')[drawer_file_mapping[drawer_id]])
+        cache_dir = config('Caching', print, '.')['Cache_Directory']
+        full_path = '.' + os.path.join('.', cache_dir, cache_folder)
+        file_path = os.path.join(full_path, config('Caching', print, '.')[drawer_file_mapping[drawer_id]])
         if os.path.exists(file_path):
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:

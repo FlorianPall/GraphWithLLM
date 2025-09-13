@@ -1,6 +1,7 @@
 from AI.AI import create_cipher, matrix, graph_json
 from Helper.Files import cache, write_txt_cache, config, write_json_cache
 import json
+import re
 
 
 def create_cipher_graph(data, cache_folder, log_callback, set_process_complete, set_process_error):
@@ -24,10 +25,19 @@ def create_cipher_graph(data, cache_folder, log_callback, set_process_complete, 
         cypher_query = cipher_graph
     else:
         cypher_query = str(cipher_graph)
-    cypher_query += " RETURN 'Graph created successfully' as result"
+    if not _has_return_statement(cypher_query):
+        cypher_query += " RETURN 'Graph created successfully' as result"
     filename = config('Caching', log_callback)['LLM_Graph']
     write_txt_cache(cypher_query, cache_folder, filename, log_callback)
     set_process_complete(data)
+
+
+def _has_return_statement(cypher_query):
+    # Prüfe auf RETURN-Statement (case-insensitive)
+    return_pattern = r'\bRETURN\b'
+
+    # Einfache Prüfung: Existiert ein RETURN-Statement in der Query?
+    return bool(re.search(return_pattern, cypher_query, re.IGNORECASE))
 
 def create_json_graph(data, cache_folder, log_callback, set_process_complete, set_process_error):
     filename = config('Caching', log_callback)['Pdf_JSON']

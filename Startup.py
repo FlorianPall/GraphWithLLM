@@ -3,10 +3,10 @@ import os
 
 def folder_structure():
     necessary_folders = [
-        '../src/Cache',
-        '../src/ESCO',
-        '../src/Modules',
-        '../src/Output'
+        './src/Cache',
+        './src/ESCO',
+        './src/Modules',
+        './src/Output'
     ]
     for directory_path in necessary_folders:
         try:

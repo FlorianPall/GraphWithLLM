@@ -1,4 +1,5 @@
 erstelle mir daraus eine Cipher Query, nutze für die Nodes und für die Relations APOC-Erweiterungsprozeduren:
+Achte darauf, dass einfache Anführungszeichen in einem String mit einem Backslash escaped werden.
 Beispiel output:
 [
   {

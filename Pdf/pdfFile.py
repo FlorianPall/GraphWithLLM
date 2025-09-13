@@ -210,7 +210,7 @@ def replace_competences(data, competences):
 def extract_pdf(filename, cache_folder, data, log_callback, set_process_complete, set_process_error):
     try:
         log_callback('Starte PDF Extraktion')
-        pages = list(extract_pages("../src/Cache/" + cache_folder + "/uploads/" + filename))
+        pages = list(extract_pages("./src/Cache/" + cache_folder + "/uploads/" + filename))
         pdf_data = pdf_groups(pages)
         pdf_structure = load_pdf_structure(log_callback)
         structured_data = groups_by_structure(pdf_data, pdf_structure)

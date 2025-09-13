@@ -15,7 +15,7 @@ def translate_modules(modules, log_callback, data=None):
 def connected_esco(skills, log_callback, data=None):
     esco_prompt = get_prompt("ConnectESCO", log_callback)
     esco_skills_filename = config('Caching', log_callback)['ESCO_preferred_label']
-    esco_skills = csv_semicolon("../src/Output/" + esco_skills_filename)
+    esco_skills = csv_semicolon("./src/Output/" + esco_skills_filename)
     esco_skills_str = esco_skills.to_csv(sep=';', index=False)
     return generate(esco_prompt + json.dumps(
         skills) + "\n Do not use other esco skills like these under any circumstances. This are the labels: \n" + esco_skills_str,

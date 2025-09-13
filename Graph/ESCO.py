@@ -44,6 +44,7 @@ def esco_skills(extracted_skills):
 
 def add_esco_to_graph(skills, data, connected_skills, log_callback):
     # Add Nodes
+    connected_skills = connected_skills['skills']
     counter = 1
     for skill in skills:
         current_skill = skills[skill]
