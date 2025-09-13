@@ -1,158 +1,417 @@
-# GraphWithLLM
-## Structure
-The project is divided into these main parts:
-1. The `src` folder contains the external files of the project.
-2. The code files on root level are the main files of the project.
-3. The `DB` folder contains the files for the database.
+# Educational Knowledge Graph Generator
 
-## Src Folder
-The `src` folder needs the following files:
-- For the ESCO Skills:
-  1. Folder `ESCO` - Contains the ESCO Skills in different csv Files
-  2. Folder `Output` - Contains the output files.
-- For the Modules:
-  1. Folder `Modules` - Contains the Modules in pdf format.
-- For the AI:
-  1. Folder `Prompts` - Contains the Prompts for the AI.
-- For the config:
-    1. `general.yml` - Contains the configuration for the program. You can add your own configuration in this folder.
-- In order to use the project parts individually and for better traceability:
-    1. Folder `Cache` - Contains the results of the individual steps.
+A system for automated processing of educational module descriptions and generation of comprehensive knowledge graphs with ESCO (European Skills, Competences, Qualifications and Occupations) skill mappings.
 
-## Example Files
+## Abstract
 
-### config
+This project implements an automated pipeline for transforming educational module descriptions from PDF documents into structured knowledge graphs. The system leverages Large Language Models (Claude AI) for intelligent text processing, skill extraction, and competency mapping to the standardized ESCO taxonomy. The resulting knowledge graphs can be imported into graph databases for further analysis and visualization.
+
+## System Overview
+
+The Educational Knowledge Graph Generator processes educational module PDFs through a seven-stage pipeline, extracting structured information about learning objectives, competencies, and skills. These are then mapped to the European ESCO skills framework and transformed into graph database-compatible formats.
+
+### Key Capabilities
+
+- Automated extraction of structured data from educational module PDFs
+- AI-powered analysis and categorization of learning competencies
+- Integration with the ESCO skills database for standardized skill mapping
+- Generation of Neo4j-compatible knowledge graphs
+- Web-based interface for workflow management and monitoring
+- Batch processing optimization for efficient AI API usage
+
+## Architecture
+
+### Processing Pipeline
+
+The system implements a seven-step processing workflow:
+
+1. **ESCO Database Setup**: Import and configure the ESCO skills database from CSV files
+2. **PDF Extraction**: Process educational module PDFs and extract structured content according to predefined templates
+3. **Graph Creation**: Generate initial knowledge graph structures from extracted data
+4. **ESCO Labels Export**: Export ESCO preferred labels for subsequent skill matching operations
+5. **Graph Merging**: Merge and deduplicate similar nodes using AI-powered clustering algorithms
+6. **ESCO Connection**: Establish connections between extracted skills and ESCO database entries
+7. **Cipher Generation**: Create Neo4j Cypher queries for graph database import
+
+### Technology Stack
+
+**Backend Infrastructure**
+- Python 3.x with Flask web framework
+- PostgreSQL database (Docker containerized)
+- SQLAlchemy for database operations
+
+**AI Processing**
+- Claude API (Anthropic) with batch processing capabilities
+- Custom prompt engineering for educational content analysis
+- Token usage optimization and rate limiting
+
+**Data Processing**
+- PDFMiner for PDF text extraction and structure analysis
+- Pandas for data manipulation and CSV processing
+- Custom graph algorithms for node merging and relationship detection
+
+**User Interface**
+- Bootstrap 5-based responsive web interface
+- JavaScript with Server-Sent Events for real-time progress monitoring
+- File upload and management system
+
+## Installation and Setup
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Docker and Docker Compose
+- Claude API key from Anthropic
+
+### Environment Configuration
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd GtaphWithLLM
+   ```
+
+2. **Install Python dependencies or use venv**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Database environment setup**
+   Create a `.env` file in the `DB_Setup/` directory with the following configuration:
+   ```env
+   POSTGRES_USER=your_database_user
+   POSTGRES_PASSWORD=your_database_password
+   POSTGRES_DB=esco_skills
+   POSTGRES_PORT=5432
+   DB_HOST=localhost
+   CLAUDE_KEY=your_claude_api_key
+   ```
+
+4. **Initialize the database**
+   ```bash
+   cd DB_Setup
+   docker-compose up -d
+   ```
+
+5. **Start the application**
+   ```bash
+   python main.py
+   ```
+
+The web interface will be accessible at `http://localhost:8888`.
+
+## Project Structure
+
+```
+├── AI/                     # AI processing modules
+│   ├── AI.py              # Core AI functions for content processing
+│   └── AIConnector.py     # Claude API integration with batch processing
+├── DB/                    # Database components
+│   └── DBEngine.py        # PostgreSQL connection management
+├── DB_Setup/              # Database configuration
+│   ├── docker-compose.yml # PostgreSQL Docker configuration
+│   ├── init.sql          # Database schema definition
+│   └── .env              # Environment variables (user-created)
+├── Graph/                 # Graph processing modules
+│   ├── Graph.py          # Graph generation and Cypher query creation
+│   ├── ESCO.py           # ESCO skills integration
+│   └── MergeGraphs.py    # Graph merging and deduplication algorithms
+├── Helper/                # Utility modules
+│   ├── Files.py          # File operations and configuration management
+│   └── csvFile.py        # CSV processing and ESCO data import
+├── Pdf/                   # PDF processing
+│   └── pdfFile.py        # PDF extraction and content structuring
+├── Server/                # Web application
+│   ├── app.py            # Flask web server and API endpoints
+│   └── templates/        # HTML templates for web interface
+├── src/                   # Source data and configuration
+│   ├── Cache/            # Processing cache and intermediate results
+│   ├── ESCO/             # ESCO skills CSV data files
+│   ├── Prompts/          # AI prompts for different processing tasks
+│   └── config/           # System configuration files
+└── main.py               # Application entry point
+```
+
+## Configuration
+
+### System Configuration
+
+The main configuration file is located at `src/config/general.yml`. This file contains all system settings including AI model parameters, module structure definitions, and processing options.
+
+#### LLM Configuration
+
+```yaml
+LLM:
+  Model: claude-sonnet-4-20250514
+  Temperature: 0.85
+  Top_p: 0.75
+  Max_Output_Tokens: 50000
+  Max_Tokens_Per_Minute: 50000
+  Rate_Limit_Buffer: 0.6
+```
+
+#### Module Structure Recognition
+
+Define how the system recognizes different sections in PDF modules:
+
 ```yaml
 Modulestructure:
   FormalDetails:
-    - Formal Details of the Module
-    - FORMALE ANGABEN ZUM MODUL
-  TeachingMethods:
-    - EINGESETZTE LEHRFORMEN
-    - Teaching Methods
-  Examination:
-    - Forms of Examination
-    - EINGESETZTE PRÜFUNGSFORMEN
-...
+    - "Formal Details of the Module"
+    - "FORMALE ANGABEN ZUM MODUL"
+  Competences:
+    - "Qualification Goals and Competences"
+    - "QUALIFIKATIONSZIELE UND KOMPETENZEN"
+  UnitsAndContents:
+    - "Learning Units and Contents"
+    - "LERNEINHEITEN UND INHALTE"
+```
+
+#### Graph Schema Definition
+
+The knowledge graph structure is defined in the `LLM_Structure` section:
+
+```yaml
 LLM_Structure:
   Nodes:
-    - Name: Program
-      Properties:
-        - name
-        - level
-        - totalETCS
-      Edges:
-        - Target: Module
-          Properties:
-            - contains
-
     - Name: Module
-      Properties:
-        - code
-        - name
-        - year
-        - mandatory
-        - ETCS
-        - language
+      Properties: [code, name, year, mandatory, ETCS, language]
       Edges:
-        - Target: Module
-          Properties:
-            - requires
         - Target: Unit
-          Properties:
-            - consists_of
-        - Target: Assessment
-          Properties:
-            - assessed_by
+          Properties: [consists_of]
+    - Name: Skill
+      Properties: [name, description, proficiencyLevel, URL]
+      Edges:
         - Target: Skill
-          Properties:
-            - needs_skill
-            - develops_skill
+          Properties: [builds_on]
+```
 
-    - Name: Unit
-...
-Ignored_Properties_Merging:
-  - code
-Ignored_Nodes_Merging:
-  - Assessment
+### Caching Configuration
+
+Configure file names and locations for intermediate processing results:
+
+```yaml
 Caching:
+  Cache_Directory: /src/Cache
   Graph_JSON: Graph_JSON.json
   Merged_Graph_JSON: Merged_Graph_JSON.json
+  ESCO_preferred_label: preferred_label.csv
   LLM_Graph: LLM_Graph.txt
-...
-LLM:
-  Model: gemini-2.0-flash
-  Temperature: 1
-  Top_p: 0.95
-  Top_k: 40
-  Max_Output_Tokens: 8192
-  Response_Mime_Type: application/json
 ```
-- The `Modulestructure` contains the structure of the Modules in the pdf files. You can add headings in the desired language.
-- The `LLM_Structure` contains the structure of the graph.
-- The `Ignored_Properties_Merging` contains the properties that should be ignored when merging the graphs.
-- The `Ignored_Nodes_Merging` contains the nodes that should be ignored when merging the graphs.
-- The `Caching` contains the files that will be cached, you can change the names of the files to your liking.
-- The `LLM` contains the information for the LLM API.
 
-##### Config Structure
-- Modulestructure: Contains the structure of the Modules in the pdf files. You can add headings in the desired language.
-- LLM_Structure: Contains the structure of the graph. You can add nodes and edges with their properties.
-- Ignored_Properties_Merging: Contains the properties that should be ignored when merging the graphs.
-- Ignored_Nodes_Merging: Contains the nodes that should be ignored when merging the graphs.
-- Caching: Contains the files that will be cached, you can change the names of the files to your liking.
-- LLM: Contains the information for the LLM API
+## Usage Guide
 
-### What can the program do?
-- ESCO DB
-  1. The Program will setup da Database in the docker container with the Structure of 'DB/init.sql'. 
-  2. Then it will automatically insert all the ESCO Skills in the DB. It will use all csv files in the ESCO folder no matter what names the files have.
-  3. Extract preferred labels and descriptions from the DB and save them in a new csv file.
-- Modules
-  1. Extract the Modules from the pdf files and build a json structure in a useful way.
-- Merging Graphs
-  1. Merge the graphs into one graph. The graphs are in the `Cache` folder in a json format. The system will detect duplicates, merge them and save the result in the `Cache` folder.
+### Data Preparation
 
-### How to use the program?
-#### Setup
-1. Install python3 and the required packages
-2. Create the folder Structure as described in the following section.
-3. Use the `general.yml` file to configure the program or create your own config file.
-4. Get a module and store it in the `Modules` folder. The file has to start with the first module, because the table of contents cant be detected.
-5. Check the prompts in the `Prompts` folder.
-6. Get the ESCO Skills and store them in the `ESCO` folder. They can be stored in multiple csv files.
-7. The projects needs a .env file with the following content. The file has to be in the `DB` folder:
-8. Start the docker container with the docker-compose file in the `DB` folder.
-  ```env
-POSTGRES_USER=
-POSTGRES_PASSWORD=
-POSTGRES_DB=
-POSTGRES_PORT=
-DB_HOST=
-API_KEY=
-  ```
+1. **ESCO Skills Data**: Place ESCO skills CSV files in the `src/ESCO/` directory. The system will automatically import all CSV files found in this location.
 
-#### Run
-You have to run the `main.py` file. You can use the following flags:
-- `--escodb` to setup the ESCO DB and insert the data.
-- `--extractpdf` to extract the Modules from the pdf files. Value is the filename.
-- `--escolabel` read ESCO-DB and extract preferred label and description.
-- `--all` to run all the functions at once. This command isnt recommended because it will take a long time and gemini is more likely to do errors. If you want to run it, you also have to use the `--extractpdf` flag to define your module file.
-- `--config` to use a different config file. Value is the filename. Default is `general.yml`. Your own config needs the same structure as the `general.yml`.
-- `--merge` to merge graphs into one.
-- `--folderstructure` to create the folder structure for the project.
-- `--connectesco` connect esco with skills in graph
-- `--createcipher` to create the cipher for the graph.
-- `--createjsongraph` create json graph from pdf json
+2. **Educational Module PDFs**: Prepare PDF files containing educational module descriptions. Ensure PDFs start with the first module content (table of contents cannot be automatically detected).
 
-#### Results
-The different results of each step will be saved in the `Cache` folder. The final result will be saved in the `Cache` folder. The name of the file is defined in the config file with the key `LLM_Graph`.
+### Web Interface Operation
 
+1. **Access the Dashboard**: Navigate to `http://localhost:8888` after starting the server.
 
-# ToDos in the 6th Semester
-- (optional) Implement UI for Skill Suggestions
-- Implement highlighting of the skill suggestions in the pdf
-- Test the program with Gemini Pro
-- Test the program with whole Modules
-- Write Paper
-- Skill Clustering with LLM
+2. **Cache Folder Management**: 
+   - Select an existing cache folder or create a new one
+   - Each cache folder maintains separate processing results
+   - Folder names should not contain special characters
+
+3. **Processing Workflow**:
+   - **Step 1 - ESCO Database**: Import ESCO skills data into PostgreSQL
+   - **Step 2 - PDF Extraction**: Upload and process educational module PDFs
+   - **Step 3 - Graph Creation**: Generate initial knowledge graph structures
+   - **Step 4 - ESCO Labels**: Export ESCO preferred labels for matching
+   - **Step 5 - Graph Merging**: Merge duplicate nodes and optimize graph structure
+   - **Step 6 - ESCO Connection**: Link extracted skills to ESCO entries
+   - **Step 7 - Cipher Generation**: Create Neo4j import queries
+
+### File Management
+
+**PDF Upload**: Use the file upload interface in Step 2 to add educational module PDFs. Supported formats:
+- PDF files up to 50MB
+- Multiple files can be uploaded per session
+
+**Result Monitoring**: Each processing step provides:
+- Real-time logging with timestamp information
+- Progress indicators and status updates
+- Text editor for reviewing and modifying intermediate results
+
+## Prompt Engineering
+
+### Prompt Structure
+
+The system uses specialized prompts for different processing tasks, located in `src/Prompts/`:
+
+- `Simplify.txt`: Converts complex competency descriptions into simple, structured sentences
+- `Translate.txt`: Translates content while preserving JSON structure
+- `ConnectESCO.txt`: Maps extracted skills to ESCO database entries
+- `Graph_JSON.txt`: Creates knowledge graph structures from processed content
+- `Matrix.txt`: Generates comprehensive skill matrices for analysis
+- `Graph.txt`: Produces Neo4j Cypher queries from graph structures
+
+### Customizing Prompts
+
+To modify AI processing behavior:
+
+1. Edit the appropriate prompt file in `src/Prompts/`
+2. Test changes with sample data
+3. Monitor processing results through the web interface
+
+**Example Prompt Structure**:
+```
+Find an ESCO label for each skill from the csv file. Do not invent new ones, do not combine them. Use exactly the csv file and nothing else. If no ESCO skill can be assigned: No ESCO. The output structure should look like this:
+[["Skill1Id", "ESCO1preferredlabel", "Type1"], ["Skill2Id", "ESCO2preferredlabel", "Type2"], ...]
+```
+
+## API Integration
+
+### Claude AI Batch Processing
+
+The system implements efficient batch processing for the Claude API:
+
+**Rate Limiting**: Automatic token usage tracking and request limiting
+```python
+max_tokens_per_minute = 50000
+safety_buffer = 0.6  # Use 60% of limit
+```
+
+**Batch Job Management**: Asynchronous processing with status monitoring
+- Request batching for cost optimization
+- Automatic retry logic for failed requests
+- Token usage reporting and optimization
+
+### Database Operations
+
+**PostgreSQL Integration**: 
+- Automatic schema creation via `DB_Setup/init.sql`
+- ESCO data import from CSV files
+- Skill matching and relationship queries
+
+**Connection Management**:
+```python
+def get_engine():
+    db_url = f'postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
+    return create_engine(db_url)
+```
+
+## Output Formats
+
+### Knowledge Graph JSON
+
+```json
+{
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Module",
+      "properties": {
+        "code": "CS101",
+        "name": "Introduction to Computer Science",
+        "ETCS": "6",
+        "language": "English"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "1",
+      "endNode": "2", 
+      "type": "consists_of",
+      "properties": {}
+    }
+  ]
+}
+```
+
+### Neo4j Cypher Queries
+
+```cypher
+CALL apoc.create.node(['Module'], {
+  code: 'CS101', 
+  name: 'Introduction to Computer Science', 
+  ETCS: '6', 
+  language: 'English'
+}) YIELD node AS n1
+```
+
+### ESCO Skill Mappings
+
+```json
+{
+  "skills": [
+    ["skill_123", "programming concepts", "equivalent"],
+    ["skill_124", "algorithm design", "partOf"]
+  ]
+}
+```
+
+## Development and Extension
+
+### Adding New Module Structures
+
+1. Update the `Modulestructure` section in `src/config/general.yml`
+2. Add corresponding section recognition patterns
+3. Test with sample PDF modules
+4. Verify extraction accuracy through the web interface
+
+### Extending Graph Schema
+
+1. Modify the `LLM_Structure` configuration to include new node types or properties
+2. Update corresponding prompts in `src/Prompts/`
+3. Adjust graph processing logic in `Graph/Graph.py` if necessary
+4. Test graph generation with modified schema
+
+### Custom AI Processing Functions
+
+To add new AI processing capabilities:
+
+1. Create new prompt files in `src/Prompts/`
+2. Implement processing functions in `AI/AI.py`
+3. Add API integration in `AI/AIConnector.py`
+4. Update web interface workflow if required
+
+### Alternative AI Provider Integration
+
+While the system is designed specifically for Claude AI, it is theoretically possible to integrate alternative AI providers by replacing the connector module:
+
+**Connector Replacement**:
+- Replace or modify `AI/AIConnector.py` with custom API integration
+- Maintain the same function signatures and return formats expected by the system
+- Implement equivalent batch processing, rate limiting, and error handling mechanisms
+
+**Important Limitations and Considerations**:
+- **No Functional Guarantee**: The system's response parsing logic is specifically designed for Claude AI's output format. Other AI providers may produce different response structures, leading to processing failures.
+- **Custom Implementation Responsibility**: When using alternative providers, developers are fully responsible for implementing:
+  - Rate limiting and API quota management
+  - Batch processing optimization
+  - Error handling and retry logic
+  - Token usage tracking and cost optimization
+  - Response format standardization
+
+**Technical Requirements for Alternative Providers**:
+- Must support JSON output format as specified in prompts
+- Should handle complex prompt instructions for educational content analysis
+- Must provide consistent response formatting for downstream processing
+- Requires sufficient context window for processing complete module descriptions
+
+**Compatibility Assessment**: Before implementing an alternative provider, thoroughly test with sample data to ensure response formats are compatible with the existing parsing logic in the Graph and Processing modules.
+
+## Troubleshooting
+
+### Common Issues
+
+**Database Connection Errors**: Verify Docker container is running and environment variables are correct
+
+**API Rate Limiting**: Check Claude API key validity and adjust rate limiting parameters in configuration
+
+**PDF Processing Failures**: Ensure PDF files are text-based (not scanned images) and follow expected structure patterns
+
+**Memory Issues**: For large PDF files, monitor system memory usage and consider processing files individually
+
+### Log Analysis
+
+The system provides comprehensive logging through the web interface:
+- Real-time processing logs with timestamps
+- Error messages with context information
+- Token usage statistics for cost monitoring
+- Processing step completion indicators
