@@ -77,7 +77,7 @@ def export_preferred_label(log_callback, set_process_complete, set_process_error
         with engine.connect() as connection:
             result = connection.execute(text("SELECT DISTINCT preferredlabel FROM skills where preferredlabel is not null"))
             df = pd.DataFrame(result.fetchall(), columns=['preferredlabel'])
-            file_name = config('Caching')['ESCO_preferred_label']
+            file_name = config('Caching', log_callback)['ESCO_preferred_label']
             df.to_csv('./src/Output/' + file_name, index=False, header=True, sep=';')
             set_process_complete()
     except Exception as e:

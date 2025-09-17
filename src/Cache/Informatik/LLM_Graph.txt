@@ -1,0 +1,247 @@
+CALL apoc.create.node(['Module'], {code: 'T4INF1001', name: 'Mathematics I', year: '1st', mandatory: 'true', ETCS: '5', language: 'German'}) YIELD node AS n1
+CALL apoc.create.node(['Unit'], {name: 'Linear Algebra', code: 'LA101', hours: '60', delivery_mode: 'Lecture, Seminar, Exercise'}) YIELD node AS n2
+CALL apoc.create.node(['Skill'], {name: 'Mathematical thinking and reasoning abilities', description: 'Ability to develop mathematical thinking and reasoning capabilities.', proficiencyLevel: null, URL: null}) YIELD node AS n3
+CALL apoc.create.node(['Skill'], {name: 'Understanding discrete mathematics and linear algebra', description: 'Ability to understand discrete mathematics and linear algebra concepts.', proficiencyLevel: null, URL: null}) YIELD node AS n4
+CALL apoc.create.node(['Skill'], {name: 'Apply mathematical knowledge to engineering problems', description: 'Ability to apply mathematical knowledge to problems from engineering and computer science.', proficiencyLevel: null, URL: null}) YIELD node AS n5
+CALL apoc.create.node(['Skill'], {name: 'Logical thinking and clear structuring', description: 'Ability to think logically and structure clearly.', proficiencyLevel: null, URL: null}) YIELD node AS n6
+CALL apoc.create.node(['Skill'], {name: 'Creative exploratory behaviors and perseverance', description: 'Ability to show creative exploratory behaviors and perseverance.', proficiencyLevel: null, URL: null}) YIELD node AS n7
+CALL apoc.create.node(['Skill'], {name: 'Work persistently on complex mathematical problems', description: 'Ability to work persistently on complex mathematical problems.', proficiencyLevel: null, URL: null}) YIELD node AS n8
+CALL apoc.create.node(['Skill'], {name: 'Integrate mathematical knowledge with other engineering disciplines', description: 'Ability to integrate mathematical knowledge with other engineering disciplines.', proficiencyLevel: null, URL: null}) YIELD node AS n9
+CALL apoc.create.node(['Professional Competence'], {name: 'Professional Competence'}) YIELD node AS n10
+CALL apoc.create.node(['Methodical Competence'], {name: 'Methodical Competence'}) YIELD node AS n11
+CALL apoc.create.node(['Personal/Social Competence'], {name: 'Personal/Social Competence'}) YIELD node AS n12
+CALL apoc.create.node(['Interdisciplinary Competence'], {name: 'Interdisciplinary Competence'}) YIELD node AS n13
+CALL apoc.create.node(['Module'], {code: 'T4INF1002', name: 'Theoretical Computer Science I', year: '1st', mandatory: 'true', ETCS: '5', language: 'German'}) YIELD node AS n14
+CALL apoc.create.node(['Unit'], {name: 'Fundamentals and Logic', code: 'FL102', hours: '60', delivery_mode: 'Lecture, Exercise'}) YIELD node AS n15
+CALL apoc.create.node(['Skill'], {name: 'Understanding theoretical foundations of logic', description: 'Ability to understand the theoretical foundations of propositional and predicate logic.', proficiencyLevel: null, URL: null}) YIELD node AS n16
+CALL apoc.create.node(['Skill'], {name: 'Formal specification of algorithms', description: 'Ability to understand the formal specification of algorithms and classify them.', proficiencyLevel: null, URL: null}) YIELD node AS n17
+CALL apoc.create.node(['Skill'], {name: 'Abstract thinking for complex applications', description: 'Ability to divide and master complex business applications through abstract thinking.', proficiencyLevel: null, URL: null}) YIELD node AS n18
+CALL apoc.create.node(['Skill'], {name: 'Logical reasoning and inference', description: 'Ability to use logical reasoning and inference on a case-by-case basis.', proficiencyLevel: null, URL: null}) YIELD node AS n19
+CALL apoc.create.node(['Skill'], {name: 'Technical communication at scientific level', description: 'Ability to exchange with specialists and laypeople about technical questions at a scientific level.', proficiencyLevel: null, URL: null}) YIELD node AS n20
+CALL apoc.create.node(['Module'], {code: 'T4INF1003', name: 'Theoretical Computer Science II', year: '1st', mandatory: 'true', ETCS: '5', language: 'German/English'}) YIELD node AS n21
+CALL apoc.create.node(['Unit'], {name: 'Algorithms and Complexity', code: 'AC103', hours: '60', delivery_mode: 'Lecture, Exercise'}) YIELD node AS n22
+CALL apoc.create.node(['Skill'], {name: 'Understanding algorithm approaches for problem classes', description: 'Ability to demonstrate in-depth knowledge of algorithm approaches for important problem classes.', proficiencyLevel: null, URL: null}) YIELD node AS n23
+CALL apoc.create.node(['Skill'], {name: 'Understanding complexity concepts and calculations', description: 'Ability to understand complexity concepts and complexity calculations for algorithms.', proficiencyLevel: null, URL: null}) YIELD node AS n24
+CALL apoc.create.node(['Skill'], {name: 'Complexity analysis evaluation', description: 'Ability to evaluate the necessity of complexity analysis for a program.', proficiencyLevel: null, URL: null}) YIELD node AS n25
+CALL apoc.create.node(['Skill'], {name: 'Design algorithms for defined problems', description: 'Ability to design algorithms for defined problems and justify their correctness.', proficiencyLevel: null, URL: null}) YIELD node AS n26
+CALL apoc.create.node(['Module'], {code: 'T4INF1004', name: 'Programming', year: '1st', mandatory: 'true', ETCS: '5', language: 'German'}) YIELD node AS n27
+CALL apoc.create.node(['Unit'], {name: 'Programming', code: 'PROG104', hours: '84', delivery_mode: 'Lecture, Exercise, Laboratory'}) YIELD node AS n28
+CALL apoc.create.node(['Skill'], {name: 'Understanding procedural and object-oriented programming', description: 'Ability to understand the basic elements of procedural and object-oriented programming.', proficiencyLevel: null, URL: null}) YIELD node AS n29
+CALL apoc.create.node(['Skill'], {name: 'Program design and implementation', description: 'Ability to independently design a program design, code it and test program functionality.', proficiencyLevel: null, URL: null}) YIELD node AS n30
+CALL apoc.create.node(['Skill'], {name: 'Team collaboration in programming', description: 'Ability to discuss, justify and develop program design and coding in a team.', proficiencyLevel: null, URL: null}) YIELD node AS n31
+CALL apoc.create.node(['Skill'], {name: 'Analyze practical problems and develop solutions', description: 'Ability to independently analyze simple practical problems and design, program and test solutions.', proficiencyLevel: null, URL: null}) YIELD node AS n32
+CALL apoc.create.node(['Module'], {code: 'T4INF1005', name: 'Key Skills', year: '1st', mandatory: 'true', ETCS: '5', language: 'German/English'}) YIELD node AS n33
+CALL apoc.create.node(['Unit'], {name: 'Business Administration', code: 'BA105', hours: '24', delivery_mode: 'Lecture, Seminar, Project'}) YIELD node AS n34
+CALL apoc.create.node(['Unit'], {name: 'Ethics and Law for Computer Science', code: 'EL105', hours: '24', delivery_mode: 'Lecture, Seminar, Project'}) YIELD node AS n35
+CALL apoc.create.node(['Unit'], {name: 'Project Management', code: 'PM105', hours: '24', delivery_mode: 'Lecture, Seminar, Project'}) YIELD node AS n36
+CALL apoc.create.node(['Skill'], {name: 'Team development and collaboration', description: 'Ability to develop, discuss and present content and ideas in a team.', proficiencyLevel: null, URL: null}) YIELD node AS n37
+CALL apoc.create.node(['Skill'], {name: 'Presentation skills', description: 'Ability to present results to a group.', proficiencyLevel: null, URL: null}) YIELD node AS n38
+CALL apoc.create.node(['Skill'], {name: 'Interdisciplinary thinking', description: 'Ability to think in interdisciplinary contexts.', proficiencyLevel: null, URL: null}) YIELD node AS n39
+CALL apoc.create.node(['Skill'], {name: 'Strategic action competence and entrepreneurial thinking', description: 'Ability to demonstrate strategic action competence and entrepreneurial thinking.', proficiencyLevel: null, URL: null}) YIELD node AS n40
+CALL apoc.create.node(['Module'], {code: 'T4INF2003', name: 'Software Engineering I', year: '2nd', mandatory: 'true', ETCS: '9', language: 'German/English'}) YIELD node AS n41
+CALL apoc.create.node(['Unit'], {name: 'Fundamentals of Software Engineering', code: 'SE203', hours: '96', delivery_mode: 'Lecture, Exercise, Project'}) YIELD node AS n42
+CALL apoc.create.node(['Skill'], {name: 'Understanding software development process', description: 'Ability to understand the fundamentals of the software development process.', proficiencyLevel: null, URL: null}) YIELD node AS n43
+CALL apoc.create.node(['Skill'], {name: 'Problem analysis and solution design', description: 'Ability to analyze a given problem and design computer-aided solutions.', proficiencyLevel: null, URL: null}) YIELD node AS n44
+CALL apoc.create.node(['Skill'], {name: 'Team building and development', description: 'Ability to build and develop teams.', proficiencyLevel: null, URL: null}) YIELD node AS n45
+CALL apoc.create.node(['Skill'], {name: 'Interdisciplinary skill combination', description: 'Ability to combine interdisciplinary skills such as software development with project management.', proficiencyLevel: null, URL: null}) YIELD node AS n46
+CALL apoc.create.node(['Module'], {code: 'T4INF2004', name: 'Database Systems', year: '2nd', mandatory: 'true', ETCS: '6', language: 'German'}) YIELD node AS n47
+CALL apoc.create.node(['Unit'], {name: 'Fundamentals of Database Systems', code: 'DB204', hours: '72', delivery_mode: 'Lecture, Exercise'}) YIELD node AS n48
+CALL apoc.create.node(['Skill'], {name: 'Understanding database system theories', description: 'Ability to understand the fundamental theories of database systems.', proficiencyLevel: null, URL: null}) YIELD node AS n49
+CALL apoc.create.node(['Skill'], {name: 'Database design and evaluation', description: 'Ability to design a practically usable, normalized relational database and evaluate designs.', proficiencyLevel: null, URL: null}) YIELD node AS n50
+CALL apoc.create.node(['Skill'], {name: 'Database design methods evaluation', description: 'Ability to evaluate the strengths and weaknesses of design methods for databases.', proficiencyLevel: null, URL: null}) YIELD node AS n51
+CALL apoc.create.node(['Module'], {code: 'T4INF2006', name: 'IT Security', year: '2nd', mandatory: 'true', ETCS: '5', language: 'German/English'}) YIELD node AS n52
+CALL apoc.create.node(['Unit'], {name: 'IT Security', code: 'ITS206', hours: '60', delivery_mode: 'Lecture'}) YIELD node AS n53
+CALL apoc.create.node(['Skill'], {name: 'Vulnerability recognition and threat analysis', description: 'Ability to recognize individual vulnerabilities after a threat analysis.', proficiencyLevel: null, URL: null}) YIELD node AS n54
+CALL apoc.create.node(['Skill'], {name: 'IT security methods application', description: 'Ability to apply methods of IT security analysis such as threat modeling.', proficiencyLevel: null, URL: null}) YIELD node AS n55
+CALL apoc.create.node(['Skill'], {name: 'Ethical assessment of IT consequences', description: 'Ability to assess ethical questions and consequences for those affected when using IT.', proficiencyLevel: null, URL: null}) YIELD node AS n56
+CALL apoc.create.node(['Skill'], {name: 'IT security decision making', description: 'Ability to make decisions against the background of IT security.', proficiencyLevel: null, URL: null}) YIELD node AS n57
+CALL apoc.create.node(['Module'], {code: 'T4INF3602', name: 'Artificial Intelligence and Machine Learning', year: '3rd', mandatory: 'false', ETCS: '5', language: 'German/English'}) YIELD node AS n58
+CALL apoc.create.node(['Unit'], {name: 'Fundamentals of Artificial Intelligence', code: 'AI602', hours: '30', delivery_mode: 'Lecture, Seminar, Exercise'}) YIELD node AS n59
+CALL apoc.create.node(['Unit'], {name: 'Fundamentals of Machine Learning Methods', code: 'ML602', hours: '30', delivery_mode: 'Lecture, Seminar, Exercise'}) YIELD node AS n60
+CALL apoc.create.node(['Skill'], {name: 'Understanding AI application areas', description: 'Ability to understand application areas and typical scenarios of artificial intelligence.', proficiencyLevel: null, URL: null}) YIELD node AS n61
+CALL apoc.create.node(['Skill'], {name: 'AI methods practical application', description: 'Ability to use basic methods of artificial intelligence in practical examples.', proficiencyLevel: null, URL: null}) YIELD node AS n62
+CALL apoc.create.node(['Skill'], {name: 'Intelligent software systems development', description: 'Ability to develop intelligent software systems using methodological knowledge.', proficiencyLevel: null, URL: null}) YIELD node AS n63
+CALL apoc.create.node(['Skill'], {name: 'AI ethical and social implications assessment', description: 'Ability to assess the ethical, economic, ecological and social implications of AI application.', proficiencyLevel: null, URL: null}) YIELD node AS n64
+CALL apoc.create.node(['Module'], {code: 'T4INF1101', name: 'Web Engineering', year: '1st', mandatory: 'false', ETCS: '5', language: 'German'}) YIELD node AS n65
+CALL apoc.create.node(['Unit'], {name: 'Web Engineering 1', code: 'WE1101', hours: '36', delivery_mode: 'Lecture, Exercise, Laboratory'}) YIELD node AS n66
+CALL apoc.create.node(['Unit'], {name: 'Web Engineering 2', code: 'WE2101', hours: '36', delivery_mode: 'Lecture, Exercise, Laboratory'}) YIELD node AS n67
+CALL apoc.create.node(['Skill'], {name: 'Web development theory-practice relation', description: 'Ability to relate developed theories and models to experiences from professional practice.', proficiencyLevel: null, URL: null}) YIELD node AS n68
+CALL apoc.create.node(['Skill'], {name: 'Web development methods selection', description: 'Ability to select and apply appropriate methods for standardized web application cases.', proficiencyLevel: null, URL: null}) YIELD node AS n69
+CALL apoc.create.node(['Skill'], {name: 'Distributed systems understanding', description: 'Ability to name basic concepts of distributed systems and explain their function.', proficiencyLevel: null, URL: null}) YIELD node AS n70
+CALL apoc.create.node(['ESCO'], {name: 'mathematics', description: 'Mathematics is the study of abstract deductive systems. It includes algebra, arithmetic, geometry, real and complex analysis and pure and applied mathematics.\nProgrammes and qualifications with the following main content are classified here:\nAlgebra\nGeometry\nMathematics\nNumerical analysis\nOperational research', altlabels: null, concepturi: 'http://data.europa.eu/esco/isced-f/0541'}) YIELD node AS nE1
+CALL apoc.create.node(['ESCO'], {name: 'thinking skills and competences', description: 'Skills and competences relating to the ability to apply the mental processes of gathering, conceptualizing, analysing, synthesizing, and/or evaluating information gathered from, or generated by, observation, experience, reflection, reasoning, or communication. They include the ability to evaluate and use information of different kinds to plan activities, achieve goals, solve problems, deal with issues and perform complex tasks in routine and novel ways.', altlabels: 'cognitive skills and competences\nuse of reason and logic', concepturi: 'http://data.europa.eu/esco/skill/8267ecb5-c976-4b6a-809b-4ceecb954967'}) YIELD node AS nE2
+CALL apoc.create.node(['ESCO'], {name: 'thinking creatively and innovatively', description: 'Generate new ideas or combine existing ones to develop innovative, novel solutions.', altlabels: 'creating new information, concepts, ideas, products, processes\ncarrying out activities in innovative and creative ways', concepturi: 'http://data.europa.eu/esco/skill/e84d080a-ff6d-41a7-b7b9-133e97c7bf00'}) YIELD node AS nE3
+CALL apoc.create.node(['ESCO'], {name: 'solving problems', description: 'Developing and implementing solutions to practical, operational or conceptual problems which arise in the execution of work in a wide range of contexts.', altlabels: 'problem solving', concepturi: 'http://data.europa.eu/esco/skill/4feed491-dc09-4218-814a-0146e13ef4fe'}) YIELD node AS nE4
+CALL apoc.create.node(['ESCO'], {name: 'logic', description: 'The study and use of accurate reasoning, where the legitimacy of arguments is measured by their logical form and not by content.', altlabels: 'the study of logic\nlogic studies', concepturi: 'http://data.europa.eu/esco/skill/294cf13e-4fdf-4cb8-bb6b-31b9da7f4819'}) YIELD node AS nE5
+CALL apoc.create.node(['ESCO'], {name: 'algorithms', description: 'The self-contained step-by-step sets of operations that carry out calculations, data processing and automated reasoning, usually to solve problems.', altlabels: 'algorithmic | algorithm | formulae | formulas', concepturi: 'http://data.europa.eu/esco/skill/54924a2c-daca-40d3-9716-4b38ceb04f38'}) YIELD node AS nE6
+CALL apoc.create.node(['ESCO'], {name: 'technical communicator', description: 'Technical communicators prepare clear, concise and professional\u00a0communication from product developers to users of the products such as online help, user manuals, white papers, specifications and industrial videos. For this, they analyse products, legal requirements, markets, customers and users. They develop information and media concepts, standards, structures and software tool support. They plan the content creation and media production processes, develop written, graphical, video or other contents, generate media output, release their information products and\u00a0receive feedback from the users.', altlabels: 'scientific communicator\ntechnical author\nadvanced technical communicator\ndocumentation specialist\ntechnical communicators\ntechnical illustrator\ne-learning author\ntechnical writer\nsenior technical communicator\ntechnical documentation specialist\ntechnical documentation author\ninformation architect\nAPI writer\ntechnical content developer\nusability expert\nuser experience designer\ntechnical editor\nscientific and technical communicator\ntech communicator', concepturi: 'http://data.europa.eu/esco/occupation/8cb59bc4-1f39-477e-beea-effed12d186c'}) YIELD node AS nE7
+CALL apoc.create.node(['ESCO'], {name: 'computer programming', description: 'The techniques and principles of software development, such as analysis, algorithms, coding, testing and compiling of programming paradigms (e.g. object oriented programming, functional programming) and of programming languages.', altlabels: 'DIBOL\nSeed7\nVisual Basic .NET\nHyperTalk\nKorn-shell\nEmacs Lisp\nKnockoutJS\ncomputer programming\nSquirrel-script\nTACL\ncT\nObject Pascal\nVisual Basic\nCaml\nAspectJ\nPostScript\nOCaml\nCeylon\nDylan\nbash\nOpenCV\nGosu\nColdFusion\nMSVC++\nC shell\nIDL\nALGOL\nSubversion\nAda\noccam\nIo\nREXX\nZ shell\nBizTalk\nAppleScript\nBCPL\nX10\nGCC\nActionScript\nINTERCAL\nLabVIEW\nHack\nFantom\nTcl\nSTL\nFortran\nPL/I\nCOMAL\nRebol\nEuphoria\nLua\nPowerShell\nAngularJS\nCurl\nAWK\nTuring', concepturi: 'http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97'}) YIELD node AS nE8
+CALL apoc.create.node(['ESCO'], {name: 'collaborating in teams and networks', description: 'Support or develop a group to work towards a common goal in a way which shows understanding and respect of others\u2019 roles and competencies.', altlabels: 'working with others\nacting with others to achieve aims', concepturi: 'http://data.europa.eu/esco/skill/036afa6e-cdde-4b38-a53a-8e7910a840e1'}) YIELD node AS nE9
+CALL apoc.create.node(['ESCO'], {name: 'presenting information', description: 'Presenting oral or visual material to an audience in order to provide or interpret information.', altlabels: null, concepturi: 'http://data.europa.eu/esco/skill/3f641516-9846-4a7f-a7f4-e1274eef6688'}) YIELD node AS nE10
+CALL apoc.create.node(['ESCO'], {name: 'software and applications development and analysis', description: 'Software and applications development and analysis is the study of the design and development of computer systems and computing environments.\nProgrammes and qualifications with the following main content are classified here:\nComputer programming\nComputer science\nComputer systems analysis\nComputer systems design\nInformatics\nOperating systems\nProgramming languages development\nSoftware development\nSoftware programming\n\n=== Exclusions\nComputer engineering (hardware) is excluded from this detailed field and included in detailed field 0714 \'Electronics and automation\'.\nProgrammes and qualifications in using computer applications are excluded from this detailed field and included in detailed field 0611 \'Computer use\'. Database and network design and administration is excluded from this detailed field and included in detailed field 0612 \'Database and network design and administration\'.', altlabels: null, concepturi: 'http://data.europa.eu/esco/isced-f/0613'}) YIELD node AS nE11
+CALL apoc.create.node(['ESCO'], {name: 'building and developing teams', description: 'Encouraging team members and building a relationship of mutual trust, respect and cooperation. Stimulating teambuilding activities.', altlabels: 'managing teams', concepturi: 'http://data.europa.eu/esco/skill/2d02d98c-20c4-4b46-bf44-e5f85a3f03ed'}) YIELD node AS nE12
+CALL apoc.create.node(['ESCO'], {name: 'database', description: 'The classification of databases, that includes their purpose, characteristics, terminology, models and use such as XML databases, document-oriented databases and full text databases.', altlabels: 'database | non-relational database | relational database | types of databases', concepturi: 'http://data.europa.eu/esco/skill/43ae58b9-5e56-4524-b45a-b422777a0576'}) YIELD node AS nE13
+CALL apoc.create.node(['ESCO'], {name: 'ethics', description: 'The philosophical study that deals with solving questions of human morality; it defines and systemises concepts such as right, wrong, and crime.', altlabels: 'moral studies\nthe study of moral principles', concepturi: 'http://data.europa.eu/esco/skill/cef5c0f8-1e40-4c09-b6a7-aa7811849e5d'}) YIELD node AS nE14
+CALL apoc.create.node(['ESCO'], {name: 'distributed computing', description: 'The software process in which computer components interact over a network and send messages to communicate on their actions.', altlabels: null, concepturi: 'http://data.europa.eu/esco/skill/897b393f-e7e0-4248-a40d-d77119694e83'}) YIELD node AS nE15
+CALL apoc.create.relationship(n1, 'consists_of', {}, n2) YIELD rel AS r1
+CALL apoc.create.relationship(n2, 'teaches', {}, n3) YIELD rel AS r2
+CALL apoc.create.relationship(n2, 'teaches', {}, n4) YIELD rel AS r3
+CALL apoc.create.relationship(n2, 'teaches', {}, n5) YIELD rel AS r4
+CALL apoc.create.relationship(n2, 'teaches', {}, n6) YIELD rel AS r5
+CALL apoc.create.relationship(n2, 'teaches', {}, n7) YIELD rel AS r6
+CALL apoc.create.relationship(n2, 'teaches', {}, n8) YIELD rel AS r7
+CALL apoc.create.relationship(n2, 'teaches', {}, n9) YIELD rel AS r8
+CALL apoc.create.relationship(n10, 'contains', {}, n3) YIELD rel AS r9
+CALL apoc.create.relationship(n10, 'contains', {}, n4) YIELD rel AS r10
+CALL apoc.create.relationship(n10, 'contains', {}, n5) YIELD rel AS r11
+CALL apoc.create.relationship(n11, 'contains', {}, n6) YIELD rel AS r12
+CALL apoc.create.relationship(n11, 'contains', {}, n7) YIELD rel AS r13
+CALL apoc.create.relationship(n12, 'contains', {}, n8) YIELD rel AS r14
+CALL apoc.create.relationship(n13, 'contains', {}, n9) YIELD rel AS r15
+CALL apoc.create.relationship(n5, 'builds_on', {}, n4) YIELD rel AS r16
+CALL apoc.create.relationship(n5, 'builds_on', {}, n3) YIELD rel AS r17
+CALL apoc.create.relationship(n9, 'builds_on', {}, n5) YIELD rel AS r18
+CALL apoc.create.relationship(n14, 'consists_of', {}, n15) YIELD rel AS r19
+CALL apoc.create.relationship(n15, 'teaches', {}, n16) YIELD rel AS r20
+CALL apoc.create.relationship(n15, 'teaches', {}, n17) YIELD rel AS r21
+CALL apoc.create.relationship(n15, 'teaches', {}, n18) YIELD rel AS r22
+CALL apoc.create.relationship(n15, 'teaches', {}, n19) YIELD rel AS r23
+CALL apoc.create.relationship(n15, 'teaches', {}, n20) YIELD rel AS r24
+CALL apoc.create.relationship(n10, 'contains', {}, n16) YIELD rel AS r25
+CALL apoc.create.relationship(n10, 'contains', {}, n17) YIELD rel AS r26
+CALL apoc.create.relationship(n11, 'contains', {}, n18) YIELD rel AS r27
+CALL apoc.create.relationship(n11, 'contains', {}, n19) YIELD rel AS r28
+CALL apoc.create.relationship(n13, 'contains', {}, n20) YIELD rel AS r29
+CALL apoc.create.relationship(n19, 'builds_on', {}, n16) YIELD rel AS r30
+CALL apoc.create.relationship(n18, 'builds_on', {}, n17) YIELD rel AS r31
+CALL apoc.create.relationship(n20, 'builds_on', {}, n19) YIELD rel AS r32
+CALL apoc.create.relationship(n21, 'consists_of', {}, n22) YIELD rel AS r33
+CALL apoc.create.relationship(n22, 'teaches', {}, n23) YIELD rel AS r34
+CALL apoc.create.relationship(n22, 'teaches', {}, n24) YIELD rel AS r35
+CALL apoc.create.relationship(n22, 'teaches', {}, n25) YIELD rel AS r36
+CALL apoc.create.relationship(n22, 'teaches', {}, n26) YIELD rel AS r37
+CALL apoc.create.relationship(n10, 'contains', {}, n23) YIELD rel AS r38
+CALL apoc.create.relationship(n10, 'contains', {}, n24) YIELD rel AS r39
+CALL apoc.create.relationship(n11, 'contains', {}, n25) YIELD rel AS r40
+CALL apoc.create.relationship(n13, 'contains', {}, n26) YIELD rel AS r41
+CALL apoc.create.relationship(n25, 'builds_on', {}, n24) YIELD rel AS r42
+CALL apoc.create.relationship(n26, 'builds_on', {}, n23) YIELD rel AS r43
+CALL apoc.create.relationship(n26, 'builds_on', {}, n24) YIELD rel AS r44
+CALL apoc.create.relationship(n27, 'consists_of', {}, n28) YIELD rel AS r45
+CALL apoc.create.relationship(n28, 'teaches', {}, n29) YIELD rel AS r46
+CALL apoc.create.relationship(n28, 'teaches', {}, n30) YIELD rel AS r47
+CALL apoc.create.relationship(n28, 'teaches', {}, n31) YIELD rel AS r48
+CALL apoc.create.relationship(n28, 'teaches', {}, n32) YIELD rel AS r49
+CALL apoc.create.relationship(n10, 'contains', {}, n29) YIELD rel AS r50
+CALL apoc.create.relationship(n11, 'contains', {}, n30) YIELD rel AS r51
+CALL apoc.create.relationship(n12, 'contains', {}, n31) YIELD rel AS r52
+CALL apoc.create.relationship(n13, 'contains', {}, n32) YIELD rel AS r53
+CALL apoc.create.relationship(n30, 'builds_on', {}, n29) YIELD rel AS r54
+CALL apoc.create.relationship(n32, 'builds_on', {}, n30) YIELD rel AS r55
+CALL apoc.create.relationship(n33, 'consists_of', {}, n34) YIELD rel AS r56
+CALL apoc.create.relationship(n33, 'consists_of', {}, n35) YIELD rel AS r57
+CALL apoc.create.relationship(n33, 'consists_of', {}, n36) YIELD rel AS r58
+CALL apoc.create.relationship(n34, 'teaches', {}, n40) YIELD rel AS r59
+CALL apoc.create.relationship(n35, 'teaches', {}, n56) YIELD rel AS r60
+CALL apoc.create.relationship(n36, 'teaches', {}, n37) YIELD rel AS r61
+CALL apoc.create.relationship(n36, 'teaches', {}, n38) YIELD rel AS r62
+CALL apoc.create.relationship(n34, 'teaches', {}, n39) YIELD rel AS r63
+CALL apoc.create.relationship(n12, 'contains', {}, n37) YIELD rel AS r64
+CALL apoc.create.relationship(n12, 'contains', {}, n38) YIELD rel AS r65
+CALL apoc.create.relationship(n13, 'contains', {}, n39) YIELD rel AS r66
+CALL apoc.create.relationship(n13, 'contains', {}, n40) YIELD rel AS r67
+CALL apoc.create.relationship(n38, 'builds_on', {}, n37) YIELD rel AS r68
+CALL apoc.create.relationship(n40, 'builds_on', {}, n39) YIELD rel AS r69
+CALL apoc.create.relationship(n41, 'consists_of', {}, n42) YIELD rel AS r70
+CALL apoc.create.relationship(n42, 'teaches', {}, n43) YIELD rel AS r71
+CALL apoc.create.relationship(n42, 'teaches', {}, n44) YIELD rel AS r72
+CALL apoc.create.relationship(n42, 'teaches', {}, n45) YIELD rel AS r73
+CALL apoc.create.relationship(n42, 'teaches', {}, n46) YIELD rel AS r74
+CALL apoc.create.relationship(n10, 'contains', {}, n43) YIELD rel AS r75
+CALL apoc.create.relationship(n11, 'contains', {}, n44) YIELD rel AS r76
+CALL apoc.create.relationship(n12, 'contains', {}, n45) YIELD rel AS r77
+CALL apoc.create.relationship(n13, 'contains', {}, n46) YIELD rel AS r78
+CALL apoc.create.relationship(n44, 'builds_on', {}, n43) YIELD rel AS r79
+CALL apoc.create.relationship(n44, 'builds_on', {}, n30) YIELD rel AS r80
+CALL apoc.create.relationship(n46, 'builds_on', {}, n43) YIELD rel AS r81
+CALL apoc.create.relationship(n46, 'builds_on', {}, n37) YIELD rel AS r82
+CALL apoc.create.relationship(n47, 'consists_of', {}, n48) YIELD rel AS r83
+CALL apoc.create.relationship(n48, 'teaches', {}, n49) YIELD rel AS r84
+CALL apoc.create.relationship(n48, 'teaches', {}, n50) YIELD rel AS r85
+CALL apoc.create.relationship(n48, 'teaches', {}, n51) YIELD rel AS r86
+CALL apoc.create.relationship(n10, 'contains', {}, n49) YIELD rel AS r87
+CALL apoc.create.relationship(n10, 'contains', {}, n50) YIELD rel AS r88
+CALL apoc.create.relationship(n11, 'contains', {}, n51) YIELD rel AS r89
+CALL apoc.create.relationship(n50, 'builds_on', {}, n49) YIELD rel AS r90
+CALL apoc.create.relationship(n51, 'builds_on', {}, n49) YIELD rel AS r91
+CALL apoc.create.relationship(n52, 'consists_of', {}, n53) YIELD rel AS r92
+CALL apoc.create.relationship(n53, 'teaches', {}, n54) YIELD rel AS r93
+CALL apoc.create.relationship(n53, 'teaches', {}, n55) YIELD rel AS r94
+CALL apoc.create.relationship(n53, 'teaches', {}, n56) YIELD rel AS r95
+CALL apoc.create.relationship(n53, 'teaches', {}, n57) YIELD rel AS r96
+CALL apoc.create.relationship(n10, 'contains', {}, n54) YIELD rel AS r97
+CALL apoc.create.relationship(n11, 'contains', {}, n55) YIELD rel AS r98
+CALL apoc.create.relationship(n12, 'contains', {}, n56) YIELD rel AS r99
+CALL apoc.create.relationship(n13, 'contains', {}, n57) YIELD rel AS r100
+CALL apoc.create.relationship(n55, 'builds_on', {}, n54) YIELD rel AS r101
+CALL apoc.create.relationship(n57, 'builds_on', {}, n54) YIELD rel AS r102
+CALL apoc.create.relationship(n57, 'builds_on', {}, n55) YIELD rel AS r103
+CALL apoc.create.relationship(n58, 'consists_of', {}, n59) YIELD rel AS r104
+CALL apoc.create.relationship(n58, 'consists_of', {}, n60) YIELD rel AS r105
+CALL apoc.create.relationship(n59, 'teaches', {}, n61) YIELD rel AS r106
+CALL apoc.create.relationship(n59, 'teaches', {}, n62) YIELD rel AS r107
+CALL apoc.create.relationship(n60, 'teaches', {}, n63) YIELD rel AS r108
+CALL apoc.create.relationship(n59, 'teaches', {}, n64) YIELD rel AS r109
+CALL apoc.create.relationship(n10, 'contains', {}, n61) YIELD rel AS r110
+CALL apoc.create.relationship(n10, 'contains', {}, n62) YIELD rel AS r111
+CALL apoc.create.relationship(n11, 'contains', {}, n63) YIELD rel AS r112
+CALL apoc.create.relationship(n12, 'contains', {}, n64) YIELD rel AS r113
+CALL apoc.create.relationship(n62, 'builds_on', {}, n61) YIELD rel AS r114
+CALL apoc.create.relationship(n63, 'builds_on', {}, n62) YIELD rel AS r115
+CALL apoc.create.relationship(n63, 'builds_on', {}, n23) YIELD rel AS r116
+CALL apoc.create.relationship(n63, 'builds_on', {}, n30) YIELD rel AS r117
+CALL apoc.create.relationship(n65, 'consists_of', {}, n66) YIELD rel AS r118
+CALL apoc.create.relationship(n65, 'consists_of', {}, n67) YIELD rel AS r119
+CALL apoc.create.relationship(n66, 'teaches', {}, n68) YIELD rel AS r120
+CALL apoc.create.relationship(n66, 'teaches', {}, n69) YIELD rel AS r121
+CALL apoc.create.relationship(n67, 'teaches', {}, n70) YIELD rel AS r122
+CALL apoc.create.relationship(n10, 'contains', {}, n68) YIELD rel AS r123
+CALL apoc.create.relationship(n11, 'contains', {}, n69) YIELD rel AS r124
+CALL apoc.create.relationship(n10, 'contains', {}, n70) YIELD rel AS r125
+CALL apoc.create.relationship(n69, 'builds_on', {}, n68) YIELD rel AS r126
+CALL apoc.create.relationship(n70, 'builds_on', {}, n69) YIELD rel AS r127
+CALL apoc.create.relationship(n70, 'builds_on', {}, n29) YIELD rel AS r128
+CALL apoc.create.relationship(n3, 'partOf', {}, nE1) YIELD rel AS r129
+CALL apoc.create.relationship(n4, 'partOf', {}, nE1) YIELD rel AS r130
+CALL apoc.create.relationship(n5, 'partOf', {}, nE1) YIELD rel AS r131
+CALL apoc.create.relationship(n6, 'partOf', {}, nE2) YIELD rel AS r132
+CALL apoc.create.relationship(n7, 'partOf', {}, nE3) YIELD rel AS r133
+CALL apoc.create.relationship(n8, 'partOf', {}, nE4) YIELD rel AS r134
+CALL apoc.create.relationship(n16, 'partOf', {}, nE5) YIELD rel AS r135
+CALL apoc.create.relationship(n17, 'partOf', {}, nE6) YIELD rel AS r136
+CALL apoc.create.relationship(n18, 'partOf', {}, nE2) YIELD rel AS r137
+CALL apoc.create.relationship(n19, 'partOf', {}, nE5) YIELD rel AS r138
+CALL apoc.create.relationship(n20, 'partOf', {}, nE7) YIELD rel AS r139
+CALL apoc.create.relationship(n23, 'partOf', {}, nE6) YIELD rel AS r140
+CALL apoc.create.relationship(n24, 'partOf', {}, nE6) YIELD rel AS r141
+CALL apoc.create.relationship(n25, 'partOf', {}, nE6) YIELD rel AS r142
+CALL apoc.create.relationship(n26, 'partOf', {}, nE6) YIELD rel AS r143
+CALL apoc.create.relationship(n29, 'partOf', {}, nE8) YIELD rel AS r144
+CALL apoc.create.relationship(n30, 'partOf', {}, nE8) YIELD rel AS r145
+CALL apoc.create.relationship(n31, 'partOf', {}, nE9) YIELD rel AS r146
+CALL apoc.create.relationship(n32, 'partOf', {}, nE4) YIELD rel AS r147
+CALL apoc.create.relationship(n37, 'equivalent', {}, nE9) YIELD rel AS r148
+CALL apoc.create.relationship(n38, 'equivalent', {}, nE10) YIELD rel AS r149
+CALL apoc.create.relationship(n39, 'partOf', {}, nE2) YIELD rel AS r150
+CALL apoc.create.relationship(n40, 'partOf', {}, nE2) YIELD rel AS r151
+CALL apoc.create.relationship(n43, 'partOf', {}, nE11) YIELD rel AS r152
+CALL apoc.create.relationship(n44, 'partOf', {}, nE4) YIELD rel AS r153
+CALL apoc.create.relationship(n45, 'equivalent', {}, nE12) YIELD rel AS r154
+CALL apoc.create.relationship(n49, 'partOf', {}, nE13) YIELD rel AS r155
+CALL apoc.create.relationship(n50, 'partOf', {}, nE13) YIELD rel AS r156
+CALL apoc.create.relationship(n51, 'partOf', {}, nE13) YIELD rel AS r157
+CALL apoc.create.relationship(n56, 'partOf', {}, nE14) YIELD rel AS r158
+CALL apoc.create.relationship(n64, 'partOf', {}, nE14) YIELD rel AS r159
+CALL apoc.create.relationship(n68, 'partOf', {}, nE11) YIELD rel AS r160
+CALL apoc.create.relationship(n69, 'partOf', {}, nE11) YIELD rel AS r161
+CALL apoc.create.relationship(n70, 'equivalent', {}, nE15) YIELD rel AS r162 RETURN 'Graph created successfully' as result

@@ -79,7 +79,7 @@ def generate(prompt, data, log_callback):
         )
     except Exception as e:
         log_callback(f"❌ Fehler beim Erstellen des Batches: {e}")
-        raise
+        return None
 
     log_callback(f"✅ Batch erstellt: {message_batch.id}")
     log_callback(f"Status: {message_batch.processing_status}")
@@ -89,18 +89,21 @@ def generate(prompt, data, log_callback):
     batch_result = wait_for_batch_completion(message_batch.id, client, log_callback)
 
     if not batch_result:
-        raise Exception("Batch-Verarbeitung fehlgeschlagen")
-
+        log_callback("Batch-Verarbeitung fehlgeschlagen")
+        return None
     # Erstes (und einziges) Ergebnis aus dem Batch holen
     result_entry = batch_result[0]
 
     # Error-Handling für verschiedene Result-Types
     if result_entry['result_type'] == 'errored':
-        raise Exception(f"API-Fehler")
+        log_callback(f"API-Fehler")
+        return None
     elif result_entry['result_type'] == 'expired':
-        raise Exception("Request ist abgelaufen")
+        log_callback("Request ist abgelaufen")
+        return None
     elif result_entry['result_type'] != 'succeeded':
-        raise Exception(f"Unbekannter Result-Type: {result_entry['result_type']}")
+        log_callback(f"Unbekannter Result-Type: {result_entry['result_type']}")
+        return None
 
     # Message-Objekt aus dem Erfolgs-Result extrahieren
     message_result = result_entry['message']

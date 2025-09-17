@@ -1,0 +1,3669 @@
+{
+  "Mathematics I (T4INF1001)\nMathematics I": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF1001"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Reinhold Hübl"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Seminar, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can develop mathematical thinking and reasoning abilities. The students can understand discrete mathematics and linear algebra. The students can apply mathematical knowledge to problems from engineering and computer science. The students can describe scientific-technical processes using discrete mathematics and linear algebra. The students can understand the complexity of matrix calculations."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can think logically and structure clearly. The students can show creative exploratory behaviors and perseverance. SUGGESTION: The students can apply mathematical methods systematically to solve technical problems."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work persistently on complex mathematical problems. SUGGESTION: The students can communicate mathematical concepts clearly."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can integrate mathematical knowledge with other engineering disciplines."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Linear Algebra"
+        },
+        {
+          "CONTACT TIME": "60"
+        },
+        {
+          "SELF-STUDY": "90"
+        },
+        [
+          "- Fundamentals of discrete mathematics\n- Basic algebraic structures\n- Vector spaces and linear mappings\n- Determinants, eigenvalues, diagonalizability\n- Complex numbers\n- Application examples"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        {
+          "It is recommended to compensate for different entry requirements of students through guided self-study.": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Theoretical Computer Science I (T4INF1002)\nTheoretical Computer Science I": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF1002"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr.-Ing. Falko Kötter"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can understand the theoretical foundations of propositional and predicate logic. The students can understand the formal specification of algorithms and classify them. The students can master the model of logical programming and apply it."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can divide and master complex business applications through abstract thinking. The students can use logical reasoning and inference on a case-by-case basis."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can engage in logical discussions and debates."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can exchange with specialists and laypeople about technical questions and tasks in logic, logical inference, verification and abstract thinking at a scientific level."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Fundamentals and Logic"
+        },
+        {
+          "CONTACT TIME": "60"
+        },
+        {
+          "SELF-STUDY": "90"
+        },
+        [
+          "- Algebraic structures: Relations, ordering, mapping\n- Formal logic: Propositional logic, predicate logic\n- Algorithm theory (with reference to logic): Recursion, termination and complexity, correctness\n- Basic knowledge of declarative (logical/functional/....) programming"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        {
+          "-": "Status as of 12.08.2025"
+        }
+      ]
+    }
+  ],
+  "Theoretical Computer Science II (T4INF1003)\nTheoretical Computer Science II": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF1003"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. rer. nat. Stephan Schulz"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can demonstrate in-depth knowledge of algorithm approaches for important problem classes in computer science. The students can understand complexity concepts and complexity calculations for algorithms. The students can understand important abstract data types and their properties."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can evaluate the necessity of complexity analysis for a program. The students can choose appropriate measures for use in the professional environment."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can collaborate effectively when analyzing complex algorithms."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can select and adapt efficient data structures for practical problems. The students can divide larger problems into manageable units through abstract thinking and solve them. The students can design algorithms for defined problems and justify their correctness."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Algorithms and Complexity"
+        },
+        {
+          "CONTACT TIME": "60"
+        },
+        {
+          "SELF-STUDY": "90"
+        },
+        [
+          "- Introduction to algorithms\n- Complexity theory: O-notation, complexity classes (O(nk), P, NP, NP-complete)\n- Search algorithms, sorting algorithms, hashing\n- Correctness of algorithms\n- Data structures: Sets, lists, stacks, queues\n- Trees, binary search trees, balanced graphs and graph algorithms\n- Coding: e.g. compression, error-detecting codes, error-correcting codes"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        {
+          "-": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "Programming, Mathematical fundamentals"
+        ]
+      ]
+    }
+  ],
+  "Programming (T4INF1004)\nProgramming": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF1004"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "2"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. rer.nat. Alexander Auch"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise, Laboratory"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Design"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "84"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "66"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can understand the basic elements of procedural and object-oriented programming. The students can understand the syntax and semantics of programming languages. The students can select and apply appropriate data structures for a problem."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can independently design a program design, code it and test their program for functionality. The students can use various structuring possibilities to create simple programs independently. The students can implement appropriate data structures for a problem. The students can use a development environment to create programs, structure them and examine them for errors including debugger."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can discuss, justify and develop their program design as well as its coding in a team. The students can analyze and evaluate existing code. The students can independently familiarize themselves with development environments and use them for programming and debugging."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can independently analyze simple practical problems and design, program and test programs to solve them."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Programming"
+        },
+        {
+          "CONTACT TIME": "84"
+        },
+        {
+          "SELF-STUDY": "66"
+        },
+        [
+          "Status as of 12.08.2025",
+          "T4INF1004 // Page 10"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Knowledge in procedural programming:\n- Algorithm description\n- Data types\n- I/O operations and file processing\n- Operators\n- Control structures\n- Functions\n- String processing\n- Structured data types\n- dynamic data types\n- Pointers\n- Memory management"
+        },
+        [
+          "Knowledge in object-oriented programming:\n- object-oriented program design\n- Idea and characteristics of object-oriented programming\n- Class concept\n- Operators\n- Overloading of operators and methods\n- Inheritance and overriding of operators\n- Polymorphism\n- Templates or Generics\n- Class libraries\n- Memory management, basic understanding of Garbage Collection"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "This module additionally includes up to 24h of guided self-study in the form of exercise hours, laboratories or projects. Here, exercise tasks and/or in-depth tasks are worked on by the students."
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Key Skills (T4INF1005)\nKey Skills": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF1005"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "2"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Jürgen Vollmer"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Seminar, Project"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Combined examination - Combined examination with written exam (<50%)"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "72"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "78"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "SUGGESTION: The students can understand fundamental communication principles."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "SUGGESTION: The students can apply presentation techniques effectively."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can develop, discuss and present content and ideas in a team. The students can present results to a group."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can think in interdisciplinary contexts. The students can demonstrate strategic action competence and entrepreneurial thinking."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Business Administration"
+        },
+        {
+          "CONTACT TIME": "24"
+        },
+        {
+          "SELF-STUDY": "26"
+        },
+        {
+          "- Introduction to theoretical approaches and methods in business administration\n- Goals and planning in business administration\n- Leadership styles and concepts\n- Legal forms\n- Balance sheets\n- Profit and loss statement\n- Cost accounting\n- Financing and investment\n- Holistic business simulation game": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Ethics and Law for Computer Science"
+        },
+        {
+          "CONTACT TIME": "24"
+        },
+        {
+          "SELF-STUDY": "26"
+        },
+        [
+          "- Fundamentals of ethics in computer science\n- Technology assessment\n- Compliance"
+        ],
+        [
+          "Legal foundations to be observed in the creation and use of intelligent systems, e.g.:\n- Criminal law\n- Civil liability, contractual legal issues and consumer protection law\n- Data protection law, especially GDPR\n- Copyright and patent law"
+        ],
+        [
+          "Project Management 2",
+          "24",
+          "26"
+        ],
+        [
+          "- Meetings, teams and conflicts\n- Risk planning and risk management\n- Quality planning\n- Project control and monitoring\n- Project completion, project review and financial considerations\n- Further project management methods"
+        ],
+        [
+          "Introduction to technical-scientific work",
+          "24",
+          "26"
+        ],
+        [
+          "Elements of scientific work and their products:\n- Content, formal and stylistic aspects of scientific work\n- Categories of technical and scientific documents and their evaluation\n- Conducting source research and their qualitative evaluation\n- Elaborations and presentation forms of scientific presentations\n- Task description of a technical or scientific project\n- Creation of an exemplary and complete documentation\n- Creation of an English and German brief report"
+        ],
+        [
+          "Key Skills 1",
+          "24",
+          "26"
+        ],
+        [
+          "- Presentation techniques\n- Learning and working techniques\n- Working in interdisciplinary and interculturally composed teams"
+        ],
+        [
+          "Key Skills 2",
+          "24",
+          "26"
+        ],
+        [
+          "- Main theories of Intercultural Communications (e.g. Hall - Kluckhohn and Strodtbeck - Hofstede - Trompenaars and Hamden-Turner)\n- Conflict management\n- Negotiations"
+        ],
+        [
+          "Key Skills 3",
+          "24",
+          "26"
+        ],
+        [
+          "- Scientific work (in addition to the units assigned to the practical modules, planning and conducting experiments, etc.)\n- Legal fundamentals for computer science\n- Fundamentals of ethics for computer science"
+        ],
+        [
+          "Foreign Languages 1",
+          "24",
+          "26"
+        ],
+        [
+          "- Written communication: Designing and evaluating reports, statements, speeches, protocols\n- Oral communication: Arguing and concluding within a discussion. Perfect presentation."
+        ],
+        [
+          "Presentation, Learning and Working Techniques",
+          "24",
+          "26"
+        ],
+        [
+          "- Verbal vs. non-verbal communication\n- Communication goal, message, target group selection\n- Content structuring\n- Process design\n- Speaker behavior (e.g. body language, voice modulation)\n- Media use with practical examples\n- Learning function"
+        ],
+        [
+          "Status as of 12.08.2025",
+          "T4INF1005 // Page 13"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Marketing 1"
+        },
+        {
+          "- Introduction to marketing\n- Market research\n- Marketing planning\n- Marketing instruments\n- Product and assortment policy\n- Advertising or communication policy\n- Price policy\n- Distribution policy": "Marketing 2"
+        },
+        {
+          "Various topics from Marketing 1 lecture are deepened here.": "Project Management 1"
+        },
+        {
+          "- What is project management?\n- Framework conditions\n- Project and goal definitions\n- Assignment and goals\n- Documents for project planning\n- Effort estimation\n- Project organization\n- Project phase models\n- Planning process and method planning\n- Personnel planning\n- Schedule planning\n- Cost planning and business background\n- Introduction to control, monitoring and project completion\n- Project management with IT support (e.g. MS Project)\n- Exercises on individual parts": "Intercultural Communication 1"
+        },
+        {
+          "- Major Theories of Intercultural Communications e.g. Hall - Kluckhohn and Strodtbeck - Hofstede - Trompenaars and Hamden-Turner\n- Exercises\n- Role Plays\n- Case Studies\n- Small Group Work\n- Presentations": "Intercultural Communication 2"
+        },
+        {
+          "- Conflict Management\n- Negotiation\n- Exercises\n- Role Plays\n- Case Studies\n- Small Group Work\n- Presentations": "Foreign Languages 2"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        {
+          "none": "Status as of 12.08.2025"
+        }
+      ]
+    }
+  ],
+  "Computer Engineering I (T4INF1006)\nComputer Engineering I": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF1006"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr.-Ing. Thomas Neidlinger"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise, Laboratory"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can grasp logical problems and develop appropriate methods for technical implementation. The students can demonstrate basic knowledge about the operation and structure of digital gates and circuits. The students can master the fundamentals for understanding computer components."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can independently grasp tasks from the field of digital technology. The students can reach suitable, function- and effort-optimized solutions in a targeted manner by applying scientific methods and findings using current technologies."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work effectively on technical implementation projects."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can integrate digital technology knowledge with broader computer science concepts."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Digital Technology"
+        },
+        {
+          "CONTACT TIME": "60"
+        },
+        {
+          "SELF-STUDY": "90"
+        },
+        [
+          "- Number systems and codes\n- Logical operations and their representation\n- Boolean algebra\n- Combinational circuits\n- Sequential circuits\n- Circuit technology and interfacing\n- Semiconductor memory"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        {
+          "-": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "none"
+        ]
+      ]
+    }
+  ],
+  "Mathematics II (T4INF1007)\nMathematics II": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF1007"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Reinhold Hübl"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Seminar, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can further develop their ability for mathematical thinking and reasoning. The students can understand analysis of one real variable and fundamental mathematical techniques. The students can apply this knowledge to problems from engineering and computer science. The students can describe scientific-technical processes using analysis. The students can use mathematical algorithms and implement them in executable programs."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can think logically and structure clearly. The students can show creative exploratory behaviors and perseverance."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can persist through challenging mathematical problems."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can bridge mathematical theory and practical programming implementation."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Analysis"
+        },
+        {
+          "CONTACT TIME": "60"
+        },
+        {
+          "SELF-STUDY": "90"
+        },
+        [
+          "- Analysis\n- Sequences and series\n- Continuity\n- Differential calculus of one variable in the real numbers\n- Integral calculus of one variable in the real numbers\n- Applications"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        {
+          "It is recommended to compensate for different entry requirements of students through guided self-study.": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Mathematics III (T4INF2001)\nMathematics III": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF2001"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "2nd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "2"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Reinhold Hübl"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        },
+        [
+          "Written exam",
+          "See examination regulations",
+          "yes"
+        ]
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "180"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "72"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "108"
+        },
+        {
+          "ECTS CREDIT POINTS": "6"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can further develop their ability for mathematical thinking and reasoning. The students can demonstrate overview knowledge regarding the application areas of mathematics and statistics important for computer science. The students can select and apply problem-appropriate methods."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "SUGGESTION: The students can systematically approach complex mathematical problems using appropriate software tools."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work independently on advanced mathematical topics."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can mathematically model tasks from computer science and solve them with software support. The students can describe technical and business processes and problems using methods of multidimensional analysis, differential equations, numerics and probability theory and statistics. The students can master the basic solution methods."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Applied Mathematics"
+        },
+        {
+          "CONTACT TIME": "36"
+        },
+        {
+          "SELF-STUDY": "54"
+        },
+        {
+          "- Fundamentals of differential and integral calculus of real functions with several variables as well as differential equations and differential equation systems\n- Numerical methods and further examples of mathematical applications in computer science": "Statistics"
+        },
+        {
+          "- Descriptive statistics\n- Random experiments, probabilities and special distributions\n- Inductive statistics\n- Applications in computer science": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "This module additionally includes up to 24h of guided self-study in the form of exercise hours, laboratories or projects. Here, exercise tasks and/or in-depth tasks are worked on by the students."
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Theoretical Computer Science III (T4INF2002)\nTheoretical Computer Science III": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF2002"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "2nd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Sebastian Ritterbusch"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "180"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "72"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "108"
+        },
+        {
+          "ECTS CREDIT POINTS": "6"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can understand the fundamentals of formal languages and automata theory. The students can formally specify regular languages through regular expressions, regex and type 3 grammar. The students can decide through finite acceptor. The students can specify context-free languages through type 2 grammar. The students can understand pushdown acceptors both top-down and bottom-up as the basis for compiler construction. The students can understand the connection between type 0 languages and Turing machines as the basis of computability theory."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can construct a minimal finite acceptor from various description forms for regular languages. The students can construct top-down and bottom-up pushdown acceptors from grammar for simple application cases. The students can understand the theoretical foundations of compiler construction tools scanner and parser for complex application cases. The students can recognize whether practical applications from computability theory are computable or decidable."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work systematically through complex theoretical problems."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can analyze the formal language in an application and recognize which Chomsky type it belongs to. The students can determine which formal methods and compiler construction tools are suitable for specific applications."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Formal Languages and Automata 1"
+        },
+        {
+          "CONTACT TIME": "48"
+        },
+        {
+          "SELF-STUDY": "72"
+        },
+        {
+          "- Grammars\n- Language classes (Chomsky hierarchy)\n- Recognizing automata Regular languages\n- Regular grammars\n- Finite automata\n- Non-deterministic/deterministic finite automata Context-free languages\n- Context-free grammars\n- Procedures for analyzing context-free grammars (CYK)\n- Pushdown automata: Top down and bottom up including k-lookahead\n- Application to simple practical examples\n- Connection Turing machine, formal languages of Chomsky type 0 and decidability": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Formal Languages and Automata 2"
+        },
+        {
+          "CONTACT TIME": "24"
+        },
+        {
+          "SELF-STUDY": "36"
+        },
+        [
+          "- Delimitation of different language classes (proof by pumping lemma)\n- Context-sensitive languages\n- Deepening decidability and computability theory\n- Turing completeness of programming languages (which language scope is sufficient to implement all computable functions)"
+        ],
+        [
+          "Introduction to Compiler Construction",
+          "24",
+          "36"
+        ],
+        [
+          "- Phases of the compiler\n- Lexical analysis (scanner)\n- Syntactic analysis (parser): Top-down procedures, bottom-up procedures\n- Syntax-directed translation: S-attribution, L-attribution, combination with syntax analysis procedures\n- Semantic analysis: Type checking"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "The unit FORMAL LANGUAGES AND AUTOMATA 1 (T4INF2002.1) is mandatory, one unit must be selected from the other units."
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Software Engineering I (T4INF2003)\nSoftware Engineering I": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF2003"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "2nd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "2"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dipl.-Phys. Till Hänisch"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise, Project"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Design"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "270"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "96"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "174"
+        },
+        {
+          "ECTS CREDIT POINTS": "9"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can understand the fundamentals of the software development process. The students can understand the methods and supporting technologies of the respective project phases."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can analyze a given problem. The students can select and apply appropriate methods for concrete problems. The students can design and implement a computer-aided solution. The students can make corrective adjustments to solution proposals. The students can use tools for collaboration and problem solving."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can competitively evaluate solution proposals for a given problem and justify their designs and solutions. The students can competitively evaluate, select and critically reflect on solution proposals. The students can exchange with specialists about problem analyses and solution proposals. The students can present their designs and solutions orally and in writing. The students can critically engage with different perspectives in discussion. The students can build and develop teams."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can combine interdisciplinary skills such as software development process with project management techniques. The students can consider time and cost factors during the project. The students can independently familiarize themselves with tools. The students can recognize their own strengths and weaknesses in the project and improve themselves. The students can deal with conflicts and solve them constructively. The students can pass on and support skills. The students can give each other constructive feedback. The students can effectively participate in a team for complex projects."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Fundamentals of Software Engineering"
+        },
+        {
+          "CONTACT TIME": "96"
+        },
+        {
+          "SELF-STUDY": "174"
+        },
+        [
+          "Status as of 12.08.2025",
+          "T4INF2003 // Page 24"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "- Process models\n- Phases of SW engineering and their connections\n- Requirements engineering and management, use cases\n- Analysis and design models (e.g. modeling techniques of UML or SADT)\n- Software architectures, interface design, software design and design patterns\n- Code guidelines and code quality: Reviewing and test planning, execution and evaluation\n- Continuous Integration\n- Version control\n- Operation and maintenance\n- Phase-specific treatment of various types of documentation\n- Implementation of a concrete software development project in medium-sized project teams\n(e.g. a web service/web app, mobile app, a stand-alone application or a control system)"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Database Systems (T4INF2004)\nDatabase Systems": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF2004"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "2nd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Dirk Reichardt"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "120"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "180"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "72"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "108"
+        },
+        {
+          "ECTS CREDIT POINTS": "6"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can understand the fundamental theories of database systems. The students can name, describe and compare the essential historical and current models of database systems. The students can systematically present and explain the basic principles of database systems. The students can design a practically usable, normalized relational database in a structured way. The students can evaluate database designs."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can evaluate the strengths and weaknesses of design methods for databases. The students can assess their applicability in the professional environment. The students can implement database schemas using SQL."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can discuss and develop appropriate designs for an application area together with subject matter experts."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can integrate database design with broader system architecture considerations."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Fundamentals of Database Systems"
+        },
+        {
+          "CONTACT TIME": "72"
+        },
+        {
+          "SELF-STUDY": "108"
+        },
+        [
+          "- Basic concepts and data modeling (including Entity Relationship Model)\n- Current and historical database models\n- Relational data model\n- Normal forms\n- Relational database design\n- Multi-user operation and transaction concepts\n- Architectures of database systems\n- Introduction to SQL (practical project/practical exercises)"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        {
+          "The module usually consists of a theoretical and a practical part.": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "Algorithms and data structures, as well as fundamentals of logic"
+        ]
+      ]
+    }
+  ],
+  "Computer Engineering II (T4INF2005)\nComputer Engineering II": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF2005"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "2nd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "2"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Dr. -Ing. Alfred Strey"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "240"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "96"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "144"
+        },
+        {
+          "ECTS CREDIT POINTS": "8"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can gain fundamental understanding of the tasks, functionality and architecture of modern computer systems. The students can perform system-level programming at the assembly level using an example processor. The students can understand the interaction of hardware and software in a computer in detail."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can understand scientific methods from computer architecture, system-level programming and operating systems. The students can interpret and evaluate the hardware and system software of modern computer systems using these methods. The students can design and analyze simple machine-level programs."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work systematically with low-level programming concepts."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can assess the performance of a computer system for a practical application. The students can follow and understand the rapid development in computer hardware. The students can understand advantages or disadvantages of introducing new IT technology. The students can understand how new technology works. The students can acquire necessary new knowledge themselves."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Computer Architectures 1"
+        },
+        {
+          "CONTACT TIME": "36"
+        },
+        {
+          "SELF-STUDY": "54"
+        },
+        [
+          "Status as of 12.08.2025",
+          "T4INF2005 // Page 28"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "- Introduction\n- History (mechanical, analog, digital)\n- von Neumann architecture\n- System components overview\n- Coarse structure of processor internals\n- Arithmetic unit\n- Addition: Half adder, full adder, significance of carry bit, carry ripple and carry look-ahead adder\n- Subtraction: Transformation from addition, significance of carry bit\n- Multiplication: Parallel and serial multiplier\n- Division: Concept\n- Arithmetic-logical unit (ALU)\n- Data path: ALU with arithmetic registers and result flags (CCR, status bits)\n- Control unit: Structure, components and functionality, instruction decoding\n- Microprogramming\n- Classification of processor instruction sets\n- Types of processor registers (general-purpose and status registers)\n- Performance evaluation and possibilities for performance improvement (e.g. pipelining)\n- Bus interface: Data, address and control lines\n- Bus components\n- Bus cycles: Read and write access, handshaking (especially waitstates)\n- Bus arbitration and bus multiplexing\n- Fundamental architectures\n- Concept of system structure and components: CPU, main memory, I/O: Discussion of connection of external devices (graphics, keyboard, hard drives, DVD, ...)\n- Semiconductor memory\n- Random access memory: Structure, function, address decoding, internal matrix organization\n- RAM: static, dynamic, current developments\n- ROM: Mask, Fuse, EPROM, EEPROM, FEPROM, current developments\n- Division of addressing space\n- Designing memory schemes and associated address decoding logic\n- Vital system components: Power supply, reset logic, system clock, chipset\n- Circuits: Interrupt and DMA controller, timer and clock components\n- Interfaces: Parallel and serial, standards (RS232, USB, ...)"
+        },
+        [
+          "Operating Systems",
+          "36",
+          "54"
+        ],
+        [
+          "- Introduction\n- Historical overview\n- Operating system concepts\n- Processes and threads\n- Interprocess synchronization and communication\n- Exercises on process communication: Classical problems\n- Process scheduling\n- Memory management\n- Simple memory management\n- Swapping\n- Virtual memory with paging\n- Segmented memory\n- File systems\n- Files and directories\n- Implementation of file systems\n- Security of file systems\n- Protection mechanisms\n- New developments: Log-based file systems\n- Input and output: Basic properties of I/O - Hard drives\n- Application of fundamentals to real operating systems: UNIX/Linux and Windows"
+        ],
+        [
+          "Status as of 12.08.2025",
+          "T4INF2005 // Page 29"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "System-level Programming 1"
+        },
+        {
+          "CONTACT TIME": "24"
+        },
+        {
+          "SELF-STUDY": "36"
+        },
+        [
+          "- Programming model for machine programming: Instruction set, register set and addressing modes\n- Implementation of control structures, evaluation of result flags\n- Subroutine call using the stack\n- Conventions\n- Concept and implementation of HW and SW interrupts: Discussion of HW and SW mechanisms and automatisms, interrupt vector table\n- User and supervisor mode of processors\n- Introduction of an example processor\n- Software development and test environment for the example processor\n- Independent development of machine programs with increasing difficulty and structuring level"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "IT Security (T4INF2006)\nIT Security": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF2006"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "2nd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr.-Ing. Falko Kötter"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students are able to recognize individual vulnerabilities after a threat analysis. The students can take appropriate measures to ensure adequate IT security within a security concept. The students can understand the strengths and weaknesses of possible measures in their professional field. The students can contribute acquired specialist knowledge to discussions on IT architectures and apply it in developing solution approaches."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can apply methods of IT security analysis such as threat modeling. The students can practice scientific working methods. The students can research and evaluate current specialist literature."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can use information technology with consideration. The students are able to assess ethical questions such as data protection. The students can assess the consequences for those affected when using IT."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can handle data of any kind consciously and carefully. The students can make decisions against the background of IT security."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "IT Security"
+        },
+        {
+          "CONTACT TIME": "60"
+        },
+        {
+          "SELF-STUDY": "90"
+        },
+        [
+          "Status as of 12.08.2025",
+          "T4INF2006 // Page 31"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "- Basic concepts and security problems\n- Threat analysis and security concepts\n- Basic mechanisms (encryption, hash functions, authentication codes, signature algorithms, public-key procedures etc.) and their cryptographic foundations\n- Security models\n- Network security and security protocols (e.g. X.509, OAuth)\n- Security of web-based applications and services (e.g. XSS, SQL injection, Rest, Soap, Microservices)\n- Secure programming (e.g. understanding and avoiding OWASP Top Ten security errors, authentication, ...)\n- Data protection\n- Embedded Security\n- Current topics"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Student Research Project (T4_3101)\nStudent Research Project": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4_3101"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "3rd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "2"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr.-Ing. Claus Mühlhan"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Project"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Student research project"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "300"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "12"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "288"
+        },
+        {
+          "ECTS CREDIT POINTS": "10"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can work their way into a complex but limited area with limited guidance. The students can acquire the general state of knowledge. The students can independently develop solutions and evaluate alternatives. The students can use existing specialist knowledge and independently expand it. The students can understand the necessity of scientific research and work. The students can efficiently control scientific work and document it correctly and comprehensibly. The students can develop and deepen a new subject area from their field of study."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can collect relevant information using scientific methods and interpret it taking into account scientific findings. The students can independently structure and write a longer research project. The students can independently work on a question corresponding to their course of study under scientific methods. The students can present results appropriately and formally correctly in written elaboration."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can persistently carry out larger tasks independently within a given deadline. The students can manage themselves and fulfill tasks by the intended deadline. The students can argue convincingly and appropriately. The students can present results plausibly and justify complex facts comprehensibly."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can integrate research findings with practical applications in their field."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Student Research Project"
+        },
+        {
+          "CONTACT TIME": "12"
+        },
+        {
+          "SELF-STUDY": "288"
+        },
+        [
+          "Preparation of a written work. The topics of the student research projects are provided by DHBW, topic suggestions by the dual partner or part-time lecturers are welcome. The task descriptions are oriented towards the curricula of the degree programs. The study academy carries out the assignment of topics to students."
+        ],
+        [
+          "It should be a problem from at least one sub-area of the degree program. Processing can also be done in a team."
+        ],
+        [
+          "Status as of 12.08.2025",
+          "T4_3101 // Page 33"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        [
+          "TEACHING AND LEARNING UNITS",
+          "CONTACT TIME",
+          "SELF-STUDY"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "Reference is made to the \"Guidelines for the processing and documentation of the modules Practical Project I to III, Student Research Project and Bachelor Thesis\" of the Technical Commission of the Baden-Württemberg Cooperative State University."
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Work Integrated Project I (T4_1000)\nWork Integrated Project I": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4_1000"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "2"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr.-Ing. Claus Mühlhan"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Seminar; Project"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Project work"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "Pass/Fail"
+        },
+        [
+          "Process and reflection report",
+          "See examination regulations",
+          "Pass/Fail"
+        ]
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "600"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "4"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "596"
+        },
+        {
+          "ECTS CREDIT POINTS": "20"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can grasp basic industrial problems in their respective context and complexity with their theoretical specialist knowledge. The students can apply central manual and mechanical basic skills to practical tasks. The students can understand the most important technical and organizational processes in sub-areas of the dual partner. The students can describe technical problems of the respective degree program and explain subject-related connections."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can implement usual procedures of industrial practice independently. The students can select and apply appropriate methods for complex practical applications under guidance. The students can assess the possibilities, practicability and limits of the methods used after instructional discussion."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can identify their own strengths and weaknesses and consciously use their strengths for smooth running of industrial processes. The students can learn from experiences and take responsibility for assigned tasks. The students can take initial responsibility in the team and integrate and support common goal achievement. The students can reflect and live equality of all genders in professional life."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can critically analyze which influencing factors must be considered to solve problems. The students can assess to what extent individual theoretical models can contribute to solving problems. The students can use their theoretical specialist knowledge to act appropriately in professional practical situations. The students can systematically search for alternative solution approaches. The students can assess the applicability of theories for practice in sustainability, energy and resource efficiency, and digitalization."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Project Work 1"
+        },
+        {
+          "CONTACT TIME": "0"
+        },
+        {
+          "SELF-STUDY": "560"
+        },
+        [
+          "Status as of 12.08.2025",
+          "T4_1000 // Page 35"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "- Preparation of project work 1 on a practical problem\n- Conveyance of practical content oriented towards the respective degree program-specific theoretical study content\n- Reference is made to the respective practical plans of the degree programs in the Technology study area"
+        },
+        {
+          "Scientific Work 1": "- Guidelines of scientific work\n- Topic selection and topic finding for project work 1\n- Typical content and requirements for project work 1\n- Structure and organization of project work 1\n- Literature search, procurement and selection\n- Use of DHBW library services\n- Form of scientific work (e.g. citation style, bibliography)\n- Notes on IT tools (e.g. literature management and generation of directories in word processing)"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        {
+          "The seminar \"Scientific Work I\" takes place during the theory phase. Implementation in the entire scope in one semester or division over two semesters is possible. For some basics, the web-based training \"Scientific Work\" of DHBW can be used.": "Reference is made to the \"Guidelines for the processing and documentation of the modules Practical Project I to III, Student Research Project and Bachelor Thesis\" of the Technical Commission of the Baden-Württemberg Cooperative State University."
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Work Integrated Project II (T4_2000)\nWork Integrated Project II": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4_2000"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "2nd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "2"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr.-Ing. Claus Mühlhan"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture; Project"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Project work"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        },
+        [
+          "Process and reflection report",
+          "See examination regulations",
+          "Pass/Fail"
+        ],
+        [
+          "See examination regulations",
+          "yes"
+        ],
+        [
+          "Combined examination - Combined examination (Presentation 30% and Oral examination 70%)"
+        ]
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "600"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "5"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "595"
+        },
+        {
+          "ECTS CREDIT POINTS": "20"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can grasp industrial problems in appropriate context and complexity. The students can understand technical and organizational processes in the areas of the dual partner. The students can describe technical problems and explain subject-related connections. The students can develop initial ideas for solution approaches."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can understand methods, techniques and skills usual in the business environment. The students can assess their strengths and weaknesses in selection. The students can select methods appropriately and situationally. The students can successfully implement assigned tasks through well-thought-out concepts, sound planning and good project management."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can identify their own strengths and weaknesses and work on their personality development. The students can learn from experiences and independently take responsibility for assigned tasks. The students can take more responsibility in the team and integrate others. The students can contribute to common goal achievement through considered behavior. The students can reflect and live equality of all genders in professional life."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can critically analyze which influencing factors must be considered to solve problems. The students can independently assess to what extent theoretical models can contribute to solving problems. The students can engage in independent critical observation and systematic search for alternative thinking and solution approaches. The students can question previous procedures. The students are able to show personal responsibility and initiative in a globalized working world. The students can consider sustainability, energy and resource efficiency, and digitalization in engineering sciences."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Project Work 2"
+        },
+        {
+          "CONTACT TIME": "0"
+        },
+        {
+          "SELF-STUDY": "560"
+        },
+        [
+          "Status as of 12.08.2025",
+          "T4_2000 // Page 37"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "- Preparation of project work 2 on a practical problem\n- Conveyance of practical content oriented towards the respective degree program-specific theoretical study content\n- Reference is made to the respective practical plans of the degree programs in the Technology study area."
+        },
+        {
+          "Scientific Work 2": "- Guidelines of scientific work\n- Topic selection and topic finding for project work 2\n- Typical content and requirements for project work 2\n- Structure and organization of project work 2\n- Preparation of the oral examination for project work 2"
+        },
+        {
+          "Combined Examination": "-"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        {
+          "The seminar \"Scientific Work II\" takes place during the theory phase. Implementation in the entire scope in one semester or division over two semesters is possible. For some basics, the WBT \"Scientific Work\" of DHBW can be used.": "According to the respective valid study and examination regulations for the bachelor degree programs in the Technology study area of the Baden-Württemberg Cooperative State University (DHBW), the oral examination and project work 2 must be passed separately. The module grade is determined from these two examination performances with a weighting of 50:50."
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Work Integrated Project III (T4_3000)\nWork Integrated Project III": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4_3000"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "3rd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr.-Ing. Claus Mühlhan"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture; Project"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Term paper"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "Pass/Fail"
+        },
+        [
+          "Report on the process and reflection of the practical module",
+          "See examination regulations",
+          "Pass/Fail"
+        ]
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "240"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "4"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "236"
+        },
+        {
+          "ECTS CREDIT POINTS": "8"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can grasp industrial problems in broad context and comprehensive complexity. The students can understand organizational and content-related connections as well as organizational structures, products, procedures, measures, processes, requirements and legal foundations. The students can contribute to the improvement and expansion of technical and organizational processes. The students can comprehensively describe technical problems and explain subject-related connections in depth. The students can develop ideas for solution approaches."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can understand methods, techniques and skills usual in the business environment and assess their strengths and weaknesses. The students can select methods appropriately, situationally and prudently. The students can implement assigned tasks systematically and successfully through well-thought-out concepts, sound planning and good project management even with frequently changing requirements."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can show high degree of reflexivity regarding their personality development and use it for independent personal further development. The students can learn from experiences and independently take responsibility for assigned tasks. The students can take responsibility for themselves and others. The students are able to handle conflict and criticism. The students can reflect and live equality of all genders in professional life."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can show comprehensive action competence by using their theoretical specialist knowledge and personal and social competencies to act appropriately in professional practical situations. The students can critically analyze influencing factors and assess theoretical models for problem solving. The students can select appropriate theoretical models. The students can show personal responsibility and initiative in a globalized and digital working world. The students can show reflected attitude towards social and ecological implications of their actions."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Project Work 3"
+        },
+        {
+          "CONTACT TIME": "0"
+        },
+        {
+          "SELF-STUDY": "220"
+        },
+        {
+          "Reference is made to the respective practical plans of the degree programs of the Faculty of Technology.": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Scientific Work 3"
+        },
+        {
+          "CONTACT TIME": "4"
+        },
+        {
+          "SELF-STUDY": "16"
+        },
+        [
+          "- What is science?\n- Theory and theory formation\n- Overview of research methods (interviews, etc.)\n- Quality criteria of science\n- Meaningful use of scientific findings (reference system, state of research/technology)\n- Structure and organization of a bachelor thesis\n- Project planning in the context of the bachelor thesis\n- Cooperation with supervisors and participants"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        {
+          "The seminar \"Scientific Work 3\" takes place during the theory phase. Implementation in the entire scope in one semester or division over two semesters is possible. For some basics, the WBT \"Scientific Work\" of DHBW can be used.": "Reference is made to the \"Guidelines for the processing and documentation of the modules Practical Project I to III, Student Research Project and Bachelor Thesis\" of the Technical Commission of the Baden-Württemberg Cooperative State University."
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Web Engineering (T4INF1101)\nWeb Engineering": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF1101"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Rolf Assfalg"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise, Laboratory"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam or Combined examination"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "72"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "78"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can relate developed theories and models to their experiences from professional practice. The students can assess their limits and practical applicability."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can select and apply appropriate methods for largely standardized application cases in practice. The students can understand the strengths and weaknesses of methods in their professional field. The students can weigh methods against each other in concrete action situations."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work effectively in web development teams."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can name basic concepts of distributed systems and explain their function and task distribution."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Web Engineering 1"
+        },
+        {
+          "CONTACT TIME": "36"
+        },
+        {
+          "SELF-STUDY": "39"
+        },
+        [
+          "- Introduction to HTML and CSS in the current version.\n- Fundamentals of internet protocols and their associated technologies.\n- Consideration of a client programming language and/or one or more server-side programming languages."
+        ],
+        [
+          "- Optional: Introduction to a frontend toolkit\n- Optional: Document markup language XML\n- Optional: Special document types for displaying 2D or 3D graphics.\n- Optional: Fundamentals of media design, if not already covered in other modules.\n- Optional: Practical exercises on HTML basics\n- Practical exercises on the programming language(s) introduced in the lecture"
+        ],
+        [
+          "Status as of 12.08.2025",
+          "T4INF1101 // Page 41"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Web Engineering 2"
+        },
+        {
+          "Deepening or learning a server-side programming language and/or deepening or learning client-side programming as a supplement and continuation of unit Web Engineering 1.": "- Special use contexts of client- or server-side programs including common frameworks/libraries of the programming language used.\n- Optional: Development of web projects suitable as submissions in the context of a combined examination. Group work is possible here."
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "The examination duration refers to the written exam."
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Computer Science Project (T4INF1102)\nComputer Science Project": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF1102"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Dirk Reichardt"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Combined examination - Combined examination and written exam (< 50%)"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "72"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "78"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can appropriately use the fundamentals of computer science in simple application cases for problem solving."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can successfully complete an application project with suitable, methodologically sound approaches of project management."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can collaborate effectively in small project groups."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can acquire knowledge about interdisciplinary connections and processes through reflected, practical implementation of an application project in small groups. The students can quickly integrate into new tasks, teams and work cultures."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Computer Science Application Project"
+        },
+        {
+          "Management of computer science projects\n- Project and goal definitions\n- Project management with IT support\n- Working in teams\n- Project control, monitoring and collaboration support": "Teaching by project example\n- Conducting a computer science project (or several small ones)\n- Practical deepening/exercise on basic lectures (i.e. programming, web engineering, digital technology, algorithms and data structures)\n- Interdisciplinary application and deepening of computer science fundamentals using the example project\n- Use of project management methods (possibly deepening a basic project management module)"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "Project management competence and deepening of basic computer science knowledge are taught interdisciplinarily."
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "Basic modules of computer science, especially programming. Algorithms and data structures can possibly be taught in parallel."
+        ]
+      ]
+    }
+  ],
+  "Communication and Network Technology (T4INF2101)\nCommunication and Network Technology": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF2101"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "2nd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr.-Ing. Falko Kötter"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise, Laboratory"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam or Combined examination"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can explain components of communication networks and use them in planning and designing networks. The students can select relevant technologies regarding structure, function, interaction of individual components, services and protocols. The students can evaluate and use technologies for concrete tasks."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can apply their specialist knowledge in the action context of the company because they master important techniques of communication networks."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work effectively in network planning teams."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can formulate, present and justify subject-related positions and problem solutions with arguments. The students can exchange information, ideas and problems in a target group-appropriate manner and further develop solutions."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Communication and Network Technology"
+        },
+        {
+          "CONTACT TIME": "60"
+        },
+        {
+          "SELF-STUDY": "90"
+        },
+        [
+          "Status as of 12.08.2025",
+          "T4INF2101 // Page 45"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Network Technology\n- Tasks of communication and network technology\n- Reference models and their interfaces\n- Network elements\n- Standards and norms\n- LAN/MAN/WAN: Distinction, structure, function, current developments and technologies\n- Protocols TCP/IP with IPv4 and IPv6\n- Network coupling, network segmentation and security techniques\n- Optional: Radio networks (e.g. WLAN), techniques, protocols, standards"
+        },
+        {
+          "Optional one of the listed topic areas:": "Network Technology Laboratory\n- practical exercises with communication networks, e.g. network laboratory\n- Software projects, simulation of network protocols and analysis of behaviors\n- current network-specific topics"
+        },
+        {
+          "Web Engineering 1\n- Introduction to HTML and CSS in the current version\n- Fundamentals of internet protocols and their associated technologies\n- Consideration of a client programming language and/or one or more server-side programming languages": "Signals and Systems 1\n- Basic concepts and introduction to signals and systems (continuous)\n- System response using convolution integral/convolution sum\n- Fourier series\n- Transformations (Fourier, Laplace)"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Quality of Software and Distributed Systems (T4INF3101)\nQuality of Software and Distributed Systems": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF3101"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "3rd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Johannes Freudenmann"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise, Laboratory"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Combined examination - Written exam and term paper"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can analyze and process complex practical problems so that they can create corresponding program systems. The students can obtain information relevant to the solution. The students can carry out software design independently. The students can give critical hints on the quality of their results."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can select and apply appropriate methods for quality assessment and assurance for complex software systems. The students can assess the possibilities, practicability and limits of the method used. The students can show alternative courses of action."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work effectively in quality assurance teams."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can integrate quality considerations throughout the software development lifecycle."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Software Quality"
+        },
+        {
+          "CONTACT TIME": "30"
+        },
+        {
+          "SELF-STUDY": "45"
+        },
+        {
+          "- Quality concepts\n- QA according to TQM, quality management under dynamic market development, definitions, standards\n- Quality audit\n- Quality improvement with measurable factors\n- QA methods, product life cycle\n- with the QTK circle, Lean Production": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Distributed Systems"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "Software Engineering I"
+        ]
+      ]
+    }
+  ],
+  "Artificial Intelligence and Machine Learning (T4INF3602)\nArtificial Intelligence and Machine Learning": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF3602"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "3rd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Dirk Reichardt"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Seminar, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Combined examination - Combined examination"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can understand application areas and typical scenarios of artificial intelligence. The students can recognize in which applications methods of artificial intelligence are advantageous. The students can use basic methods of artificial intelligence in practical examples. The students can demonstrate in-depth specialist knowledge of Evolutionary Computing, Machine Learning, Agent Systems or Emotional Computing. The students can practically use associated techniques for problem solving."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can grasp real-world problems and extract knowledge needed to implement intelligent applications with subject matter experts. The students can develop intelligent software systems using methodological knowledge."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can assess the ethical, economic, ecological and social implications of the application of artificial intelligence."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can integrate AI solutions responsibly into broader business and social contexts."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Fundamentals of Artificial Intelligence"
+        },
+        {
+          "CONTACT TIME": "30"
+        },
+        {
+          "SELF-STUDY": "45"
+        },
+        {
+          "- Fundamentals and definition of knowledge and model building\n- Use of logic and automatic proof\n- Use of heuristics (including heuristic search)\n- Representation of fuzzy problems (e.g. probabilistic networks, evidence theory/Dempster-Shafer/fuzzy systems)\n- Analogy and similarity\n- Fundamentals of machine learning\n- Application areas of artificial intelligence (e.g. design of digital circuits, big data, autonomous systems, intelligent interaction)\n- Practical applications of artificial intelligence methods": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Fundamentals of Machine Learning Methods"
+        },
+        {
+          "CONTACT TIME": "30"
+        },
+        {
+          "SELF-STUDY": "45"
+        },
+        [
+          "- Introduction to machine learning\n- Symbolic learning methods\n- Fundamentals of neural networks\n- Probabilistic learning models\n- Extended concepts and deep learning\n- Design and implementation of selected techniques for an application"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "New Concepts in Computer Science (T4INF3906)\nNew Concepts in Computer Science": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF3906"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "3rd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Eckhart Hanser"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Seminar, Project"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Presentation"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can understand new developments in applied research in computer science and adjacent areas. The students can communicate these research results and recognize suitable application possibilities."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can understand and apply the latest methods and procedures of computer science."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can adapt to rapidly changing technological landscapes."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can evaluate and integrate emerging technologies into existing systems and processes."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Applied Computer Science Research"
+        },
+        {
+          "CONTACT TIME": "60"
+        },
+        {
+          "SELF-STUDY": "90"
+        },
+        [
+          "In this seminar, new research topics from the field of computer science are presented and developed by students in group work."
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Bachelor Thesis (T4_3300)\nBachelor Thesis": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4_3300"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "-"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr.-Ing. Claus Mühlhan"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "-"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Bachelor thesis"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "360"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "6"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "354"
+        },
+        {
+          "ECTS CREDIT POINTS": "12"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can demonstrate broad specialist and interdisciplinary knowledge in their degree program. The students can identify and solve practical and scientific topics in their subject area based on current state of research and findings from practice."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can understand methods according to their degree program subject area. The students can critically reflect and apply methods in the context of working on practical and scientific problems. The students can develop and justify their own solution approaches."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can independently and responsibly work on business problems. The students can bring new innovative topic areas into practical discussion. The students can pay attention to smooth cooperation in teams and with third parties during processing. The students can reflect and live equality of all genders in professional life."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can grasp industrial problems in broad context and realistic complexity. The students can understand organizational and content-related connections as well as organizational structures, products, procedures, measures, processes, requirements and legal foundations. The students can critically analyze influencing factors and assess theoretical models for problem solving. The students can independently work their way into theoretical foundations with minor guidance. The students can independently develop solutions based on theory and practice and evaluate alternatives. The students can efficiently control scientific work as part of practical projects and document it correctly and comprehensibly. The students can show personal responsibility and initiative in a globalized and digital working world. The students can show reflected attitude towards social and ecological implications of their actions."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Bachelor Thesis"
+        },
+        {
+          "CONTACT TIME": "6"
+        },
+        {
+          "SELF-STUDY": "354"
+        },
+        {
+          "Independent processing and solution of a business problem that has a clear reference to the respective degree program, taking into account current scientific findings in the chosen subject area. Written preparation of solution approaches in the form of a scientific work.": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "Reference is made to the \"Guidelines for the processing and documentation of the modules Practical Project I to III, Student Research Project and Bachelor Thesis\" of the Technical Commission of DHBW"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Foundations in Digital Transformation (T4INF3903)\nFoundations in Digital Transformation": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF3903"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "3rd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Jan Michael Olaf"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Seminar, Project"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam or Combined examination"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can understand the terms Internet of Things and Big Data. The students can classify these terms in the overall context of Industry 4.0."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can understand essential methods and procedures of digital transformation. The students can apply essential methods and procedures of digital transformation to common problems."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can adapt to digital transformation challenges in their work environment."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can evaluate and implement digital transformation strategies in organizational contexts."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Big Data"
+        },
+        {
+          "CONTACT TIME": "30"
+        },
+        {
+          "SELF-STUDY": "45"
+        },
+        [
+          "Status as of 12.08.2025",
+          "T4INF3903 // Page 54"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Big Data Programming\n- Introduction to the topic area of big data programming\n- Explanation of horizontal scaling of systems in processing digital mass data\n- Introduction to distributed processing of digital mass data\n- Introduction to batch and stream processing\n- Presentation of current frameworks, libraries, programming languages, etc.\n- Implementation of practical examples"
+        },
+        [
+          "Big Data Storage\n- Introduction to the topic area of big data storage\n- Explanation of horizontal scaling of systems in storing digital mass data\n- Introduction to storing digital mass data using various storage and access types (file systems, databases, etc.)\n- Presentation of current frameworks, libraries, programming and query languages, etc.\n- Implementation of practical examples",
+          "30",
+          "45"
+        ],
+        [
+          "Internet of Things"
+        ],
+        [
+          "- Introduction to IoT\n- Application areas\n- Technologies (on a current IoT platform)\n- Communication protocols\n- Sensors and data acquisition\n- Platforms"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Introduction to IT Infrastructure (T4INF4123)\nIntroduction to IT Infrastructure": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF4123"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "1st year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dipl.-Phys. Till Hänisch"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise, Laboratory"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Combined examination - Combined examination"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "72"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "78"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can master basic handling of IT infrastructure in the degree program. The students can access networks and cloud servers. The students can set up servers and install applications. The students can map permissions and take basic security measures."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can accomplish independent learning of simple tasks in a laboratory through literature study including manuals and instructions."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work independently on infrastructure setup tasks."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can integrate infrastructure knowledge with broader system administration concepts."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Fundamentals of IT Security"
+        },
+        {
+          "CONTACT TIME": "24"
+        },
+        {
+          "SELF-STUDY": "36"
+        },
+        {
+          "- Basic concepts\n- Protection goals\n- Threats\n- Measures\n- Implementation in the laboratory": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Introduction to a Computer Science Laboratory"
+        },
+        {
+          "Getting to know the structure of a computer science laboratory with (depending on equipment)\n- Routers/switches\n- Cabling\n- Desktop computers\n- Servers\n- Robots\n- Various applications": "Guided exercises with the components and applications of the computer science laboratory such as changing cabling, installing and managing applications, programming robots, etc."
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Web Engineering II (T4INF4212)\nWeb Engineering II": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF4212"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "2nd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr. Rolf Assfalg"
+        },
+        {
+          "LANGUAGE": "German"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise, Laboratory"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Written exam or Combined examination"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "42"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "108"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can relate developed theories and models to their experiences from professional practice. The students can assess their limits and practical applicability."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can select and apply appropriate methods for largely standardized application cases in practice. The students can understand strengths and weaknesses of methods in their professional field. The students can weigh methods against each other in concrete action situations."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work effectively in advanced web development teams."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can design and implement complex web-based solutions considering user experience and technical requirements."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Web Engineering 2"
+        },
+        {
+          "CONTACT TIME": "30"
+        },
+        {
+          "SELF-STUDY": "45"
+        },
+        {
+          "- Introduction to full-stack development as a supplement and continuation of unit Web Engineering 1, with special focus on the connection of back-end and front-end\n- Deepening or learning a server-side programming language and/or deepening or learning client-side programming with current frameworks\n- Special use contexts of client- or server-side programs including common frameworks/libraries of the programming language used\n- Assignment of a development project and implementation in group work\n- Optional: Automation of web application development with current tools\n- Optional: Special execution platforms for web applications\n- Optional: Introduction to architectural patterns and concepts of modern web applications\n- Optional: Frameworks for testing and documentation of web application development": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Web Engineering 2 Laboratory"
+        },
+        {
+          "CONTACT TIME": "12"
+        },
+        {
+          "SELF-STUDY": "63"
+        },
+        [
+          "Practical implementations in practice-oriented scenarios. Project-like tasks in larger student groups are possible."
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ],
+  "Implementation of Distributed Systems (T4INF4223)\nImplementation of Distributed Systems": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF4223"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "3rd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dipl.-Phys. Till Hänisch"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Project, Laboratory"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Laboratory work including elaboration or Combined examination"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can apply common concepts for implementing distributed systems to real and complex application scenarios while appropriately considering aspects of IT security."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can systematically transfer the design of a distributed system into an implementation."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "The students can solve assigned tasks independently as a team."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "SUGGESTION: The students can integrate distributed systems concepts with broader enterprise architecture considerations."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Security in Distributed Systems"
+        },
+        {
+          "CONTACT TIME": "24"
+        },
+        {
+          "SELF-STUDY": "36"
+        },
+        [
+          "- Security in distributed systems (identify ICT system weaknesses)\n- Scalability, consistency, fault tolerance (align software with system architectures, protecting ict devices, apply information security policies)\n- Advanced topics"
+        ],
+        [
+          "Distributed Systems Laboratory",
+          "36",
+          "54"
+        ],
+        [
+          "- Implementation issues in distributed systems\n- decentralized application frameworks\n- principles of distributed ledger technology"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        {
+          "-": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "Fundamentals of distributed systems, e.g. Software Quality and Distributed Systems (T4INF4305) alternatively ESCO: distributed computing"
+        ]
+      ]
+    }
+  ],
+  "Advanced IT Security (T4INF4343)\nAdvanced IT Security": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF4343"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "3rd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dr.-Ing. Andreas Judt"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Seminar, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Presentation or Combined examination"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can demonstrate deep and current specialist knowledge in selected aspects of IT security. The students can use this knowledge as foundation to develop into experts in this field after completing their studies."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can assess risks and action needs regarding IT security. The students can design or select appropriate security measures and implement them. The students can recognize and consider security aspects in the design, implementation and operation of IT systems."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can communicate security risks and solutions effectively to different stakeholders."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can consider complex and current aspects of IT security in their professional activities. The students can understand ethical and social challenges of IT security. The students are able to act responsibly in IT security matters."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Selected Topics in IT Security"
+        },
+        {
+          "CONTACT TIME": "60"
+        },
+        {
+          "SELF-STUDY": "90"
+        },
+        [
+          "Status as of 12.08.2025",
+          "T4INF4343 // Page 62"
+        ]
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Selected current topics from the field of IT security are covered, for example:\n- Current attack types and protective measures\n- Modern cryptographic procedures and their applications\n- Hardware security\n- Security of web applications\n- Development of secure software\n- Analysis and design of security protocols\n- Security of mobile devices\n- Security of embedded systems/Internet of Things\n- Censorship, surveillance and anonymity on the Internet\n- Blockchain and its applications\n- Formal security and attack models\n- IT security management\n- IT forensics\n- Ethical and social aspects of IT security"
+        }
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "Programming, Operating Systems, Communication and Network Technology, Mathematical Foundations, Basic knowledge of IT security and cryptography"
+        ]
+      ]
+    }
+  ],
+  "New Concepts in Computer Science Laboratory (T4INF4383)\nNew Concepts in Computer Science Laboratory": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF4383"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "3rd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "1"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dipl.-Phys. Till Hänisch"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Project, Laboratory"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Combined examination - Combined examination"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "60"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "90"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "The students can learn exemplarily through an example the solution of a current problem in computer science."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can learn how new methods and procedures are evaluated and implemented."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can work independently on experimental computer science topics."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can independently work their way into a complex technical topic."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "New Concepts in Computer Science Laboratory"
+        },
+        {
+          "CONTACT TIME": "60"
+        },
+        {
+          "SELF-STUDY": "90"
+        },
+        [
+          "Implementation of a new concept in computer science in a concrete project"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        [
+          "-"
+        ]
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "Knowledge of current topics in computer science, e.g. from the module \"New Concepts in Computer Science\" T4INF4329"
+        ]
+      ]
+    }
+  ],
+  "Integration Seminar on Selected Topics in Computer Science (T4INF4384)\nIntegration Seminar on Selected Topics in Computer Science": [
+    {
+      "formaldetails": [
+        {
+          "MODULE NUMBER": "T4INF4384"
+        },
+        {
+          "PLACEMENT IN STUDY PROGRAM": "3rd year of study"
+        },
+        {
+          "MODULE DURATION (SEMESTER)": "2"
+        },
+        {
+          "MODULE RESPONSIBILITY": "Prof. Dipl.-Phys. Till Hänisch"
+        },
+        {
+          "LANGUAGE": "German/English"
+        }
+      ]
+    },
+    {
+      "teachingmethods": [
+        {
+          "TEACHING FORMS": "Lecture, Exercise"
+        },
+        {
+          "TEACHING METHODS": "-"
+        }
+      ]
+    },
+    {
+      "examination": [
+        {
+          "EXAMINATION PERFORMANCE": "Combined examination - Combined examination"
+        },
+        {
+          "EXAMINATION SCOPE (IN MINUTES)": "See examination regulations"
+        },
+        {
+          "GRADING": "yes"
+        }
+      ]
+    },
+    {
+      "workloadandects": [
+        {
+          "TOTAL WORKLOAD (IN H)": "150"
+        },
+        {
+          "OF WHICH CONTACT TIME (IN H)": "50"
+        },
+        {
+          "OF WHICH SELF-STUDY (IN H)": "100"
+        },
+        {
+          "ECTS CREDIT POINTS": "5"
+        }
+      ]
+    },
+    {
+      "competences": [
+        {
+          "SUBJECT COMPETENCE": "SUGGESTION: The students can demonstrate understanding of selected advanced computer science topics."
+        },
+        {
+          "METHODOLOGICAL COMPETENCE": "The students can assess the relevance of selected methods and techniques in the professional context. The students can judge practicability and limits of methods related to seminar topics. The students can consider social impacts."
+        },
+        {
+          "PERSONAL AND SOCIAL COMPETENCE": "SUGGESTION: The students can engage in intensive academic discussions and debates."
+        },
+        {
+          "COMPREHENSIVE ACTION COMPETENCE": "The students can practice dealing with complex and poorly structured problems to prepare for future professional challenges. The students can bring comprehensive questions to constructive solutions and subject them to intensive discussion with theoretical-model constructs and pragmatic solution methods. The students can develop understanding of overarching connections of seminar topics. The students can assess applicability and benefit of theories for practice."
+        }
+      ]
+    },
+    {
+      "unitsandcontents": [
+        {
+          "TEACHING AND LEARNING UNITS": "Integration Seminar"
+        },
+        {
+          "CONTACT TIME": "50"
+        },
+        {
+          "SELF-STUDY": "100"
+        },
+        [
+          "- Engagement with current developments in computer science, possibly also in related disciplines\n- scientifically sound preparation\n- linking with current questions of business practice\n- cross-industry or industry-specific consideration"
+        ]
+      ]
+    },
+    {
+      "specifics": [
+        {
+          "-": "Status as of 12.08.2025"
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        [
+          "-"
+        ]
+      ]
+    }
+  ]
+}

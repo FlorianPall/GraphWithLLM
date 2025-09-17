@@ -1,0 +1,1836 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF1001",
+        "name": "Mathematics I",
+        "year": "1st",
+        "mandatory": "true",
+        "ETCS": "5",
+        "language": "German"
+      }
+    },
+    {
+      "id": 2,
+      "label": "Unit",
+      "properties": {
+        "name": "Linear Algebra",
+        "code": "LA101",
+        "hours": "60",
+        "delivery_mode": "Lecture, Seminar, Exercise"
+      }
+    },
+    {
+      "id": 3,
+      "label": "Skill",
+      "properties": {
+        "name": "Mathematical thinking and reasoning abilities",
+        "description": "Ability to develop mathematical thinking and reasoning capabilities.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 4,
+      "label": "Skill",
+      "properties": {
+        "name": "Understanding discrete mathematics and linear algebra",
+        "description": "Ability to understand discrete mathematics and linear algebra concepts.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 5,
+      "label": "Skill",
+      "properties": {
+        "name": "Apply mathematical knowledge to engineering problems",
+        "description": "Ability to apply mathematical knowledge to problems from engineering and computer science.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 6,
+      "label": "Skill",
+      "properties": {
+        "name": "Logical thinking and clear structuring",
+        "description": "Ability to think logically and structure clearly.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 7,
+      "label": "Skill",
+      "properties": {
+        "name": "Creative exploratory behaviors and perseverance",
+        "description": "Ability to show creative exploratory behaviors and perseverance.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 8,
+      "label": "Skill",
+      "properties": {
+        "name": "Work persistently on complex mathematical problems",
+        "description": "Ability to work persistently on complex mathematical problems.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 9,
+      "label": "Skill",
+      "properties": {
+        "name": "Integrate mathematical knowledge with other engineering disciplines",
+        "description": "Ability to integrate mathematical knowledge with other engineering disciplines.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 10,
+      "label": "Professional Competence",
+      "properties": {
+        "name": "Professional Competence"
+      }
+    },
+    {
+      "id": 11,
+      "label": "Methodical Competence",
+      "properties": {
+        "name": "Methodical Competence"
+      }
+    },
+    {
+      "id": 12,
+      "label": "Personal/Social Competence",
+      "properties": {
+        "name": "Personal/Social Competence"
+      }
+    },
+    {
+      "id": 13,
+      "label": "Interdisciplinary Competence",
+      "properties": {
+        "name": "Interdisciplinary Competence"
+      }
+    },
+    {
+      "id": 14,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF1002",
+        "name": "Theoretical Computer Science I",
+        "year": "1st",
+        "mandatory": "true",
+        "ETCS": "5",
+        "language": "German"
+      }
+    },
+    {
+      "id": 15,
+      "label": "Unit",
+      "properties": {
+        "name": "Fundamentals and Logic",
+        "code": "FL102",
+        "hours": "60",
+        "delivery_mode": "Lecture, Exercise"
+      }
+    },
+    {
+      "id": 16,
+      "label": "Skill",
+      "properties": {
+        "name": "Understanding theoretical foundations of logic",
+        "description": "Ability to understand the theoretical foundations of propositional and predicate logic.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 17,
+      "label": "Skill",
+      "properties": {
+        "name": "Formal specification of algorithms",
+        "description": "Ability to understand the formal specification of algorithms and classify them.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 18,
+      "label": "Skill",
+      "properties": {
+        "name": "Abstract thinking for complex applications",
+        "description": "Ability to divide and master complex business applications through abstract thinking.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 19,
+      "label": "Skill",
+      "properties": {
+        "name": "Logical reasoning and inference",
+        "description": "Ability to use logical reasoning and inference on a case-by-case basis.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 20,
+      "label": "Skill",
+      "properties": {
+        "name": "Technical communication at scientific level",
+        "description": "Ability to exchange with specialists and laypeople about technical questions at a scientific level.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 21,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF1003",
+        "name": "Theoretical Computer Science II",
+        "year": "1st",
+        "mandatory": "true",
+        "ETCS": "5",
+        "language": "German/English"
+      }
+    },
+    {
+      "id": 22,
+      "label": "Unit",
+      "properties": {
+        "name": "Algorithms and Complexity",
+        "code": "AC103",
+        "hours": "60",
+        "delivery_mode": "Lecture, Exercise"
+      }
+    },
+    {
+      "id": 23,
+      "label": "Skill",
+      "properties": {
+        "name": "Understanding algorithm approaches for problem classes",
+        "description": "Ability to demonstrate in-depth knowledge of algorithm approaches for important problem classes.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 24,
+      "label": "Skill",
+      "properties": {
+        "name": "Understanding complexity concepts and calculations",
+        "description": "Ability to understand complexity concepts and complexity calculations for algorithms.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 25,
+      "label": "Skill",
+      "properties": {
+        "name": "Complexity analysis evaluation",
+        "description": "Ability to evaluate the necessity of complexity analysis for a program.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 26,
+      "label": "Skill",
+      "properties": {
+        "name": "Design algorithms for defined problems",
+        "description": "Ability to design algorithms for defined problems and justify their correctness.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 27,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF1004",
+        "name": "Programming",
+        "year": "1st",
+        "mandatory": "true",
+        "ETCS": "5",
+        "language": "German"
+      }
+    },
+    {
+      "id": 28,
+      "label": "Unit",
+      "properties": {
+        "name": "Programming",
+        "code": "PROG104",
+        "hours": "84",
+        "delivery_mode": "Lecture, Exercise, Laboratory"
+      }
+    },
+    {
+      "id": 29,
+      "label": "Skill",
+      "properties": {
+        "name": "Understanding procedural and object-oriented programming",
+        "description": "Ability to understand the basic elements of procedural and object-oriented programming.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 30,
+      "label": "Skill",
+      "properties": {
+        "name": "Program design and implementation",
+        "description": "Ability to independently design a program design, code it and test program functionality.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 31,
+      "label": "Skill",
+      "properties": {
+        "name": "Team collaboration in programming",
+        "description": "Ability to discuss, justify and develop program design and coding in a team.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 32,
+      "label": "Skill",
+      "properties": {
+        "name": "Analyze practical problems and develop solutions",
+        "description": "Ability to independently analyze simple practical problems and design, program and test solutions.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 33,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF1005",
+        "name": "Key Skills",
+        "year": "1st",
+        "mandatory": "true",
+        "ETCS": "5",
+        "language": "German/English"
+      }
+    },
+    {
+      "id": 34,
+      "label": "Unit",
+      "properties": {
+        "name": "Business Administration",
+        "code": "BA105",
+        "hours": "24",
+        "delivery_mode": "Lecture, Seminar, Project"
+      }
+    },
+    {
+      "id": 35,
+      "label": "Unit",
+      "properties": {
+        "name": "Ethics and Law for Computer Science",
+        "code": "EL105",
+        "hours": "24",
+        "delivery_mode": "Lecture, Seminar, Project"
+      }
+    },
+    {
+      "id": 36,
+      "label": "Unit",
+      "properties": {
+        "name": "Project Management",
+        "code": "PM105",
+        "hours": "24",
+        "delivery_mode": "Lecture, Seminar, Project"
+      }
+    },
+    {
+      "id": 37,
+      "label": "Skill",
+      "properties": {
+        "name": "Team development and collaboration",
+        "description": "Ability to develop, discuss and present content and ideas in a team.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 38,
+      "label": "Skill",
+      "properties": {
+        "name": "Presentation skills",
+        "description": "Ability to present results to a group.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 39,
+      "label": "Skill",
+      "properties": {
+        "name": "Interdisciplinary thinking",
+        "description": "Ability to think in interdisciplinary contexts.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 40,
+      "label": "Skill",
+      "properties": {
+        "name": "Strategic action competence and entrepreneurial thinking",
+        "description": "Ability to demonstrate strategic action competence and entrepreneurial thinking.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 41,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF2003",
+        "name": "Software Engineering I",
+        "year": "2nd",
+        "mandatory": "true",
+        "ETCS": "9",
+        "language": "German/English"
+      }
+    },
+    {
+      "id": 42,
+      "label": "Unit",
+      "properties": {
+        "name": "Fundamentals of Software Engineering",
+        "code": "SE203",
+        "hours": "96",
+        "delivery_mode": "Lecture, Exercise, Project"
+      }
+    },
+    {
+      "id": 43,
+      "label": "Skill",
+      "properties": {
+        "name": "Understanding software development process",
+        "description": "Ability to understand the fundamentals of the software development process.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 44,
+      "label": "Skill",
+      "properties": {
+        "name": "Problem analysis and solution design",
+        "description": "Ability to analyze a given problem and design computer-aided solutions.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 45,
+      "label": "Skill",
+      "properties": {
+        "name": "Team building and development",
+        "description": "Ability to build and develop teams.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 46,
+      "label": "Skill",
+      "properties": {
+        "name": "Interdisciplinary skill combination",
+        "description": "Ability to combine interdisciplinary skills such as software development with project management.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 47,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF2004",
+        "name": "Database Systems",
+        "year": "2nd",
+        "mandatory": "true",
+        "ETCS": "6",
+        "language": "German"
+      }
+    },
+    {
+      "id": 48,
+      "label": "Unit",
+      "properties": {
+        "name": "Fundamentals of Database Systems",
+        "code": "DB204",
+        "hours": "72",
+        "delivery_mode": "Lecture, Exercise"
+      }
+    },
+    {
+      "id": 49,
+      "label": "Skill",
+      "properties": {
+        "name": "Understanding database system theories",
+        "description": "Ability to understand the fundamental theories of database systems.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 50,
+      "label": "Skill",
+      "properties": {
+        "name": "Database design and evaluation",
+        "description": "Ability to design a practically usable, normalized relational database and evaluate designs.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 51,
+      "label": "Skill",
+      "properties": {
+        "name": "Database design methods evaluation",
+        "description": "Ability to evaluate the strengths and weaknesses of design methods for databases.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 52,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF2006",
+        "name": "IT Security",
+        "year": "2nd",
+        "mandatory": "true",
+        "ETCS": "5",
+        "language": "German/English"
+      }
+    },
+    {
+      "id": 53,
+      "label": "Unit",
+      "properties": {
+        "name": "IT Security",
+        "code": "ITS206",
+        "hours": "60",
+        "delivery_mode": "Lecture"
+      }
+    },
+    {
+      "id": 54,
+      "label": "Skill",
+      "properties": {
+        "name": "Vulnerability recognition and threat analysis",
+        "description": "Ability to recognize individual vulnerabilities after a threat analysis.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 55,
+      "label": "Skill",
+      "properties": {
+        "name": "IT security methods application",
+        "description": "Ability to apply methods of IT security analysis such as threat modeling.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 56,
+      "label": "Skill",
+      "properties": {
+        "name": "Ethical assessment of IT consequences",
+        "description": "Ability to assess ethical questions and consequences for those affected when using IT.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 57,
+      "label": "Skill",
+      "properties": {
+        "name": "IT security decision making",
+        "description": "Ability to make decisions against the background of IT security.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 58,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF3602",
+        "name": "Artificial Intelligence and Machine Learning",
+        "year": "3rd",
+        "mandatory": "false",
+        "ETCS": "5",
+        "language": "German/English"
+      }
+    },
+    {
+      "id": 59,
+      "label": "Unit",
+      "properties": {
+        "name": "Fundamentals of Artificial Intelligence",
+        "code": "AI602",
+        "hours": "30",
+        "delivery_mode": "Lecture, Seminar, Exercise"
+      }
+    },
+    {
+      "id": 60,
+      "label": "Unit",
+      "properties": {
+        "name": "Fundamentals of Machine Learning Methods",
+        "code": "ML602",
+        "hours": "30",
+        "delivery_mode": "Lecture, Seminar, Exercise"
+      }
+    },
+    {
+      "id": 61,
+      "label": "Skill",
+      "properties": {
+        "name": "Understanding AI application areas",
+        "description": "Ability to understand application areas and typical scenarios of artificial intelligence.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 62,
+      "label": "Skill",
+      "properties": {
+        "name": "AI methods practical application",
+        "description": "Ability to use basic methods of artificial intelligence in practical examples.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 63,
+      "label": "Skill",
+      "properties": {
+        "name": "Intelligent software systems development",
+        "description": "Ability to develop intelligent software systems using methodological knowledge.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 64,
+      "label": "Skill",
+      "properties": {
+        "name": "AI ethical and social implications assessment",
+        "description": "Ability to assess the ethical, economic, ecological and social implications of AI application.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 65,
+      "label": "Module",
+      "properties": {
+        "code": "T4INF1101",
+        "name": "Web Engineering",
+        "year": "1st",
+        "mandatory": "false",
+        "ETCS": "5",
+        "language": "German"
+      }
+    },
+    {
+      "id": 66,
+      "label": "Unit",
+      "properties": {
+        "name": "Web Engineering 1",
+        "code": "WE1101",
+        "hours": "36",
+        "delivery_mode": "Lecture, Exercise, Laboratory"
+      }
+    },
+    {
+      "id": 67,
+      "label": "Unit",
+      "properties": {
+        "name": "Web Engineering 2",
+        "code": "WE2101",
+        "hours": "36",
+        "delivery_mode": "Lecture, Exercise, Laboratory"
+      }
+    },
+    {
+      "id": 68,
+      "label": "Skill",
+      "properties": {
+        "name": "Web development theory-practice relation",
+        "description": "Ability to relate developed theories and models to experiences from professional practice.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 69,
+      "label": "Skill",
+      "properties": {
+        "name": "Web development methods selection",
+        "description": "Ability to select and apply appropriate methods for standardized web application cases.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": 70,
+      "label": "Skill",
+      "properties": {
+        "name": "Distributed systems understanding",
+        "description": "Ability to name basic concepts of distributed systems and explain their function.",
+        "proficiencyLevel": null,
+        "URL": null
+      }
+    },
+    {
+      "id": "E1",
+      "label": "ESCO",
+      "properties": {
+        "name": "mathematics",
+        "description": "Mathematics is the study of abstract deductive systems. It includes algebra, arithmetic, geometry, real and complex analysis and pure and applied mathematics.\nProgrammes and qualifications with the following main content are classified here:\nAlgebra\nGeometry\nMathematics\nNumerical analysis\nOperational research",
+        "altlabels": null,
+        "concepturi": "http://data.europa.eu/esco/isced-f/0541"
+      }
+    },
+    {
+      "id": "E2",
+      "label": "ESCO",
+      "properties": {
+        "name": "thinking skills and competences",
+        "description": "Skills and competences relating to the ability to apply the mental processes of gathering, conceptualizing, analysing, synthesizing, and/or evaluating information gathered from, or generated by, observation, experience, reflection, reasoning, or communication. They include the ability to evaluate and use information of different kinds to plan activities, achieve goals, solve problems, deal with issues and perform complex tasks in routine and novel ways.",
+        "altlabels": "cognitive skills and competences\nuse of reason and logic",
+        "concepturi": "http://data.europa.eu/esco/skill/8267ecb5-c976-4b6a-809b-4ceecb954967"
+      }
+    },
+    {
+      "id": "E3",
+      "label": "ESCO",
+      "properties": {
+        "name": "thinking creatively and innovatively",
+        "description": "Generate new ideas or combine existing ones to develop innovative, novel solutions.",
+        "altlabels": "creating new information, concepts, ideas, products, processes\ncarrying out activities in innovative and creative ways",
+        "concepturi": "http://data.europa.eu/esco/skill/e84d080a-ff6d-41a7-b7b9-133e97c7bf00"
+      }
+    },
+    {
+      "id": "E4",
+      "label": "ESCO",
+      "properties": {
+        "name": "solving problems",
+        "description": "Developing and implementing solutions to practical, operational or conceptual problems which arise in the execution of work in a wide range of contexts.",
+        "altlabels": "problem solving",
+        "concepturi": "http://data.europa.eu/esco/skill/4feed491-dc09-4218-814a-0146e13ef4fe"
+      }
+    },
+    {
+      "id": "E5",
+      "label": "ESCO",
+      "properties": {
+        "name": "logic",
+        "description": "The study and use of accurate reasoning, where the legitimacy of arguments is measured by their logical form and not by content.",
+        "altlabels": "the study of logic\nlogic studies",
+        "concepturi": "http://data.europa.eu/esco/skill/294cf13e-4fdf-4cb8-bb6b-31b9da7f4819"
+      }
+    },
+    {
+      "id": "E6",
+      "label": "ESCO",
+      "properties": {
+        "name": "algorithms",
+        "description": "The self-contained step-by-step sets of operations that carry out calculations, data processing and automated reasoning, usually to solve problems.",
+        "altlabels": "algorithmic | algorithm | formulae | formulas",
+        "concepturi": "http://data.europa.eu/esco/skill/54924a2c-daca-40d3-9716-4b38ceb04f38"
+      }
+    },
+    {
+      "id": "E7",
+      "label": "ESCO",
+      "properties": {
+        "name": "technical communicator",
+        "description": "Technical communicators prepare clear, concise and professional communication from product developers to users of the products such as online help, user manuals, white papers, specifications and industrial videos. For this, they analyse products, legal requirements, markets, customers and users. They develop information and media concepts, standards, structures and software tool support. They plan the content creation and media production processes, develop written, graphical, video or other contents, generate media output, release their information products and receive feedback from the users.",
+        "altlabels": "scientific communicator\ntechnical author\nadvanced technical communicator\ndocumentation specialist\ntechnical communicators\ntechnical illustrator\ne-learning author\ntechnical writer\nsenior technical communicator\ntechnical documentation specialist\ntechnical documentation author\ninformation architect\nAPI writer\ntechnical content developer\nusability expert\nuser experience designer\ntechnical editor\nscientific and technical communicator\ntech communicator",
+        "concepturi": "http://data.europa.eu/esco/occupation/8cb59bc4-1f39-477e-beea-effed12d186c"
+      }
+    },
+    {
+      "id": "E8",
+      "label": "ESCO",
+      "properties": {
+        "name": "computer programming",
+        "description": "The techniques and principles of software development, such as analysis, algorithms, coding, testing and compiling of programming paradigms (e.g. object oriented programming, functional programming) and of programming languages.",
+        "altlabels": "DIBOL\nSeed7\nVisual Basic .NET\nHyperTalk\nKorn-shell\nEmacs Lisp\nKnockoutJS\ncomputer programming\nSquirrel-script\nTACL\ncT\nObject Pascal\nVisual Basic\nCaml\nAspectJ\nPostScript\nOCaml\nCeylon\nDylan\nbash\nOpenCV\nGosu\nColdFusion\nMSVC++\nC shell\nIDL\nALGOL\nSubversion\nAda\noccam\nIo\nREXX\nZ shell\nBizTalk\nAppleScript\nBCPL\nX10\nGCC\nActionScript\nINTERCAL\nLabVIEW\nHack\nFantom\nTcl\nSTL\nFortran\nPL/I\nCOMAL\nRebol\nEuphoria\nLua\nPowerShell\nAngularJS\nCurl\nAWK\nTuring",
+        "concepturi": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      }
+    },
+    {
+      "id": "E9",
+      "label": "ESCO",
+      "properties": {
+        "name": "collaborating in teams and networks",
+        "description": "Support or develop a group to work towards a common goal in a way which shows understanding and respect of others’ roles and competencies.",
+        "altlabels": "working with others\nacting with others to achieve aims",
+        "concepturi": "http://data.europa.eu/esco/skill/036afa6e-cdde-4b38-a53a-8e7910a840e1"
+      }
+    },
+    {
+      "id": "E10",
+      "label": "ESCO",
+      "properties": {
+        "name": "presenting information",
+        "description": "Presenting oral or visual material to an audience in order to provide or interpret information.",
+        "altlabels": null,
+        "concepturi": "http://data.europa.eu/esco/skill/3f641516-9846-4a7f-a7f4-e1274eef6688"
+      }
+    },
+    {
+      "id": "E11",
+      "label": "ESCO",
+      "properties": {
+        "name": "software and applications development and analysis",
+        "description": "Software and applications development and analysis is the study of the design and development of computer systems and computing environments.\nProgrammes and qualifications with the following main content are classified here:\nComputer programming\nComputer science\nComputer systems analysis\nComputer systems design\nInformatics\nOperating systems\nProgramming languages development\nSoftware development\nSoftware programming\n\n=== Exclusions\nComputer engineering (hardware) is excluded from this detailed field and included in detailed field 0714 'Electronics and automation'.\nProgrammes and qualifications in using computer applications are excluded from this detailed field and included in detailed field 0611 'Computer use'. Database and network design and administration is excluded from this detailed field and included in detailed field 0612 'Database and network design and administration'.",
+        "altlabels": null,
+        "concepturi": "http://data.europa.eu/esco/isced-f/0613"
+      }
+    },
+    {
+      "id": "E12",
+      "label": "ESCO",
+      "properties": {
+        "name": "building and developing teams",
+        "description": "Encouraging team members and building a relationship of mutual trust, respect and cooperation. Stimulating teambuilding activities.",
+        "altlabels": "managing teams",
+        "concepturi": "http://data.europa.eu/esco/skill/2d02d98c-20c4-4b46-bf44-e5f85a3f03ed"
+      }
+    },
+    {
+      "id": "E13",
+      "label": "ESCO",
+      "properties": {
+        "name": "database",
+        "description": "The classification of databases, that includes their purpose, characteristics, terminology, models and use such as XML databases, document-oriented databases and full text databases.",
+        "altlabels": "database | non-relational database | relational database | types of databases",
+        "concepturi": "http://data.europa.eu/esco/skill/43ae58b9-5e56-4524-b45a-b422777a0576"
+      }
+    },
+    {
+      "id": "E14",
+      "label": "ESCO",
+      "properties": {
+        "name": "ethics",
+        "description": "The philosophical study that deals with solving questions of human morality; it defines and systemises concepts such as right, wrong, and crime.",
+        "altlabels": "moral studies\nthe study of moral principles",
+        "concepturi": "http://data.europa.eu/esco/skill/cef5c0f8-1e40-4c09-b6a7-aa7811849e5d"
+      }
+    },
+    {
+      "id": "E15",
+      "label": "ESCO",
+      "properties": {
+        "name": "distributed computing",
+        "description": "The software process in which computer components interact over a network and send messages to communicate on their actions.",
+        "altlabels": null,
+        "concepturi": "http://data.europa.eu/esco/skill/897b393f-e7e0-4248-a40d-d77119694e83"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "1",
+      "endNode": "2",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "2",
+      "endNode": "3",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "2",
+      "endNode": "4",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "2",
+      "endNode": "5",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "2",
+      "endNode": "6",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "2",
+      "endNode": "7",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "2",
+      "endNode": "8",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "2",
+      "endNode": "9",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "3",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "4",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "5",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "6",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "7",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "12",
+      "endNode": "8",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "13",
+      "endNode": "9",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "5",
+      "endNode": "4",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "5",
+      "endNode": "3",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "9",
+      "endNode": "5",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "14",
+      "endNode": "15",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "15",
+      "endNode": "16",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "15",
+      "endNode": "17",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "15",
+      "endNode": "18",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "15",
+      "endNode": "19",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "15",
+      "endNode": "20",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "16",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "17",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "18",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "19",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "13",
+      "endNode": "20",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "19",
+      "endNode": "16",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "18",
+      "endNode": "17",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "20",
+      "endNode": "19",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "21",
+      "endNode": "22",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "22",
+      "endNode": "23",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "22",
+      "endNode": "24",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "22",
+      "endNode": "25",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "22",
+      "endNode": "26",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "23",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "24",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "25",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "13",
+      "endNode": "26",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "25",
+      "endNode": "24",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "26",
+      "endNode": "23",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "26",
+      "endNode": "24",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "27",
+      "endNode": "28",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "28",
+      "endNode": "29",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "28",
+      "endNode": "30",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "28",
+      "endNode": "31",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "28",
+      "endNode": "32",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "29",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "30",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "12",
+      "endNode": "31",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "13",
+      "endNode": "32",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "30",
+      "endNode": "29",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "32",
+      "endNode": "30",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "33",
+      "endNode": "34",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "33",
+      "endNode": "35",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "33",
+      "endNode": "36",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "34",
+      "endNode": "40",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "35",
+      "endNode": "56",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "36",
+      "endNode": "37",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "36",
+      "endNode": "38",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "34",
+      "endNode": "39",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "12",
+      "endNode": "37",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "12",
+      "endNode": "38",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "13",
+      "endNode": "39",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "13",
+      "endNode": "40",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "38",
+      "endNode": "37",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "40",
+      "endNode": "39",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "41",
+      "endNode": "42",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "42",
+      "endNode": "43",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "42",
+      "endNode": "44",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "42",
+      "endNode": "45",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "42",
+      "endNode": "46",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "43",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "44",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "12",
+      "endNode": "45",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "13",
+      "endNode": "46",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "44",
+      "endNode": "43",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "44",
+      "endNode": "30",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "46",
+      "endNode": "43",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "46",
+      "endNode": "37",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "47",
+      "endNode": "48",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "48",
+      "endNode": "49",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "48",
+      "endNode": "50",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "48",
+      "endNode": "51",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "49",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "50",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "51",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "50",
+      "endNode": "49",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "51",
+      "endNode": "49",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "52",
+      "endNode": "53",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "53",
+      "endNode": "54",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "53",
+      "endNode": "55",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "53",
+      "endNode": "56",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "53",
+      "endNode": "57",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "54",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "55",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "12",
+      "endNode": "56",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "13",
+      "endNode": "57",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "55",
+      "endNode": "54",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "57",
+      "endNode": "54",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "57",
+      "endNode": "55",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "58",
+      "endNode": "59",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "58",
+      "endNode": "60",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "59",
+      "endNode": "61",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "59",
+      "endNode": "62",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "60",
+      "endNode": "63",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "59",
+      "endNode": "64",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "61",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "62",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "63",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "12",
+      "endNode": "64",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "62",
+      "endNode": "61",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "63",
+      "endNode": "62",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "63",
+      "endNode": "23",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "63",
+      "endNode": "30",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "65",
+      "endNode": "66",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "65",
+      "endNode": "67",
+      "type": "consists_of",
+      "properties": {}
+    },
+    {
+      "startNode": "66",
+      "endNode": "68",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "66",
+      "endNode": "69",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "67",
+      "endNode": "70",
+      "type": "teaches",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "68",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "11",
+      "endNode": "69",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "10",
+      "endNode": "70",
+      "type": "contains",
+      "properties": {}
+    },
+    {
+      "startNode": "69",
+      "endNode": "68",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "70",
+      "endNode": "69",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "70",
+      "endNode": "29",
+      "type": "builds_on",
+      "properties": {}
+    },
+    {
+      "startNode": "3",
+      "endNode": "E1",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "4",
+      "endNode": "E1",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "5",
+      "endNode": "E1",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "6",
+      "endNode": "E2",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "7",
+      "endNode": "E3",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "8",
+      "endNode": "E4",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "16",
+      "endNode": "E5",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "17",
+      "endNode": "E6",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "18",
+      "endNode": "E2",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "19",
+      "endNode": "E5",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "20",
+      "endNode": "E7",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "23",
+      "endNode": "E6",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "24",
+      "endNode": "E6",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "25",
+      "endNode": "E6",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "26",
+      "endNode": "E6",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "29",
+      "endNode": "E8",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "30",
+      "endNode": "E8",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "31",
+      "endNode": "E9",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "32",
+      "endNode": "E4",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "37",
+      "endNode": "E9",
+      "type": "equivalent",
+      "properties": {}
+    },
+    {
+      "startNode": "38",
+      "endNode": "E10",
+      "type": "equivalent",
+      "properties": {}
+    },
+    {
+      "startNode": "39",
+      "endNode": "E2",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "40",
+      "endNode": "E2",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "43",
+      "endNode": "E11",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "44",
+      "endNode": "E4",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "45",
+      "endNode": "E12",
+      "type": "equivalent",
+      "properties": {}
+    },
+    {
+      "startNode": "49",
+      "endNode": "E13",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "50",
+      "endNode": "E13",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "51",
+      "endNode": "E13",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "56",
+      "endNode": "E14",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "64",
+      "endNode": "E14",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "68",
+      "endNode": "E11",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "69",
+      "endNode": "E11",
+      "type": "partOf",
+      "properties": {}
+    },
+    {
+      "startNode": "70",
+      "endNode": "E15",
+      "type": "equivalent",
+      "properties": {}
+    }
+  ]
+}
